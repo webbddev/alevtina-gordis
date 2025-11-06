@@ -1,0 +1,63 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "Projects": {
+    "title": "Explore our projects",
+    "subtitle": "Our projects showcase the best visuals and storytelling techniques.",
+    "projectDetails": "Project Details",
+    "close": "×",
+    "projects": {
+      "project1": {
+        "name": "Milina Warehouse",
+        "description": "Created video content related to company's anniversary",
+        "details": "Comprehensive campaign showcasing back-to-school products with dynamic storytelling and visual excellence. We produced a series of high-quality videos that captured the spirit of the anniversary, highlighting key milestones and achievements."
+      },
+      "project2": {
+        "name": "Scenery Selection",
+        "description": "Selecting the best scenery for author's novel",
+        "details": "Crafted a user-centric landing page for Airbnb, focusing on intuitive navigation and visually appealing design to enhance user engagement and drive bookings."
+      },
+      "project3": {
+        "name": "Audi",
+        "description": "Developed Audi car configurator",
+        "details": "Engineered a sophisticated car configurator for Audi, allowing users to customize their vehicles with real-time visualizations and detailed specifications, improving the online purchasing experience."
+      },
+      "project4": {
+        "name": "Paypal",
+        "description": "Integrated Paypal payment gateway",
+        "details": "Seamlessly integrated the PayPal payment gateway into an e-commerce platform, ensuring secure and efficient transactions for customers, enhancing the overall checkout experience."
+      },
+      "project5": {
+        "name": "Sony",
+        "description": "Developed Sony Playstation website",
+        "details": "Built a dynamic and engaging website for Sony PlayStation, featuring interactive elements, immersive visuals, and a user-friendly interface to promote gaming products and services."
+      },
+      "project6": {
+        "name": "Under Armour",
+        "description": "Designed Under Armour fitness app",
+        "details": "Designed an intuitive and motivating fitness app for Under Armour, incorporating personalized workout plans, progress tracking, and social features to enhance user engagement and fitness goals."
+      },
+      "project7": {
+        "name": "Redbull",
+        "description": "Created Redbull energy drink campaign",
+        "details": "Developed a high-energy digital campaign for Red Bull, featuring dynamic content, social media integration, and interactive experiences to amplify brand awareness and drive consumer engagement."
+      },
+      "project8": {
+        "name": "Dyson",
+        "description": "Dyson & Maximum Electronics: A Collaborative Journey in Product Storytelling",
+        "details": "Partnered with Dyson and Maximum Electronics to create compelling product reviews and storytelling content, showcasing the innovation and performance of their latest products."
+      },
+      "project9": {
+        "name": "Visa",
+        "description": "Integrated Visa payment gateway",
+        "details": "Successfully integrated the Visa payment gateway, providing secure and reliable transaction processing for online customers, improving the efficiency of the checkout process."
+      },
+      "project10": {
+        "name": "Maximum Riscani",
+        "description": "Designed Maximum's store opening ceremony",
+        "details": "Redesigned the Nordstrom e-commerce website, focusing on a clean, modern aesthetic and improved navigation to enhance the online shopping experience and increase conversions."
+      }
+    }
+  }
+}
