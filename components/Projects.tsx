@@ -66,11 +66,11 @@ const ProjectDetailsSlider = ({
       animate={{ x: 0 }}
       exit={{ x: '100%' }}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-      className='fixed right-0 top-0 h-full md:w-2/5 bg-white shadow-lg p-6 z-50 cursor-pointer'
+      className='fixed right-0 top-0 h-full md:w-3/5 xl:w-1/2 bg-white dark:bg-gray-800 shadow-lg p-6 z-50 cursor-pointer'
     >
       <button
         onClick={onClose}
-        className='absolute top-4 right-4 text-gray-500 hover:text-gray-700'
+        className='absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
       >
         {t('close')}
       </button>
@@ -84,16 +84,18 @@ const ProjectDetailsSlider = ({
           height={300}
           className='w-full rounded-lg mb-6 object-cover h-60'
         />
-        <p className='text-gray-600 mb-4'>{project.description}</p>
+        <p className='text-gray-600 dark:text-gray-300 mb-4'>
+          {project.description}
+        </p>
 
         <div className='space-y-4'>
           <h3 className='font-semibold text-lg'>{t('projectDetails')}</h3>
-          <p className='text-gray-600'>{project.details}</p>
+          <p className='text-gray-600 dark:text-gray-300'>{project.details}</p>
           <div className='flex flex-wrap gap-2'>
             {project.tags?.map((tag, index) => (
               <span
                 key={index}
-                className='px-3 py-1 bg-gray-100 rounded-full text-sm'
+                className='px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm'
               >
                 {tag}
               </span>
@@ -238,59 +240,63 @@ const Projects = () => {
 
   return (
     <section
-      id='my-work'
-      className='w-full bg-white py-16 md:mx-auto 2xl:w-[70vw] md:px-16'
+      id='my-works'
+      className='w-full bg-white dark:bg-gray-900 py-16 md:px-6'
     >
-      <div className='mx-auto mb-12 px-2 md:px-0'>
-        <h2 className='text-4xl font-bold text-gray-900 mb-4'>{t('title')}</h2>
-        <p className='text-[#7b7b7b] text-lg'>{t('subtitle')}</p>
-      </div>
+      <div className='mx-auto max-w-340 px-4 md:px-8'>
+        <div className='mb-12 md:-ml-8'>
+          <h2 className='text-4xl font-bold text-foreground mb-4'>
+            {t('title')}
+          </h2>
+          <p className='text-muted-foreground text-lg '>{t('subtitle')}</p>
+        </div>
 
-      <div className='w-full h-[800px] 2xl:h-[1000px] flex items-center justify-center overflow-hidden py-8'>
-        <Marquee
-          vertical
-          pauseOnHover
-          className='[--duration:60s]'
-          paused={selectedProject !== null}
-        >
-          {firstRow.map((review, index) => (
-            <ReviewCard
-              key={index}
-              {...review}
-              onClick={() => setSelectedProject(review)}
-            />
-          ))}
-        </Marquee>
+        <div className='w-full h-[800px] 2xl:h-[1000px] flex items-center justify-center overflow-hidden py-8'>
+          <Marquee
+            vertical
+            pauseOnHover
+            className='[--duration:60s]'
+            paused={selectedProject !== null}
+          >
+            {firstRow.map((review, index) => (
+              <ReviewCard
+                key={index}
+                {...review}
+                onClick={() => setSelectedProject(review)}
+              />
+            ))}
+          </Marquee>
 
-        <Marquee
-          vertical
-          pauseOnHover
-          className='[--duration:60s]'
-          paused={selectedProject !== null}
-        >
-          {secondRow.map((review, index) => (
-            <ReviewCard
-              key={index}
-              {...review}
-              onClick={() => setSelectedProject(review)}
-            />
-          ))}
-        </Marquee>
+          <Marquee
+            vertical
+            pauseOnHover
+            className='[--duration:60s]'
+            paused={selectedProject !== null}
+          >
+            {secondRow.map((review, index) => (
+              <ReviewCard
+                key={index}
+                {...review}
+                onClick={() => setSelectedProject(review)}
+              />
+            ))}
+          </Marquee>
 
-        <Marquee
-          vertical
-          pauseOnHover
-          className='[--duration:60s] hidden md:flex'
-          paused={selectedProject !== null}
-        >
-          {thirdRow.map((review, index) => (
-            <ReviewCard
-              key={index}
-              {...review}
-              onClick={() => setSelectedProject(review)}
-            />
-          ))}
-        </Marquee>
+          <Marquee
+            vertical
+            pauseOnHover
+            className='[--duration:60s] hidden md:flex'
+            paused={selectedProject !== null}
+          >
+            {thirdRow.map((review, index) => (
+              <ReviewCard
+                key={index}
+                {...review}
+                onClick={() => setSelectedProject(review)}
+              />
+            ))}
+          </Marquee>
+        </div>
       </div>
 
       <AnimatePresence>

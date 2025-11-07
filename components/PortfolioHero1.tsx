@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { TextReveal } from './ui/text-reveal';
+import { AnimatedThemeToggler } from './ui/animated-theme-toggler';
+import { Lens } from './ui/lens';
 
 /**
  * A self-contained, responsive portfolio hero section with:
@@ -11,20 +13,23 @@ import { TextReveal } from './ui/text-reveal';
  */
 export function PortfolioHero1() {
   return (
-    <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-24 sm:py-32 px-4 md:px-8'>
+    <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-24 sm:py-32 md:px-6'>
       {/* Centered, max-width container. */}
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-340 mx-auto px-4 md:px-8'>
         {/* --- LEFT-ALIGNED SECTION --- */}
 
         {/* Label */}
-        <p className='text-left text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2'>
+        <p className='text-left text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2 md:-ml-8'>
           Project
         </p>
 
         {/* Main Title (Stacked) */}
-        <h1 className='text-left text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight tracking-tighter mb-16'>
+        <h1 className='text-left text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight tracking-tighter mb-16 md:-ml-8'>
           <span className='block'>ALEVTINA</span>
-          <span className='block'>GORDIENKO</span>
+          <span className='relative inline-block'>
+            GORDIENKO
+            <AnimatedThemeToggler className='absolute top-0 left-full ml-2' />
+          </span>
         </h1>
 
         <div className='flex flex-col sm:flex-row justify-start items-start text-left gap-y-6 sm:gap-y-0 sm:gap-x-12 md:gap-x-24 mb-16 w-full max-w-4xl'>
@@ -32,7 +37,7 @@ export function PortfolioHero1() {
             <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
               Enjoy
             </p>
-            <Link href='#my-work' className='text-lg font-medium group'>
+            <Link href='#my-works' className='text-lg font-medium group'>
               {'[ '}
               <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
                 VIEWING MY WORK
@@ -77,15 +82,22 @@ export function PortfolioHero1() {
 
         {/* Main Image Container */}
         <div className='w-full'>
-          <div className='relative w-full aspect-[3/2] overflow-hidden rounded-lg mb-4 shadow-lg'>
-            <Image
-              src='/portfolio-image.png'
-              alt='Artistic portrait with glitch-inspired overlays and ethereal lighting'
-              layout='fill'
-              objectFit='cover'
-              quality={90}
-            />
-          </div>
+          <Lens
+            zoomFactor={1.5}
+            lensSize={170}
+            isStatic={false}
+            ariaLabel='Zoom Area'
+          >
+            <div className='relative w-full aspect-[3/2] overflow-hidden rounded-lg mb-4 shadow-lg'>
+              <Image
+                src='/portfolio-image.png'
+                alt='Artistic portrait with glitch-inspired overlays and ethereal lighting'
+                layout='fill'
+                objectFit='cover'
+                quality={90}
+              />
+            </div>
+          </Lens>
         </div>
 
         <p className='text-center text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mt-24 mb-4'>
@@ -93,17 +105,13 @@ export function PortfolioHero1() {
         </p>
 
         {/* Introduction Paragraph with TextReveal */}
-        <TextReveal
-          className='text-start text-2xl md:text-3xl font-medium leading-relaxed max-w-4xl mx-auto'
-        >
+        <TextReveal className='font-mono text-start text-2xl md:text-3xl font-medium leading-relaxed max-w-4xl mx-auto'>
           A VIBRANT PHOTOGRAPHY SHOOT CAPTURES THE ESSENCE OF MODERN BRAND
           IDENTITY, BLENDING ARTISTIC EXPRESSION WITH BOLD VISUAL STORYTELLING.
         </TextReveal>
 
         {/* Detailed Description with TextReveal */}
-        <TextReveal
-          className='text-start text-base leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'
-        >
+        <TextReveal className='font-funnel font-light text-start text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'>
           This project centers on a creative portrait session designed to
           reflect the innovative and dynamic spirit of the brand. The shoot
           features ethereal lighting and glitch-inspired color overlays, evoking

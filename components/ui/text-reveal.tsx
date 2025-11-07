@@ -19,7 +19,7 @@ export const TextReveal: FC<TextRevealProps> = ({
     target: ref,
     offset: ['start center', 'end center'],
   });
-  
+
   if (typeof children !== 'string') {
     throw new Error('TextReveal: children must be a string');
   }
@@ -30,7 +30,7 @@ export const TextReveal: FC<TextRevealProps> = ({
     <p
       ref={ref}
       className={cn(
-        'flex flex-wrap text-black/50 dark:text-white/20',
+        'flex flex-wrap text-black/50 dark:text-white/60',
         className
       )}
       {...props}
