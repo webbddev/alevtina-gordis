@@ -237,7 +237,10 @@ const Projects = () => {
   const thirdRow = projectData.slice(6, projectData.length);
 
   return (
-    <section className='w-full bg-white py-16 md:mx-auto 2xl:w-[70vw] md:px-16'>
+    <section
+      id='my-work'
+      className='w-full bg-white py-16 md:mx-auto 2xl:w-[70vw] md:px-16'
+    >
       <div className='mx-auto mb-12 px-2 md:px-0'>
         <h2 className='text-4xl font-bold text-gray-900 mb-4'>{t('title')}</h2>
         <p className='text-[#7b7b7b] text-lg'>{t('subtitle')}</p>
