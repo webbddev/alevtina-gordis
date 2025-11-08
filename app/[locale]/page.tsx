@@ -1,14 +1,12 @@
-import Footer from '@/components/Footer';
-import HeroSection from '@/components/hero-section';
-import { PortfolioHero } from '@/components/PortfolioHero';
-import { PortfolioHero1 } from '@/components/PortfolioHero1';
+import { Hero } from '@/components/Hero';
 import Projects from '@/components/Projects';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <>
       {/* <PortfolioHero /> */}
-      <PortfolioHero1 />
+      <Hero />
       {/* <HeroSection /> */}
       <Projects />
       <Footer />
