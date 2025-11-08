@@ -5,20 +5,13 @@ import { ArrowRight } from 'lucide-react';
 import { TextReveal } from './ui/text-reveal';
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler';
 import { Lens } from './ui/lens';
+import LanguageSwitcher from './LanguageSwitcher';
 
-/**
- * A self-contained, responsive portfolio hero section with:
- * - LEFT-ALIGNED top section (Title, Metadata, Image)
- * - CENTER-ALIGNED bottom section (Project Overview, Text, Contact Link)
- */
 export function Hero() {
   return (
-    <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-14  md:px-6'>
-      {/* Centered, max-width container. */}
+    <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-14 md:px-6'>
       <div className='max-w-340 mx-auto px-4 md:px-8'>
         {/* --- LEFT-ALIGNED SECTION --- */}
-
-        {/* Label */}
         <p className='text-left text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2 md:-ml-8'>
           Project
         </p>
@@ -32,17 +25,68 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className='pt-0 py-6'>
-          <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
-            I talk
-          </p>
-          <Link href='#my-works' className='text-lg font-medium group'>
-            {'[ '}
-            <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
-              LanguageSwitcher
-            </span>
-            {' ]'}
-          </Link>
+        {/* --- COMBINED NAVIGATION SECTION --- */}
+        <div className='flex flex-col sm:flex-row justify-between items-start gap-6 md:gap-10 mb-16 w-full max-w-6xl mx-auto'>
+          {/* Three Links (Centered) */}
+          <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:flex lg:flex-row lg:items-center lg:justify-center lg:flex-nowrap'>
+            {/* Language Switcher */}
+            <div className='flex-shrink-0'>
+              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+                I talk
+              </p>
+              <div className='text-base font-medium group'>
+                {'[ '}
+                <LanguageSwitcher />
+                {' ]'}
+              </div>
+            </div>
+            {/* --- Viewing My Work Link --- */}
+            <div className=''>
+              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+                Enjoy
+              </p>
+              <Link href='#my-works' className='text-base font-medium group '>
+                {'[ '}
+                <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
+                  VIEWING MY WORK
+                </span>
+                {' ]'}
+              </Link>
+            </div>
+            {/* --- Download CV Link --- */}
+            <div className=''>
+              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+                Feel free
+              </p>
+              <a
+                href='/Alevtina-Gordienko-CV.pdf'
+                download
+                className='text-base font-medium group'
+              >
+                {'[ '}
+                <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
+                  DOWNLOAD MY CV
+                </span>
+                {' ]'}
+              </a>
+            </div>
+            {/* --- Contact Me Link --- */}
+            <div className=''>
+              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+                Welcome
+              </p>
+              <Link
+                href='#contact'
+                className='text-base font-medium hover:text-gray-400 dark:hover:text-gray-300 transition-colors'
+              >
+                {'[ '}
+                <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
+                  CONTACT ME
+                </span>
+                {' ]'}
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Main Image Container */}
@@ -87,56 +131,6 @@ export function Hero() {
           touchpoints to communicate a unique blend of creativity, technology,
           and authenticity.
         </TextReveal>
-
-        {/* --- CENTER-ALIGNED SECTION --- */}
-        <div className='flex flex-col sm:flex-row justify-between md:justify-center items-start sm:items-center sm:flex-nowrap gap-y-6 sm:gap-y-0 sm:gap-x-12 md:gap-x-14 mb-16 w-full max-w-4xl mt-10 mx-auto'>
-          {/* --- VIEWING MY WORK Link --- */}
-          <div className=''>
-            <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
-              Enjoy
-            </p>
-            <Link href='#my-works' className='text-lg font-medium group'>
-              {'[ '}
-              <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
-                VIEWING MY WORK
-              </span>
-              {' ]'}
-            </Link>
-          </div>
-          {/* --- Download CV Link --- */}
-          <div className=''>
-            <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
-              Feel free
-            </p>
-            <a
-              href='/Alevtina-Gordienko-CV.pdf'
-              download
-              className='text-lg font-medium group'
-            >
-              {'[ '}
-              <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
-                DOWNLOAD MY CV
-              </span>
-              {' ]'}
-            </a>
-          </div>
-          {/* --- Contact Me Link --- */}
-          <div className=''>
-            <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
-              Welcome
-            </p>
-            <Link
-              href='#contact'
-              className='text-lg font-medium hover:text-gray-400 dark:hover:text-gray-300 transition-colors'
-            >
-              {'[ '}
-              <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
-                CONTACT ME
-              </span>
-              {' ]'}
-            </Link>
-          </div>
-        </div>
 
         {/* Contact Us Link (Centered) */}
         {/* <div className='flex justify-center mt-16'>

@@ -60,27 +60,13 @@ const Footer = () => {
                       Home
                     </a>
                   </li>
-                  <li>
-                    <a href='#' className='text-xl font-medium hover:underline'>
-                      Collection
-                    </a>
-                  </li>
+
                   <li>
                     <a
                       href='#my-works'
                       className='text-xl font-medium hover:underline'
                     >
                       Projects
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#' className='text-xl font-medium hover:underline'>
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#' className='text-xl font-medium hover:underline'>
-                      Login
                     </a>
                   </li>
                 </ul>
@@ -142,14 +128,6 @@ const Footer = () => {
             &copy;{new Date().getFullYear()} Alevtina Gordienko All rights
             reserved
           </p>
-          {/* <div className='flex gap-6'>
-            <a href='#' className='hover:underline'>
-              Privacy Policy
-            </a>
-            <a href='#' className='hover:underline'>
-              Terms of Service
-            </a>
-          </div> */}
         </div>
       </div>
     </>
