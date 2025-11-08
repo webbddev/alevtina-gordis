@@ -3,8 +3,10 @@
 import { Marquee } from './ui/marquee';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { HeroVideoDialog } from './ui/hero-video-dialog';
+import { XIcon } from 'lucide-react';
 
 // Individual card component for project preview
 // Displays project image with overlay containing name and description
@@ -55,6 +57,7 @@ const ProjectDetailsSlider = ({
     details: string;
     tags: string[];
     className: string;
+    videoSrc: string;
   };
   onClose: () => void;
 }) => {
@@ -66,24 +69,45 @@ const ProjectDetailsSlider = ({
       animate={{ x: 0 }}
       exit={{ x: '100%' }}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-      className='fixed right-0 top-0 h-full md:w-3/5 xl:w-1/2 bg-white dark:bg-gray-800 shadow-lg p-6 z-50 cursor-pointer'
+      className='fixed right-0 top-0 z-50 h-full cursor-pointer overflow-y-auto bg-white p-6 shadow-lg dark:bg-gray-800 md:w-3/5 xl:w-1/2'
     >
       <button
         onClick={onClose}
         className='absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
       >
-        {t('close')}
+        <XIcon className='h-6 w-6' />
       </button>
 
       <div className='mt-8'>
         <h2 className='text-2xl font-bold mb-4'>{project.name}</h2>
-        <Image
+        {/* Replace Image with HeroVideoDialog */}
+        <div className='w-full mb-6 rounded-lg overflow-hidden'>
+          <HeroVideoDialog
+            className='block dark:hidden'
+            animationStyle='top-in-bottom-out'
+            videoSrc={project.videoSrc}
+            thumbnailSrc={project.src}
+            thumbnailAlt={project.name}
+            aspectRatio='aspect-video'
+          />
+          <HeroVideoDialog
+            className='hidden dark:block'
+            animationStyle='top-in-bottom-out'
+            videoSrc={project.videoSrc}
+            thumbnailSrc={project.src}
+            thumbnailAlt={project.name}
+            aspectRatio='aspect-video'
+          />
+        </div>
+
+        {/* <Image
           src={project.src}
           alt={project.name}
           width={500}
           height={300}
           className='w-full rounded-lg mb-6 object-cover h-60'
-        />
+        /> */}
+
         <p className='text-gray-600 dark:text-gray-300 mb-4'>
           {project.description}
         </p>
@@ -123,7 +147,19 @@ const Projects = () => {
     details: string;
     tags: string[];
     className: string;
+    videoSrc: string;
   } | null>(null);
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [selectedProject]);
 
   // Get project data from translations
   const projectData = [

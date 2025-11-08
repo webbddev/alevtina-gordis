@@ -1,4 +1,3 @@
-import React from 'react';
 
 // A simple SVG icon for the external links
 const ExternalLinkIcon = () => (

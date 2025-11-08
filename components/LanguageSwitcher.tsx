@@ -23,9 +23,9 @@ export default function LanguageSwitcher({
   const currentLocale = pathname.split('/')[1] || 'en';
 
   const locales = [
-    { code: 'en', name: '🇬🇧 English 🇬🇧' },
+    { code: 'en', name: 'English' },
     { code: 'ru', name: 'Русский' },
-    { code: 'ro', name: '🇲🇩 Română 🇲🇩' },
+    { code: 'ro', name: 'Română' },
   ];
 
   const onSelectChange = (nextLocale: string) => {

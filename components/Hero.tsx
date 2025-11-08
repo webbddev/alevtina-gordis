@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -114,13 +113,13 @@ export function Hero() {
         </p>
 
         {/* Introduction Paragraph with TextReveal */}
-        <TextReveal className='font-mono text-start text-2xl md:text-3xl font-medium leading-relaxed max-w-4xl mx-auto'>
+        <TextReveal className='font-mono text-justify text-2xl md:text-3xl font-medium leading-relaxed max-w-4xl mx-auto'>
           A VIBRANT PHOTOGRAPHY SHOOT CAPTURES THE ESSENCE OF MODERN BRAND
           IDENTITY, BLENDING ARTISTIC EXPRESSION WITH BOLD VISUAL STORYTELLING.
         </TextReveal>
 
         {/* Detailed Description with TextReveal */}
-        <TextReveal className='font-funnel font-light text-start text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'>
+        <TextReveal className='font-funnel font-light text-justify text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'>
           This project centers on a creative portrait session designed to
           reflect the innovative and dynamic spirit of the brand. The shoot
           features ethereal lighting and glitch-inspired color overlays, evoking
@@ -131,17 +130,6 @@ export function Hero() {
           touchpoints to communicate a unique blend of creativity, technology,
           and authenticity.
         </TextReveal>
-
-        {/* Contact Us Link (Centered) */}
-        {/* <div className='flex justify-center mt-16'>
-          <Link
-            href='/contact'
-            className='inline-flex items-center text-base font-medium text-gray-800 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors'
-          >
-            Contact Us
-            <ArrowRight className='ml-2 h-4 w-4' />
-          </Link>
-        </div> */}
       </div>
     </section>
   );

@@ -6,57 +6,66 @@
     "title": "Explorați proiectele noastre",
     "subtitle": "Proiectele noastre prezintă cele mai bune tehnici vizuale și de storytelling.",
     "projectDetails": "Detalii proiect",
-    "close": "×",
     "projects": {
       "project1": {
         "name": "Depozitul Milina",
         "description": "Conținut video creat legat de aniversarea companiei",
-        "details": "Campanie comprehensivă care prezintă produse pentru începerea școlii cu storytelling dinamic și excelență vizuală. Am produs o serie de videoclipuri de înaltă calitate care au capturat spiritul aniversării, evidențiind momentele cheie și realizările."
+        "details": "Campanie comprehensivă care prezintă produse pentru începerea școlii cu storytelling dinamic și excelență vizuală. Am produs o serie de videoclipuri de înaltă calitate care au capturat spiritul aniversării, evidențiind momentele cheie și realizările.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project2": {
         "name": "Selecție Peisaj",
         "description": "Selectarea celui mai bun peisaj pentru romanul autorului",
-        "details": "Am creat o pagină de destinație centrată pe utilizator pentru Airbnb, concentrându-ne pe navigare intuitivă și design vizual atrăgător pentru a îmbunătăți implicarea utilizatorilor și a stimula rezervările."
+        "details": "Am creat o pagină de destinație centrată pe utilizator pentru Airbnb, concentrându-ne pe navigare intuitivă și design vizual atrăgător pentru a îmbunătăți implicarea utilizatorilor și a stimula rezervările.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project3": {
         "name": "Audi",
         "description": "Dezvoltat configurator auto Audi",
-        "details": "Am proiectat un configurator sofisticat de mașini pentru Audi, permițând utilizatorilor să-și personalizeze vehiculele cu vizualizări în timp real și specificații detaliate, îmbunătățind experiența de cumpărare online."
+        "details": "Am proiectat un configurator sofisticat de mașini pentru Audi, permițând utilizatorilor să-și personalizeze vehiculele cu vizualizări în timp real și specificații detaliate, îmbunătățind experiența de cumpărare online.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project4": {
         "name": "Paypal",
         "description": "Integrat gateway de plată Paypal",
-        "details": "Am integrat perfect gateway-ul de plată PayPal într-o platformă e-commerce, asigurând tranzacții sigure și eficiente pentru clienți, îmbunătățind experiența generală de checkout."
+        "details": "Am integrat perfect gateway-ul de plată PayPal într-o platformă e-commerce, asigurând tranzacții sigure și eficiente pentru clienți, îmbunătățind experiența generală de checkout.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project5": {
         "name": "Sony",
         "description": "Dezvoltat website Sony Playstation",
-        "details": "Am construit un website dinamic și captivant pentru Sony PlayStation, cu elemente interactive, vizuale imersive și o interfață prietenoasă pentru a promova produsele și serviciile de gaming."
+        "details": "Am construit un website dinamic și captivant pentru Sony PlayStation, cu elemente interactive, vizuale imersive și o interfață prietenoasă pentru a promova produsele și serviciile de gaming.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project6": {
         "name": "Under Armour",
         "description": "Proiectat aplicație fitness Under Armour",
-        "details": "Am proiectat o aplicație fitness intuitivă și motivantă pentru Under Armour, încorporând planuri de antrenament personalizate, urmărirea progresului și funcții sociale pentru a îmbunătăți implicarea utilizatorilor și obiectivele de fitness."
+        "details": "Am proiectat o aplicație fitness intuitivă și motivantă pentru Under Armour, încorporând planuri de antrenament personalizate, urmărirea progresului și funcții sociale pentru a îmbunătăți implicarea utilizatorilor și obiectivele de fitness.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project7": {
         "name": "Redbull",
         "description": "Creată campanie băutură energizantă Redbull",
-        "details": "Am dezvoltat o campanie digitală de înaltă energie pentru Red Bull, cu conținut dinamic, integrare social media și experiențe interactive pentru a amplifica conștientizarea mărcii și a stimula implicarea consumatorilor."
+        "details": "Am dezvoltat o campanie digitală de înaltă energie pentru Red Bull, cu conținut dinamic, integrare social media și experiențe interactive pentru a amplifica conștientizarea mărcii și a stimula implicarea consumatorilor.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project8": {
         "name": "Dyson",
         "description": "Dyson și Maximum Electronics: O călătorie colaborativă în storytelling-ul produselor",
-        "details": "Parteneriat cu Dyson și Maximum Electronics pentru a crea recenzii convingătoare ale produselor și conținut de storytelling, prezentând inovația și performanța celor mai recente produse ale lor."
+        "details": "Parteneriat cu Dyson și Maximum Electronics pentru a crea recenzii convingătoare ale produselor și conținut de storytelling, prezentând inovația și performanța celor mai recente produse ale lor.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project9": {
         "name": "Visa",
         "description": "Integrat gateway de plată Visa",
-        "details": "Am integrat cu succes gateway-ul de plată Visa, oferind procesare sigură și fiabilă a tranzacțiilor pentru clienții online, îmbunătățind eficiența procesului de checkout."
+        "details": "Am integrat cu succes gateway-ul de plată Visa, oferind procesare sigură și fiabilă a tranzacțiilor pentru clienții online, îmbunătățind eficiența procesului de checkout.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project10": {
         "name": "Maximum Riscani",
         "description": "Proiectată ceremonia de deschidere a magazinului Maximum",
-        "details": "Am redesigned website-ul de comerț electronic Nordstrom, concentrându-ne pe un aspect estetic curat și modern și o navigare îmbunătățită pentru a îmbunătăți experiența de cumpărături online și a crește conversiile."
+        "details": "Am redesigned website-ul de comerț electronic Nordstrom, concentrându-ne pe un aspect estetic curat și modern și o navigare îmbunătățită pentru a îmbunătăți experiența de cumpărături online și a crește conversiile.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       }
     }
   }
