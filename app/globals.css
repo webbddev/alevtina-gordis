@@ -45,13 +45,10 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --animate-shine: shine var(--duration) infinite linear;
-  --animate-aurora: aurora 8s ease-in-out infinite alternate;
 
   /* --- TEXT GLOW CUSTOM PROPERTIES AND ANIMATION KEYFRAMES (MUST stay inside @theme) --- */
-  --text-shadow-glow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 15px rgba(255, 255, 255, 0.6);
-  --text-shadow-dark-glow: 0 0 10px rgba(0, 0, 0, 0.5),
-    0 0 15px rgba(0, 0, 0, 0.3);
+  --text-shadow-glow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6);
+  --text-shadow-dark-glow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3);
   --animate-text-pulse: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes pulse {
@@ -63,29 +60,7 @@
       opacity: 0.8;
     }
   }
-
-  @keyframes aurora {
-    0% {
-      background-position: 0% 50%;
-      transform: rotate(-5deg) scale(0.9);
-    }
-    25% {
-      background-position: 50% 100%;
-      transform: rotate(5deg) scale(1.1);
-    }
-    50% {
-      background-position: 100% 50%;
-      transform: rotate(-3deg) scale(0.95);
-    }
-    75% {
-      background-position: 50% 0%;
-      transform: rotate(3deg) scale(1.05);
-    }
-    100% {
-      background-position: 0% 50%;
-      transform: rotate(-5deg) scale(0.9);
-    }
-  }
+  /* --- END TEXT GLOW CUSTOM PROPERTIES AND ANIMATION KEYFRAMES --- */
 
   @keyframes marquee {
     from {
@@ -114,7 +89,24 @@
       background-position: 0% 0%;
     }
   }
-}
+  --animate-aurora: aurora 8s ease-in-out infinite alternate
+;
+  @keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);}
+  25% {
+    background-position: 50% 100%;
+    transform: rotate(5deg) scale(1.1);}
+  50% {
+    background-position: 100% 50%;
+    transform: rotate(-3deg) scale(0.95);}
+  75% {
+    background-position: 50% 0%;
+    transform: rotate(3deg) scale(1.05);}
+  100% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);}}}
 
 /* --- GLOW UTILITY CLASSES (MOVED OUTSIDE @theme) --- */
 /* This is the light-mode glow utility */

@@ -1,4 +1,4 @@
-
+import { useTranslations } from 'next-intl';
 // A simple SVG icon for the external links
 const ExternalLinkIcon = () => (
   <svg
@@ -19,6 +19,8 @@ const ExternalLinkIcon = () => (
 );
 
 const Footer = () => {
+  const t = useTranslations('Footer');
+
   return (
     <>
       {/* Main Footer Content */}
@@ -51,12 +53,12 @@ const Footer = () => {
               {/* Navigate Links */}
               <div>
                 <h3 className='text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4'>
-                  Navigate
+                  {t('navigate')}
                 </h3>
                 <ul className='space-y-3'>
                   <li>
                     <a href='#' className='text-xl font-medium hover:underline'>
-                      Home
+                      {t('home')}
                     </a>
                   </li>
 
@@ -65,7 +67,7 @@ const Footer = () => {
                       href='#my-works'
                       className='text-xl font-medium hover:underline'
                     >
-                      Projects
+                      {t('projects')}
                     </a>
                   </li>
                 </ul>
@@ -74,7 +76,7 @@ const Footer = () => {
               {/* Social Links */}
               <div>
                 <h3 className='text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4'>
-                  Social
+                  {t('social')}
                 </h3>
                 <ul className='space-y-3'>
                   <li>
@@ -82,7 +84,7 @@ const Footer = () => {
                       href='#'
                       className='text-xl font-medium hover:underline flex items-center gap-1.5'
                     >
-                      Linkedin <ExternalLinkIcon />
+                      {t('mySeoBlog')} <ExternalLinkIcon />
                     </a>
                   </li>
                   <li>

@@ -55,6 +55,24 @@ export function Hero() {
                 {' ]'}
               </Link>
             </div>
+            {/* --- Visit BirDigi Link --- */}
+            <div className=''>
+              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+                {t('visit')}
+              </p>
+              <a
+                href='https://birdigi.vercel.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-base font-medium group'
+              >
+                {'[ '}
+                <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
+                  {t('visitBirDigi')}
+                </span>
+                {' ]'}
+              </a>
+            </div>
             {/* --- Download CV Link --- */}
             <div className=''>
               <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
@@ -72,6 +90,7 @@ export function Hero() {
                 {' ]'}
               </a>
             </div>
+
             {/* --- Contact Me Link --- */}
             <div className=''>
               <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>

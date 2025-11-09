@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { HeroVideoDialog } from './ui/hero-video-dialog';
 import { XIcon } from 'lucide-react';
 
+
 // Individual card component for project preview
 // Displays project image with overlay containing name and description
 const ReviewCard = ({
@@ -108,13 +109,17 @@ const ProjectDetailsSlider = ({
           className='w-full rounded-lg mb-6 object-cover h-60'
         /> */}
 
-        <p className='text-gray-600 dark:text-gray-300 mb-4'>
+        <p className='2xl:text-lg text-gray-600 dark:text-gray-300 mb-4'>
           {project.description}
         </p>
 
         <div className='space-y-4'>
-          <h3 className='font-semibold text-lg'>{t('projectDetails')}</h3>
-          <p className='text-gray-600 dark:text-gray-300'>{project.details}</p>
+          <h3 className='font-semibold text-lg 2xl:text-xl'>
+            {t('projectDetails')}
+          </h3>
+          <p className='text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-600 dark:text-gray-300'>
+            {project.details}
+          </p>
           {/* <div className='flex flex-wrap gap-2'>
             {project.tags?.map((tag, index) => (
               <span
