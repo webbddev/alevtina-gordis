@@ -29,65 +29,158 @@
     "title": "Proiectele Mele",
     "subtitle": "Proiectele noastre prezintă cele mai bune tehnici vizuale și de storytelling.",
     "projectDetails": "Detalii proiect",
+    "projectRole": "Rol",
+    "projectTasks": "Sarcini",
+    "projectResult": "Rezultat",
     "projects": {
       "project1": {
-        "name": "Depozitul Milina",
-        "description": "Conținut video creat legat de aniversarea companiei",
-        "details": "Campanie comprehensivă care prezintă produse pentru începerea școlii cu storytelling dinamic și excelență vizuală. Am produs o serie de videoclipuri de înaltă calitate care au capturat spiritul aniversării, evidențiind momentele cheie și realizările.",
+        "name": "JURNALIST | ȘTIRI 1TV (PARTENERIAT BBC) | 2024 – 2025",
+        "summary": "Crearea de reportaje de știri zilnice pentru 1TV în parteneriat cu BBC.",
+        "role": "Jurnalist în departamentul de știri al 1TV, lucrând în parteneriat cu BBC.",
+        "description": [
+          "Acoperirea zilnică a evenimentelor și crearea de reportaje de autor.",
+          "Cercetarea subiectelor, interacțiunea cu reprezentanții organizațiilor de stat și publice, coordonarea și realizarea interviurilor.",
+          "Crearea de subiecte în conformitate cu standardele britanice de radiodifuziune și etica jurnalistică."
+        ],
+        "result": "Lansarea de subiecte de autor care formează brandul unic al știrilor postului TV cu publicare pe rețelele de socializare ale 1TV.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project2": {
-        "name": "Selecție Peisaj",
-        "description": "Selectarea celui mai bun peisaj pentru romanul autorului",
-        "details": "Am creat o pagină de destinație centrată pe utilizator pentru Airbnb, concentrându-ne pe navigare intuitivă și design vizual atrăgător pentru a îmbunătăți implicarea utilizatorilor și a stimula rezervările.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "name": "PRODUCĂTOR | CAMPANIA „VOTEAZĂ CONȘTIENT” (NDI) | 1TV 2025",
+        "summary": "Producția de clipuri video și reportaje pentru campania „Votează Conștient”.",
+        "role": "Producător a 8 clipuri video artistice pentru campania „Votează Conștient” și 4 reportaje informative despre activitățile pre-electorale și importanța votului conștient în parteneriat cu ndi.org pentru 1TV.",
+        "description": [
+          "Căutarea personajelor, negocieri cu personalități publice și celebre din Moldova pentru participarea la proiect.",
+          "Dezvoltarea scenariilor, coordonarea ideilor cu personajele și regizorul principal al postului.",
+          "Cercetarea și selectarea locațiilor, organizarea condițiilor pentru filmări.",
+          "Gestionarea procesului de filmare, coordonarea muncii operatorilor și a echipei de filmare.",
+          "Post-producție: montaj, selecția muzicii, controlul produsului final."
+        ],
+        "result": "8 teasere video pentru campania pre-electorală în stil storytelling și 4 reportaje speciale informative în cadrul ȘTIRI 1TV, subliniind importanța votului conștient.",
+        "videoSrc": "https://www.youtube.com/watch?v=w2kGpsm5KaI",
+        "videoLinks": [
+          "https://www.youtube.com/watch?v=3GWCh9kMji8",
+          "https://www.youtube.com/watch?v=dR9r6quDwqI",
+          "https://www.youtube.com/watch?v=17eM8yXggY0",
+          "https://www.youtube.com/watch?v=H2-DTDyY0NE",
+          "https://www.youtube.com/watch?v=wdaKZPbk-h0"
+        ]
       },
       "project3": {
-        "name": "Audi",
-        "description": "Dezvoltat configurator auto Audi",
-        "details": "Am proiectat un configurator sofisticat de mașini pentru Audi, permițând utilizatorilor să-și personalizeze vehiculele cu vizualizări în timp real și specificații detaliate, îmbunătățind experiența de cumpărare online.",
+        "name": "PRODUCĂTOR | Site pentru TATIANA BRAGA BEAUTY SALON | 2024",
+        "summary": "Crearea și lansarea unei pagini de destinație pentru un nou șampon de la Tatiana Braga Beauty Salon.",
+        "role": "Producător al proiectului de lansare a unui site pentru un nou produs al salonului de înfrumusețare Tatiana Braga.",
+        "description": [
+          "Cercetarea șamponului, creat de un expert.",
+          "Crearea textului pentru pagina de destinație.",
+          "Organizarea unei ședințe foto pentru produs.",
+          "Coordonarea lucrului cu programatorul la crearea paginii de destinație."
+        ],
+        "result": "Lansarea cu succes a paginii de destinație, inclusiv crearea de conținut, organizarea unei ședințe foto și coordonarea cu un dezvoltator web, ceea ce a dus la prezentarea eficientă a noului produs pe piață.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project4": {
-        "name": "Paypal",
-        "description": "Integrat gateway de plată Paypal",
-        "details": "Am integrat perfect gateway-ul de plată PayPal într-o platformă e-commerce, asigurând tranzacții sigure și eficiente pentru clienți, îmbunătățind experiența generală de checkout.",
+        "name": "PRODUCĂTOR | MILINA BAKERY | 2024",
+        "summary": "Producția a trei clipuri video pentru promovarea unei noi linii de pâine Milina Bakery.",
+        "role": "Producător pentru crearea a trei clipuri pentru site și promovarea unei noi linii de pâine.",
+        "description": [
+          "Căutarea personajelor, negocieri cu personalități publice pentru participarea la proiect.",
+          "Dezvoltarea scenariilor, coordonarea ideilor cu personajele și marketerul șef al Milina.",
+          "Selectarea locațiilor, organizarea condițiilor pentru filmări, storyboard, regie.",
+          "Gestionarea procesului de filmare, coordonarea muncii operatorilor și a echipei de filmare.",
+          "Post-producție: montaj, selecția muzicii, controlul produsului final."
+        ],
+        "result": "3 videoclipuri promoționale pentru site-ul companiei.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project5": {
-        "name": "Sony",
-        "description": "Dezvoltat website Sony Playstation",
-        "details": "Am construit un website dinamic și captivant pentru Sony PlayStation, cu elemente interactive, vizuale imersive și o interfață prietenoasă pentru a promova produsele și serviciile de gaming.",
+        "name": "ADMINISTRATOR | SALON DE NUNTĂ “APRIORI” | 2023",
+        "summary": "Managementul complet al unui salon de nuntă, inclusiv vânzări, marketing și instruirea personalului.",
+        "role": "Administrator",
+        "description": [
+          "Managementul complet al companiei în absența directorului.",
+          "Consultanță pentru clienți și încheierea de tranzacții.",
+          "Gestionarea rețelelor sociale și a site-ului.",
+          "Inventariere, administrarea registrului de casă.",
+          "Instruirea personalului.",
+          "Muncă în condițiile unui sezon de nunți intens, lucru cu clienți străini."
+        ],
+        "result": "A asigurat funcționarea fără probleme a salonului, a crescut vânzările și a gestionat cu succes echipa în timpul sezonului de vârf.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project6": {
-        "name": "Under Armour",
-        "description": "Proiectat aplicație fitness Under Armour",
-        "details": "Am proiectat o aplicație fitness intuitivă și motivantă pentru Under Armour, încorporând planuri de antrenament personalizate, urmărirea progresului și funcții sociale pentru a îmbunătăți implicarea utilizatorilor și obiectivele de fitness.",
+        "name": "CO-AUTOR ȘI SPEAKER | PROIECTUL “PREMIERE ESQUISSE” | 2021 – 2022",
+        "summary": "Co-autor și speaker al unui proiect educațional pentru tinerii designeri.",
+        "role": "Co-autor și speaker",
+        "description": [
+          "Co-autor și speaker al proiectului “Premiere Esquisse” pentru tinerii designeri.",
+          "Crearea conceptului concursului și implementarea sa detaliată.",
+          "Susținerea de prelegeri și master-class-uri pe temele: 'Producția unei ședințe foto', 'Vectorii principali ai stilului', 'Arhetipurile brandului și ale colecției', 'Liniaritatea și contrastele de culoare în îmbrăcăminte'."
+        ],
+        "result": "Au fost implementate 2 sezoane ale proiectului, finalul cărora au fost prezentări de colecții ale tinerilor designeri.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project7": {
-        "name": "Redbull",
-        "description": "Creată campanie băutură energizantă Redbull",
-        "details": "Am dezvoltat o campanie digitală de înaltă energie pentru Red Bull, cu conținut dinamic, integrare social media și experiențe interactive pentru a amplifica conștientizarea mărcii și a stimula implicarea consumatorilor.",
+        "name": "MANAGER DE PROIECT | MAXIMUM ELECTRONICS SRL | 2019 – 2022",
+        "summary": "Managementul unui proiect de creare a recenziilor video pentru un mare retailer de electronice.",
+        "role": "Manager de proiect",
+        "description": [
+          "Manager de proiect pentru crearea de recenzii video pentru magazinul online Maximum Electronics SRL.",
+          "Cercetarea produselor premium (LG, Samsung, Sharp), scrierea scenariilor cu propria mea abilitate, fără AI.",
+          "Participare la filmări în calitate de prezentator. Participare la post-producție.",
+          "Coordonarea textelor și recenziilor cu reprezentanții străini ai LG Samsung Sharp.",
+          "Autor de texte comerciale pentru portalul Point.md."
+        ],
+        "result": "Peste 50 de videoclipuri (5–8 min), recenzia Dyson AirWrap a adunat peste 300.000 de vizualizări.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project8": {
-        "name": "Dyson",
-        "description": "Dyson și Maximum Electronics: O călătorie colaborativă în storytelling-ul produselor",
-        "details": "Parteneriat cu Dyson și Maximum Electronics pentru a crea recenzii convingătoare ale produselor și conținut de storytelling, prezentând inovația și performanța celor mai recente produse ale lor.",
+        "name": "MANAGER PR | MILINA BAKERY | 2019",
+        "summary": "Managementul unei campanii de PR pentru lansarea de noi linii de produse pentru Milina Bakery.",
+        "role": "Manager PR",
+        "description": [
+          "Șeful campaniei de PR, Milina Bakery / Iugintertrans S.A și alte proiecte.",
+          "Lansarea de noi linii de pâine sănătoasă 'Pravia' și 'Baltia'.",
+          "Scenarii, storyboard, casting, organizarea filmărilor și controlul montajului spoturilor publicitare.",
+          "Muncă în comun cu un targetolog și întreținerea conținutului video pentru rețelele sociale."
+        ],
+        "result": "Creșterea vânzărilor de la 300 la 6000 de pâini pe zi în primele trei luni de la lansare.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project9": {
-        "name": "Visa",
-        "description": "Integrat gateway de plată Visa",
-        "details": "Am integrat cu succes gateway-ul de plată Visa, oferind procesare sigură și fiabilă a tranzacțiilor pentru clienții online, îmbunătățind eficiența procesului de checkout.",
+        "name": "PRODUCĂTOR, AUTOR ȘI REGIZOR | PROIECTUL DE MODĂ “ISTIL”, ORHEI TV | 2018 – 2019",
+        "summary": "Producția completă a unei emisiuni TV săptămânale de modă.",
+        "role": "Producător, autor și regizor",
+        "description": [
+          "Producător, autor și regizor al proiectului de modă “ISTIL”, Orhei TV.",
+          "Producția completă a unei ediții săptămânale de 26 de minute: selecția eroinelor, prezentatorilor, locațiilor, partenerilor, scenariilor și controlul montajului.",
+          "Managementul unei echipe de 5 persoane (2 prezentatori, 3 operatori)."
+        ],
+        "result": "Au fost lansate 21 de emisiuni de televiziune.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project10": {
-        "name": "Maximum Riscani",
-        "description": "Proiectată ceremonia de deschidere a magazinului Maximum",
-        "details": "Am redesigned website-ul de comerț electronic Nordstrom, concentrându-ne pe un aspect estetic curat și modern și o navigare îmbunătățită pentru a îmbunătăți experiența de cumpărături online și a crește conversiile.",
+        "name": "JURNALIST | PROIECTUL “ISTORII URBANE”, TNT BRAVO TV | 2013 – 2017",
+        "summary": "Jurnalist și co-autor al unui proiect de televiziune zilnic despre povești urbane.",
+        "role": "Jurnalist și co-autor",
+        "description": [
+          "Jurnalist și co-autor al proiectului zilnic “Istorii Urbane”, TNT Bravo TV.",
+          "Căutare zilnică de subiecte, eroi și organizarea filmărilor timp de 4 ani la rând.",
+          "Scrierea de texte pentru subiecte, publicare pe rețelele sociale."
+        ],
+        "result": "Crearea de conținut zilnic pentru un proiect de televiziune timp de patru ani, inclusiv căutarea de povești, organizarea filmărilor și scrierea de scenarii.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+      },
+      "project11": {
+        "name": "PREZENTATOARE TV ȘI AUTOR | PROIECTUL NIT TV | 2009 – 2013",
+        "summary": "Prezentatoare, jurnalistă și autoare a mai multor proiecte de televiziune, inclusiv o emisiune matinală și un program despre protecția drepturilor consumatorilor.",
+        "role": "Prezentatoare TV, jurnalistă și autoare a proiectului",
+        "description": [
+          "Prezentatoare TV a emisiunii matinale 'NIT Dejun' - scenarii, căutare de subiecte actuale, interviuri cu vedete din show-business, reportaje speciale.",
+          "Autoare și șefă a proiectului 'Capcane pentru consumator' - investigații jurnalistice în domeniul protecției drepturilor consumatorilor, interviuri cu politicieni, avocați și personalități publice.",
+          "Corespondent special al programului 'Microeconomie' - scenarii și materiale analitice."
+        ],
+        "result": "Crearea și întreținerea mai multor programe de televiziune de succes, inclusiv efectuarea de investigații jurnalistice și interviuri cu personalități cheie.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       }
     }

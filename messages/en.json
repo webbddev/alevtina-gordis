@@ -29,65 +29,158 @@
     "title": "My Projects",
     "subtitle": "Our projects showcase the best visuals and storytelling techniques.",
     "projectDetails": "Project Details",
+    "projectRole": "Role",
+    "projectTasks": "Tasks",
+    "projectResult": "Result",
     "projects": {
       "project1": {
-        "name": "Milina Warehouse",
-        "description": "Created video content related to company's anniversary",
-        "details": "Comprehensive campaign showcasing back-to-school products with dynamic storytelling and visual excellence. We produced a series of high-quality videos that captured the spirit of the anniversary, highlighting key milestones and achievements.",
+        "name": "JOURNALIST | NEWS 1TV (BBC PARTNERSHIP) | 2024 – 2025",
+        "summary": "Creation of daily news reports for 1TV in partnership with the BBC.",
+        "role": "Journalist in the news department of 1TV, working in partnership with the BBC.",
+        "description": [
+          "Daily coverage of events and creation of original reports.",
+          "Researching topics, interacting with representatives of state and public organizations, coordinating and conducting interviews.",
+          "Creating stories in accordance with British broadcasting standards and journalistic ethics."
+        ],
+        "result": "Release of original stories that form the unique brand of the TV channel's news with publication on 1TV's social networks.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project2": {
-        "name": "Scenery Selection",
-        "description": "Selecting the best scenery for author's novel",
-        "details": "Crafted a user-centric landing page for Airbnb, focusing on intuitive navigation and visually appealing design to enhance user engagement and drive bookings.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "name": "PRODUCER | 'VOTE CONSCIOUSLY' CAMPAIGN (NDI) | 1TV 2025",
+        "summary": "Production of video clips and reports for the 'Vote Consciously' campaign.",
+        "role": "Producer of 8 artistic video clips for the 'Vote Consciously' campaign and 4 informational reports on pre-election activities and the importance of conscious voting in partnership with ndi.org for 1TV.",
+        "description": [
+          "Searching for characters, negotiating with public and famous personalities of Moldova for participation in the project.",
+          "Developing scripts, coordinating ideas with characters and the main director of the channel.",
+          "Researching and selecting locations, organizing conditions for filming.",
+          "Managing the filming process, coordinating the work of operators and the film crew.",
+          "Post-production: editing, music selection, final product control."
+        ],
+        "result": "8 video teasers for the pre-election campaign in storytelling style and 4 special informational reports within STIRI 1TV, emphasizing the importance of conscious voting.",
+        "videoSrc": "https://www.youtube.com/watch?v=w2kGpsm5KaI",
+        "videoLinks": [
+          "https://www.youtube.com/watch?v=3GWCh9kMji8",
+          "https://www.youtube.com/watch?v=dR9r6quDwqI",
+          "https://www.youtube.com/watch?v=17eM8yXggY0",
+          "https://www.youtube.com/watch?v=H2-DTDyY0NE",
+          "https://www.youtube.com/watch?v=wdaKZPbk-h0"
+        ]
       },
       "project3": {
-        "name": "Audi",
-        "description": "Developed Audi car configurator",
-        "details": "Engineered a sophisticated car configurator for Audi, allowing users to customize their vehicles with real-time visualizations and detailed specifications, improving the online purchasing experience.",
+        "name": "PRODUCER | Website for TATIANA BRAGA BEAUTY SALON | 2024",
+        "summary": "Creation and launch of a landing page for a new shampoo from Tatiana Braga Beauty Salon.",
+        "role": "Producer of the project to launch a website for a new product of the Tatiana Braga beauty salon.",
+        "description": [
+          "Research of the shampoo created by an expert.",
+          "Creating text for the landing page.",
+          "Organizing a photo shoot for the product.",
+          "Coordinating work with the programmer when creating the landing page."
+        ],
+        "result": "Successful launch of the landing page, including content creation, organization of a photo shoot and coordination with a web developer, which led to the effective presentation of the new product on the market.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project4": {
-        "name": "Paypal",
-        "description": "Integrated Paypal payment gateway",
-        "details": "Seamlessly integrated the PayPal payment gateway into an e-commerce platform, ensuring secure and efficient transactions for customers, enhancing the overall checkout experience.",
+        "name": "PRODUCER | MILINA BAKERY | 2024",
+        "summary": "Production of three video clips to promote a new line of Milina Bakery breads.",
+        "role": "Producer for the creation of three videos for the website and promotion of a new line of breads.",
+        "description": [
+          "Searching for characters, negotiating with public figures for participation in the project.",
+          "Developing scripts, coordinating ideas with characters and the chief marketer of Milina.",
+          "Selection of locations, organization of conditions for filming, storyboarding, directing.",
+          "Managing the filming process, coordinating the work of operators and the film crew.",
+          "Post-production: editing, music selection, final product control."
+        ],
+        "result": "3 promotional videos for the company's website.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project5": {
-        "name": "Sony",
-        "description": "Developed Sony Playstation website",
-        "details": "Built a dynamic and engaging website for Sony PlayStation, featuring interactive elements, immersive visuals, and a user-friendly interface to promote gaming products and services.",
+        "name": "ADMINISTRATOR | WEDDING SALON “APRIORI” | 2023",
+        "summary": "Full management of a wedding salon, including sales, marketing and staff training.",
+        "role": "Administrator",
+        "description": [
+          "Full management of the company in the absence of the director.",
+          "Consulting clients and closing deals.",
+          "Maintaining social networks and the website.",
+          "Inventory, administration of the cash book.",
+          "Staff training.",
+          "Work in the conditions of an intense wedding season, work with foreign clients."
+        ],
+        "result": "Ensured the smooth operation of the salon, increased sales and successfully managed the team during the peak season.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project6": {
-        "name": "Under Armour",
-        "description": "Designed Under Armour fitness app",
-        "details": "Designed an intuitive and motivating fitness app for Under Armour, incorporating personalized workout plans, progress tracking, and social features to enhance user engagement and fitness goals.",
+        "name": "CO-AUTHOR AND SPEAKER | “PREMIERE ESQUISSE” PROJECT | 2021 – 2022",
+        "summary": "Co-author and speaker of an educational project for young designers.",
+        "role": "Co-author and speaker",
+        "description": [
+          "Co-author and speaker of the “Premiere Esquisse” project for young designers.",
+          "Creating the concept of the competition and its detailed implementation.",
+          "Conducting lectures and master classes on the topics: 'Producing a photo shoot', 'Main style vectors', 'Brand and collection archetypes', 'Linearity and color contrasts in clothing'."
+        ],
+        "result": "2 seasons of the project were implemented, the final of which were shows of collections of young designers.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project7": {
-        "name": "Redbull",
-        "description": "Created Redbull energy drink campaign",
-        "details": "Developed a high-energy digital campaign for Red Bull, featuring dynamic content, social media integration, and interactive experiences to amplify brand awareness and drive consumer engagement.",
+        "name": "PROJECT MANAGER | MAXIMUM ELECTRONICS SRL | 2019 – 2022",
+        "summary": "Management of a project to create video reviews for a major electronics retailer.",
+        "role": "Project manager",
+        "description": [
+          "Project manager for the creation of video reviews for the Maximum Electronics SRL online store.",
+          "Research of premium products (LG, Samsung, Sharp), writing scripts with my own skill, without AI.",
+          "Participation in filming as a presenter. Participation in post-production.",
+          "Coordination of texts and reviews with foreign representatives of LG Samsung Sharp.",
+          "Author of commercial texts for the Point.md portal."
+        ],
+        "result": "More than 50 videos (5–8 min), the Dyson AirWrap review got 300,000+ views.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project8": {
-        "name": "Dyson",
-        "description": "Dyson & Maximum Electronics: A Collaborative Journey in Product Storytelling",
-        "details": "Partnered with Dyson and Maximum Electronics to create compelling product reviews and storytelling content, showcasing the innovation and performance of their latest products.",
+        "name": "PR-MANAGER | MILINA BAKERY | 2019",
+        "summary": "Management of a PR campaign to launch new product lines for Milina Bakery.",
+        "role": "PR-Manager",
+        "description": [
+          "Head of the PR campaign, Milina Bakery / Iugintertrans S.A and other projects.",
+          "Launch of new lines of healthy breads 'Pravia' and 'Baltia'.",
+          "Scripts, storyboarding, casting, organization of filming and control of editing of commercials.",
+          "Joint work with a targetologist and maintenance of video content for social networks."
+        ],
+        "result": "Sales growth from 300 to 6000 loaves per day in the first three months after launch.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project9": {
-        "name": "Visa",
-        "description": "Integrated Visa payment gateway",
-        "details": "Successfully integrated the Visa payment gateway, providing secure and reliable transaction processing for online customers, improving the efficiency of the checkout process.",
+        "name": "PRODUCER, AUTHOR AND DIRECTOR | FASHION PROJECT “ISTIL”, ORHEI TV | 2018 – 2019",
+        "summary": "Full production of a weekly fashion TV show.",
+        "role": "Producer, author and director",
+        "description": [
+          "Producer, author and director of the fashion project “ISTIL”, Orhei TV.",
+          "Full production of a weekly 26-minute issue: selection of heroines, presenters, locations, partners, scripts and control of editing.",
+          "Management of a team of 5 people (2 presenters, 3 operators)."
+        ],
+        "result": "21 television shows were released.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       },
       "project10": {
-        "name": "Maximum Riscani",
-        "description": "Designed Maximum's store opening ceremony",
-        "details": "Redesigned the Nordstrom e-commerce website, focusing on a clean, modern aesthetic and improved navigation to enhance the online shopping experience and increase conversions.",
+        "name": "JOURNALIST | “ISTORII URBANE” PROJECT, TNT BRAVO TV | 2013 – 2017",
+        "summary": "Journalist and co-author of a daily television project about urban stories.",
+        "role": "Journalist and co-author",
+        "description": [
+          "Journalist and co-author of the daily project “Istorii Urbane”, TNT Bravo TV.",
+          "Daily search for topics, heroes and organization of filming for 4 years in a row.",
+          "Writing texts for stories, publication in social networks."
+        ],
+        "result": "Creation of daily content for a television project for four years, including searching for stories, organizing filming and writing scripts.",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+      },
+      "project11": {
+        "name": "TV PRESENTER AND AUTHOR | NIT TV PROJECT | 2009 – 2013",
+        "summary": "Presenter, journalist and author of several television projects, including a morning show and a program on consumer rights protection.",
+        "role": "TV presenter, journalist and author of the project",
+        "description": [
+          "TV presenter of the morning show 'NIT Dejun' - scripts, search for current topics, interviews with show business stars, special reports.",
+          "Author and head of the project 'Traps for the consumer' - journalistic investigations in the field of consumer rights protection, interviews with politicians, lawyers and public figures.",
+          "Special correspondent of the 'Microeconomics' program - scripts and analytical materials."
+        ],
+        "result": "Creation and maintenance of several successful television programs, including conducting journalistic investigations and interviews with key figures.",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
       }
     }

@@ -125,8 +125,8 @@ export function Hero() {
                 // src='/portfolio-image1.jpg'
                 src='/portfolio-image.png'
                 alt='Artistic portrait with glitch-inspired overlays and ethereal lighting'
-                layout='fill'
-                objectFit='cover'
+                fill
+                style={{ objectFit: 'cover' }}
                 quality={90}
               />
             </div>
