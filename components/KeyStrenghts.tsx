@@ -15,7 +15,7 @@ const KeyStrengths = () => {
 
   const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-10%']);
   const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
-  const x3 = useTransform(scrollYProgress, [0, 1], ['30%', '-10%']);
+  const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-10%']);
   const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-15%']);
 
   const dividerColor = 'bg-yellow-500 dark:bg-yellow-400';
@@ -27,7 +27,7 @@ const KeyStrengths = () => {
   return (
     <section
       ref={targetRef}
-      className='bg-white dark:bg-gray-900 pt-20 overflow-hidden font-light leading-snug text-center pb-42 text-[28px] sm:text-[38px] md:text-[40px] lg:text-[50px]'
+      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug text-center pb-10 text-[28px] sm:text-[38px] md:text-[40px] xl:text-[50px]'
     >
       {/* Line 1 */}
       <motion.div style={{ x: x1 }} className='py-2'>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useLenis } from 'lenis/react';
-import Link, { LinkProps } from 'next/link';
 import React from 'react';
 
 interface SmoothLinkProps

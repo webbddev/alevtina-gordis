@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { TextReveal } from './ui/text-reveal';
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler';
 import { Lens } from './ui/lens';
