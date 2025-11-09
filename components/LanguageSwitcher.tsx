@@ -23,9 +23,9 @@ export default function LanguageSwitcher({
   const currentLocale = pathname.split('/')[1] || 'en';
 
   const locales = [
-    { code: 'en', name: 'English' },
-    { code: 'ru', name: 'Русский' },
-    { code: 'ro', name: 'Română' },
+    { code: 'en', name: 'ENGLISH' },
+    { code: 'ru', name: 'РУССКИЙ' },
+    { code: 'ro', name: 'ROMÂNǍ' },
   ];
 
   const onSelectChange = (nextLocale: string) => {
@@ -35,29 +35,27 @@ export default function LanguageSwitcher({
   };
 
   return (
-    // Wrap in inline-flex container to align properly
-    <span className='inline-flex items-center'>
-      <Select
-        defaultValue={currentLocale}
-        onValueChange={onSelectChange}
-        disabled={isPending}
+    <Select
+      defaultValue={currentLocale}
+      onValueChange={onSelectChange}
+      disabled={isPending}
+    >
+      <SelectTrigger
+        className='w-auto bg-transparent dark:bg-transparent border-none shadow-none focus:ring-0 focus:ring-offset-0 transition-colors hover:text-gray-400 dark:hover:text-gray-300 text-base font-medium text-gray-800 dark:text-gray-100 cursor-pointer leading-none !p-0 !m-0 !h-auto !min-h-0 inline-flex items-baseline gap-1 hover:bg-transparent dark:hover:bg-transparent [&>span]:!p-0 [&>span]:!m-0 [&>span]:leading-none [&_svg]:h-3 [&_svg]:w-3'
+        aria-label='Change language'
       >
-        <SelectTrigger
-          className='w-auto p-0 bg-transparent dark:bg-transparent border-none shadow-none focus:ring-0 focus:ring-offset-0 transition-colors hover:text-gray-400 dark:hover:text-gray-300 text-lg font-medium text-gray-800 dark:text-gray-100 cursor-pointer'
-          aria-label='Change language'
-        >
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          {locales.map((locale) => (
-            <SelectItem key={locale.code} value={locale.code}>
-              {locale.name}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </span>
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent>
+        {locales.map((locale) => (
+          <SelectItem key={locale.code} value={locale.code}>
+            {locale.name}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
+
 }
 
 // ORIGINAL LanguageSwitcher code with no shadcn/ui components and lovely dropdown styling

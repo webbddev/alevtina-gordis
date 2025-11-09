@@ -1,7 +1,19 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
-  },
+  "Hero": {
+  "projectLabel": "Project",
+  "titleLine1": "ALEVTINA",
+  "titleLine2": "GORDIENKO",
+  "iTalk": "I speak",
+  "enjoy": "Enjoy",
+  "viewWork": "VIEW MY WORK",
+  "feelFree": "Feel free",
+  "downloadCv": "DOWNLOAD MY CV",
+  "welcome": "Welcome",
+  "contactMe": "CONTACT ME",
+  "overviewTitle": "Project Overview",
+  "overviewIntro": "A VIBRANT PHOTOSHOOT CAPTURES THE ESSENCE OF A MODERN BRAND IDENTITY, BLENDING ARTISTIC EXPRESSION WITH BOLD VISUAL STORYTELLING.",
+  "overviewDetails": "This project focuses on a creative portrait session designed to reflect the brand's innovative and dynamic spirit. The shoot features ethereal lighting and glitch-style color overlays, evoking a sense of movement and digital artistry. The model's confident gaze and modern styling embody the brand's forward-thinking identity, while the interplay of blue and purple tones creates a memorable, immersive visual experience. These images will be used across all brand touchpoints to convey a unique blend of creativity, technology, and authenticity."
+},
   "Projects": {
     "title": "Explore our projects",
     "subtitle": "Our projects showcase the best visuals and storytelling techniques.",

@@ -115,7 +115,7 @@ const ProjectDetailsSlider = ({
         <div className='space-y-4'>
           <h3 className='font-semibold text-lg'>{t('projectDetails')}</h3>
           <p className='text-gray-600 dark:text-gray-300'>{project.details}</p>
-          <div className='flex flex-wrap gap-2'>
+          {/* <div className='flex flex-wrap gap-2'>
             {project.tags?.map((tag, index) => (
               <span
                 key={index}
@@ -124,7 +124,7 @@ const ProjectDetailsSlider = ({
                 {tag}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>

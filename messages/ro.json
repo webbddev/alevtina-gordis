@@ -1,6 +1,18 @@
 {
-  "HomePage": {
-    "title": "Salut, lume!"
+  "Hero": {
+    "projectLabel": "Proiect",
+    "titleLine1": "ALEVTINA",
+    "titleLine2": "GORDIENKO",
+    "iTalk": "Vorbesc",
+    "enjoy": "Bucurați-vă",
+    "viewWork": "VEZI LUCRĂRILE MELE",
+    "feelFree": "Simțiți-vă liber",
+    "downloadCv": "DESCĂRCAȚI CV-UL MEU",
+    "welcome": "Bun venit",
+    "contactMe": "CONTACTAȚI-MĂ",
+    "overviewTitle": "Prezentarea Proiectului",
+    "overviewIntro": "O ȘEDINȚĂ FOTO VIBRANTĂ SURPRINDE ESENȚA IDENTITĂȚII MODERNE A UNUI BRAND, ÎMBINÂND EXPRESIA ARTISTICĂ CU O POVESTIRE VIZUALĂ ÎNDRĂZNEAȚĂ.",
+    "overviewDetails": "Acest proiect se concentrează pe o sesiune de portrete creative menită să reflecte spiritul inovator și dinamic al brandului. Ședința foto prezintă o iluminare eterică și suprapuneri de culori inspirate de glitch-uri, evocând un sentiment de mișcare și artă digitală. Privirea încrezătoare a subiectului și stilul contemporan întruchipează identitatea orientată spre viitor a brandului, în timp ce interacțiunea tonurilor de cyan și magenta creează o experiență vizuală memorabilă și imersivă. Aceste imagini vor fi folosite în toate punctele de contact ale brandului pentru a comunica un amestec unic de creativitate, tehnologie și autenticitate."
   },
   "Projects": {
     "title": "Explorați proiectele noastre",
