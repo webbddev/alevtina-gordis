@@ -17,6 +17,7 @@ const KeyStrengths = () => {
   const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
   const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-10%']);
   const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-15%']);
+  const x5 = useTransform(scrollYProgress, [0, 1], ['-30%', '15%']);
 
   const dividerColor = 'bg-yellow-500 dark:bg-yellow-400';
 
@@ -27,7 +28,7 @@ const KeyStrengths = () => {
   return (
     <section
       ref={targetRef}
-      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug text-center pb-10 text-[28px] sm:text-[38px] md:text-[40px] xl:text-[50px]'
+      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug text-center pb-10 text-[20px] md:text-[30px] xl:text-[50px]'
     >
       {/* Line 1 */}
       <motion.div style={{ x: x1 }} className='py-2'>
@@ -41,11 +42,11 @@ const KeyStrengths = () => {
         style={{ x: x2 }}
         className='flex items-center justify-center gap-3 py-2'
       >
-        <p className='font-light'>{t('skill2')}</p>
+        <p className='font-thin'>{t('skill2')}</p>
         <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
-        <p className='font-thin'>{t('skill4')}</p>
       </motion.div>
 
+      {/* Line 3 */}
       <motion.div style={{ x: x3 }} className='py-2'>
         <p className='italic'>{t('skill3')}</p>
       </motion.div>
@@ -59,10 +60,13 @@ const KeyStrengths = () => {
           <AuroraText colors={mixedTones}>{t('skill5')}</AuroraText>
         </p>
         <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
-        <p>{t('skill6')}</p>
+        <p className='font-thin italic'>{t('skill6')}</p>
       </motion.div>
 
-      
+      {/* Line 5 */}
+      <motion.div style={{ x: x5 }} className='py-2'>
+        <p className='font-'>{t('skill4')}</p>
+      </motion.div>
     </section>
   );
 };
