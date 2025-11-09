@@ -2,10 +2,12 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Funnel_Sans } from 'next/font/google';
 import './globals.css';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import {  routing } from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
+import ReactLenis from 'lenis/react';
+import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -56,16 +58,20 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${funnelSans.variable} antialiased `}
       >
-        <NextIntlClientProvider>
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        {/* <SmoothScrollProvider> */}
+        <ReactLenis root>
+          <NextIntlClientProvider>
+            <ThemeProvider
+              attribute='class'
+              defaultTheme='system'
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </ReactLenis>
+        {/* </SmoothScrollProvider> */}
       </body>
     </html>
   );

@@ -109,15 +109,15 @@ const ProjectDetailsSlider = ({
           className='w-full rounded-lg mb-6 object-cover h-60'
         /> */}
 
-        <p className='2xl:text-lg text-gray-600 dark:text-gray-300 mb-4'>
+        <p className='text-base md:text-[20px]  2xl:text-[20px] text-gray-600 dark:text-gray-300 mb-4'>
           {project.description}
         </p>
 
         <div className='space-y-4'>
-          <h3 className='font-semibold text-lg 2xl:text-xl'>
+          <h3 className='font-semibold text-lg 2xl:text-[25px]'>
             {t('projectDetails')}
           </h3>
-          <p className='text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-600 dark:text-gray-300'>
+          <p className='text-base md:text-lg lg:text-xl 2xl:text-[24px] text-gray-600 dark:text-gray-300'>
             {project.details}
           </p>
           {/* <div className='flex flex-wrap gap-2'>

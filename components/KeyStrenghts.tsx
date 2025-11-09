@@ -13,11 +13,10 @@ const KeyStrengths = () => {
     offset: ['start end', 'end start'],
   });
 
-  const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-30%']);
-  const x2 = useTransform(scrollYProgress, [0, 1], ['-30%', '50%']);
-  const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-50%']);
-  const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-40%']);
-  const x5 = useTransform(scrollYProgress, [0, 1], ['-50%', '60%']);
+  const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-10%']);
+  const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
+  const x3 = useTransform(scrollYProgress, [0, 1], ['30%', '-10%']);
+  const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-15%']);
 
   const dividerColor = 'bg-yellow-500 dark:bg-yellow-400';
 
@@ -63,10 +62,7 @@ const KeyStrengths = () => {
         <p>{t('skill6')}</p>
       </motion.div>
 
-      {/* Line 5 */}
-      <motion.div style={{ x: x5 }} className='py-2'>
-        <p className='font-thin italic'>{t('skill7')}</p>
-      </motion.div>
+      
     </section>
   );
 };

@@ -6,6 +6,7 @@ import { AnimatedThemeToggler } from './ui/animated-theme-toggler';
 import { Lens } from './ui/lens';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslations } from 'next-intl';
+import { SmoothLink } from './SmoothLink';
 
 export function Hero() {
   const t = useTranslations('Hero');
@@ -29,11 +30,11 @@ export function Hero() {
 
         {/* --- COMBINED NAVIGATION SECTION --- */}
         <div className='flex flex-col sm:flex-row justify-between items-start gap-6 md:gap-10 mb-16 w-full max-w-6xl mx-auto'>
-          {/* Three Links (Centered) */}
-          <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:gap-x-20 lg:flex lg:flex-row lg:items-center lg:justify-center lg:flex-nowrap'>
-            {/* Language Switcher */}
+          {/* Four Links (Centered) */}
+          <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 md:gap-x-3 md:gap-y-6 xl:gap-x-14 xl:flex xl:flex-row xl:items-center xl:justify-center xl:flex-nowrap'>
+            {/* --- Language Switcher --- */}
             <div className='flex-shrink-0'>
-              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+              <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('iTalk')}
               </p>
               <span className='inline-flex items-baseline gap-1 text-base font-medium'>
@@ -44,20 +45,23 @@ export function Hero() {
             </div>
             {/* --- Viewing My Work Link --- */}
             <div className=''>
-              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+              <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('enjoy')}
               </p>
-              <Link href='#my-works' className='text-base font-medium group '>
+              <SmoothLink
+                href='#my-works'
+                className='text-base font-medium group '
+              >
                 {'[ '}
                 <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
                   {t('viewWork')}
                 </span>
                 {' ]'}
-              </Link>
+              </SmoothLink>
             </div>
             {/* --- Visit BirDigi Link --- */}
             <div className=''>
-              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+              <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('visit')}
               </p>
               <a
@@ -75,7 +79,7 @@ export function Hero() {
             </div>
             {/* --- Download CV Link --- */}
             <div className=''>
-              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+              <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('feelFree')}
               </p>
               <a
@@ -93,10 +97,10 @@ export function Hero() {
 
             {/* --- Contact Me Link --- */}
             <div className=''>
-              <p className='text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+              <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('welcome')}
               </p>
-              <Link
+              <SmoothLink
                 href='#contact'
                 className='text-base font-medium hover:text-gray-400 dark:hover:text-gray-300 transition-colors'
               >
@@ -105,7 +109,7 @@ export function Hero() {
                   {t('contactMe')}
                 </span>
                 {' ]'}
-              </Link>
+              </SmoothLink>
             </div>
           </div>
         </div>
@@ -120,6 +124,7 @@ export function Hero() {
           >
             <div className='relative w-full aspect-[3/2] overflow-hidden rounded-lg mb-4 shadow-lg'>
               <Image
+                // src='/portfolio-image1.jpg'
                 src='/portfolio-image.png'
                 alt='Artistic portrait with glitch-inspired overlays and ethereal lighting'
                 layout='fill'

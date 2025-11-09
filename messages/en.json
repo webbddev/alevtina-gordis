@@ -12,9 +12,9 @@
     "downloadCv": "DOWNLOAD MY CV",
     "welcome": "Welcome",
     "contactMe": "CONTACT ME",
-    "overviewTitle": "Project Overview",
-    "overviewIntro": "A VIBRANT PHOTOSHOOT CAPTURES THE ESSENCE OF A MODERN BRAND IDENTITY, BLENDING ARTISTIC EXPRESSION WITH BOLD VISUAL STORYTELLING.",
-    "overviewDetails": "This project focuses on a creative portrait session designed to reflect the brand's innovative and dynamic spirit. The shoot features ethereal lighting and glitch-style color overlays, evoking a sense of movement and digital artistry. The model's confident gaze and modern styling embody the brand's forward-thinking identity, while the interplay of blue and purple tones creates a memorable, immersive visual experience. These images will be used across all brand touchpoints to convey a unique blend of creativity, technology, and authenticity."
+    "overviewTitle": "From the Author",
+    "overviewIntro": "MY JOURNEY: FROM FINDING STORIES TO LEARNING TO LISTEN TO BUSINESS. TODAY, I COMBINE EMPATHY WITH ANALYTICS TO CREATE STRATEGIES FOR YOUR GROWTH.",
+    "overviewDetails": "I remember my first reports: running through the streets, searching for heroes, hundreds of questions, and one goal: to capture a living story. Over the years, I created video projects for brands and social campaigns, learned to see the essence, to turn the complex into something understandable and valuable for people. Today, I am changing my direction: I combine my experience with projects and attention to detail with analytics and digital tools to help businesses develop their projects more effectively. The world of SEO seems particularly attractive to me: the excitement of discovering what is happening 'on the other side of the screen,' analyzing, looking for patterns, and finding opportunities for growth."
   },
   "KeyStrengths": {
     "title": "KEY SKILLS",
@@ -23,11 +23,10 @@
     "skill3": "Long-term project management",
     "skill4": "Interest in e-commerce",
     "skill5": "Respect for people",
-    "skill6": "Making the complex simple",
-    "skill7": "Partnership based on respect for another person's experience and personality"
+    "skill6": "Making the complex simple"
   },
   "Projects": {
-    "title": "Explore our projects",
+    "title": "My Projects",
     "subtitle": "Our projects showcase the best visuals and storytelling techniques.",
     "projectDetails": "Project Details",
     "projects": {

@@ -1,4 +1,6 @@
 import { useTranslations } from 'next-intl';
+import { SmoothLink } from './SmoothLink';
+
 // A simple SVG icon for the external links
 const ExternalLinkIcon = () => (
   <svg
@@ -24,7 +26,7 @@ const Footer = () => {
   return (
     <>
       {/* Main Footer Content */}
-      <footer className='bg-white dark:bg-gray-900 text-black dark:text-white py-16 md:px-8'>
+      <footer id='contact' className='bg-white dark:bg-gray-900 text-black dark:text-white py-16 md:px-8'>
         {/* Consistent max-width container based on your Hero component */}
         <div className='max-w-340 mx-auto px-4 '>
           {/* Top Section: Contact & Links */}
@@ -57,18 +59,21 @@ const Footer = () => {
                 </h3>
                 <ul className='space-y-3'>
                   <li>
-                    <a href='#' className='text-xl font-medium hover:underline'>
+                    <SmoothLink
+                      href='#'
+                      className='text-xl font-medium hover:underline'
+                    >
                       {t('home')}
-                    </a>
+                    </SmoothLink>
                   </li>
 
                   <li>
-                    <a
+                    <SmoothLink
                       href='#my-works'
                       className='text-xl font-medium hover:underline'
                     >
                       {t('projects')}
-                    </a>
+                    </SmoothLink>
                   </li>
                 </ul>
               </div>
