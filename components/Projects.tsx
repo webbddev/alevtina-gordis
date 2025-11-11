@@ -7,43 +7,48 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { HeroVideoDialog } from './ui/hero-video-dialog';
 import { XIcon, CheckCircle2 } from 'lucide-react';
-// We do not need useLenis in this file
-// import { useLenis } from 'lenis/react';
 
 // Individual card component for project preview
 // Displays project image with overlay containing name and description
-const ReviewCard = ({
+const ProjectPreviewCard = ({
   src,
   name,
-  description,
+  summary: summary,
   onClick,
 }: {
   src: string;
   name: string;
-  description: string;
+  summary: string;
   onClick: () => void;
 }) => {
   return (
-    <motion.figure
-      className='relative cursor-pointer overflow-hidden group'
+    <div
+      className='relative block w-full cursor-pointer overflow-hidden group text-left'
       onClick={onClick}
+      aria-label={`Open details for ${name}`}
     >
       <div className='relative'>
         <Image
-          width={500}
+          width={400}
           height={500}
           src={src}
-          alt='projects'
+          alt={name}
           className='object-cover w-full'
+          priority
         />
-        <div className='absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/60 to-transparent w-full'>
-          <h3 className='text-white text-xl font-semibold'>{name}</h3>
-          <p className='text-white/80 text-sm'>{description}</p>
+        <div className='absolute bottom-0 left-0 p-4 bg-linear-to-t from-black/80 to-transparent w-full'>
+          <h3 className='text-white text-[12px] md:text-[13px] lg:text-[16px] xl:text-[17px] font-semibold '>
+            {name}
+          </h3>
+          <p className='line-clamp-2 text-white/80 text-[12px] md:text-[13px] lg:text-[16px] xl:text-[17px]'>
+            {summary}
+          </p>
         </div>
       </div>
-    </motion.figure>
+    </div>
   );
 };
+``;
 
 // Sliding panel component that shows detailed project information
 // Appears when a project card is clicked
@@ -59,7 +64,7 @@ const ProjectDetailsSlider = ({
     role: string;
     description: string[];
     result: string;
-    tags: string[];
+    tags?: string[];
     className: string;
     videoSrc: string;
   };
@@ -86,7 +91,7 @@ const ProjectDetailsSlider = ({
       animate={{ x: 0 }}
       exit={{ x: '100%' }}
       transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-      className='fixed right-0 top-0 z-50 h-screen w-full overflow-y-auto bg-white shadow-lg dark:bg-gray-800 md:w-3/5 xl:w-1/2' 
+      className='fixed right-0 top-0 z-50 h-screen w-full overflow-y-auto bg-white shadow-lg dark:bg-gray-800 md:w-3/5 xl:w-1/2'
       onClick={(e) => e.stopPropagation()}
     >
       <div className='relative p-6'>
@@ -135,7 +140,7 @@ const ProjectDetailsSlider = ({
               <ul className='space-y-2'>
                 {project.description.map((task, index) => (
                   <li key={index} className='flex items-start'>
-                    <CheckCircle2 className='h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0' />
+                    <CheckCircle2 className='h-5 w-5 text-green-500 mr-3 mt-1 shrink-0' />
                     <span className='text-base md:text-lg lg:text-xl 2xl:text-[24px] text-gray-600 dark:text-gray-300'>
                       {task}
                     </span>
@@ -174,7 +179,7 @@ const Projects = () => {
     role: string;
     description: string[];
     result: string;
-    tags: string[];
+    tags?: string[];
     className: string;
     videoSrc: string;
   } | null>(null);
@@ -286,11 +291,29 @@ const Projects = () => {
       className: '',
       ...t.raw('projects.project10'),
     },
+    {
+      src: '/img/projects/project-11.jpg',
+      logo: '/nord-logo.png',
+      // tags: [
+      //   'E-commerce Design',
+      //   'UI/UX Design',
+      //   'Web Design',
+      //   'User Experience',
+      // ],
+      className: '',
+      ...t.raw('projects.project11'),
+    },
   ];
 
-  const firstRow = projectData.slice(0, projectData.length);
-  const secondRow = projectData.slice(3, projectData.length);
-  const thirdRow = projectData.slice(6, projectData.length);
+  // Split project data into 3 rows
+  const firstRow = projectData;
+  const secondRow = [...projectData.slice(3), ...projectData.slice(0, 3)];
+  const thirdRow = [...projectData.slice(6), ...projectData.slice(0, 6)];
+  // const cols = 3;
+  // const base = Math.ceil(projectData.length / cols);
+  // const firstRow = projectData.slice(0, base);
+  // const secondRow = projectData.slice(base, base * 2);
+  // const thirdRow = projectData.slice(base * 2, base * 3);
 
   return (
     <section
@@ -312,13 +335,13 @@ const Projects = () => {
             className='[--duration:60s]'
             paused={selectedProject !== null}
           >
-            {firstRow.map((review, index) => (
-              <ReviewCard
+            {firstRow.map((project, index) => (
+              <ProjectPreviewCard
                 key={index}
-                src={review.src}
-                name={review.name}
-                description={review.summary}
-                onClick={() => setSelectedProject(review)}
+                src={project.src}
+                name={project.name}
+                summary={project.summary}
+                onClick={() => setSelectedProject(project)}
               />
             ))}
           </Marquee>
@@ -326,16 +349,16 @@ const Projects = () => {
           <Marquee
             vertical
             pauseOnHover
-            className='[--duration:60s]'
+            className='[--duration:75s]'
             paused={selectedProject !== null}
           >
-            {secondRow.map((review, index) => (
-              <ReviewCard
+            {secondRow.map((project, index) => (
+              <ProjectPreviewCard
                 key={index}
-                src={review.src}
-                name={review.name}
-                description={review.summary}
-                onClick={() => setSelectedProject(review)}
+                src={project.src}
+                name={project.name}
+                summary={project.summary}
+                onClick={() => setSelectedProject(project)}
               />
             ))}
           </Marquee>
@@ -343,16 +366,16 @@ const Projects = () => {
           <Marquee
             vertical
             pauseOnHover
-            className='[--duration:60s] hidden md:flex'
+            className='[--duration:85s] hidden md:flex'
             paused={selectedProject !== null}
           >
-            {thirdRow.map((review, index) => (
-              <ReviewCard
+            {thirdRow.map((project, index) => (
+              <ProjectPreviewCard
                 key={index}
-                src={review.src}
-                name={review.name}
-                description={review.summary}
-                onClick={() => setSelectedProject(review)}
+                src={project.src}
+                name={project.name}
+                summary={project.summary}
+                onClick={() => setSelectedProject(project)}
               />
             ))}
           </Marquee>

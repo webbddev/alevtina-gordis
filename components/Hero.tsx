@@ -81,7 +81,7 @@ export function Hero() {
                 {t('feelFree')}
               </p>
               <a
-                href='/Alevtina-Gordienko-CV.pdf'
+                href='/Alevtina-Gordienko-CV-RU.pdf'
                 download
                 className='text-base font-medium group'
               >
