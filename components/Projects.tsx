@@ -8,12 +8,30 @@ import { useTranslations } from 'next-intl';
 import { HeroVideoDialog } from './ui/hero-video-dialog';
 import { XIcon, CheckCircle2 } from 'lucide-react';
 
+// Type definition for video links
+interface VideoLink {
+  url: string;
+  thumbnail: string;
+}
+// Type definition for project data structure
+interface ProjectData {
+  src: string;
+  logo: string;
+  videoSrc: string;
+  videoLinks?: VideoLink[];
+  name: string;
+  summary: string;
+  role: string;
+  description: string[];
+  result: string;
+}
+
 // Individual card component for project preview
 // Displays project image with overlay containing name and description
 const ProjectPreviewCard = ({
   src,
   name,
-  summary: summary,
+  summary,
   onClick,
 }: {
   src: string;
@@ -48,7 +66,6 @@ const ProjectPreviewCard = ({
     </div>
   );
 };
-``;
 
 // Sliding panel component that shows detailed project information
 // Appears when a project card is clicked
@@ -56,33 +73,20 @@ const ProjectDetailsSlider = ({
   project,
   onClose,
 }: {
-  project: {
-    src: string;
-    name: string;
-    logo: string;
-    summary: string;
-    role: string;
-    description: string[];
-    result: string;
-    tags?: string[];
-    className: string;
-    videoSrc: string;
-  };
+  project: ProjectData;
   onClose: () => void;
 }) => {
   const t = useTranslations('Projects');
 
   useEffect(() => {
-    // This locks the body scroll, preventing the main page from moving
-    // This is the correct target, as it won't affect the 'fixed' slider
+    // Lock body scroll when slider is open
     document.body.style.overflow = 'hidden';
 
-    // Cleanup function: This runs when the component unmounts
+    // Cleanup: unlock body scroll when slider closes
     return () => {
-      // This unlocks the body scroll
       document.body.style.overflow = '';
     };
-  }, []); // Empty dependency array ensures this runs only on mount and unmount
+  }, []);
 
   return (
     <motion.div
@@ -94,17 +98,18 @@ const ProjectDetailsSlider = ({
       className='fixed right-0 top-0 z-50 h-screen w-full overflow-y-auto bg-white shadow-lg dark:bg-gray-800 md:w-3/5 xl:w-1/2'
       onClick={(e) => e.stopPropagation()}
     >
-      <div className='relative p-6'>
+      <div className='relative p-6 md:px-6 xl:px-14'>
         <button
           onClick={onClose}
           className='sticky top-4 float-right text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 z-10'
+          aria-label='Close project details'
         >
           <XIcon className='h-6 w-6' />
         </button>
-
         <div className='clear-both mt-8'>
           <h2 className='text-2xl font-bold mb-4'>{project.name}</h2>
-          {/* Replace Image with HeroVideoDialog */}
+
+          {/* Video dialog component */}
           <div className='w-full mb-6 rounded-lg overflow-hidden'>
             <HeroVideoDialog
               className='block dark:hidden'
@@ -125,6 +130,7 @@ const ProjectDetailsSlider = ({
           </div>
 
           <div className='space-y-6'>
+            {/* Role section */}
             <div>
               <h3 className='font-semibold text-lg 2xl:text-[25px] mb-2'>
                 {t('projectRole')}
@@ -133,11 +139,13 @@ const ProjectDetailsSlider = ({
                 {project.role}
               </p>
             </div>
+
+            {/* Tasks section */}
             <div>
               <h3 className='font-semibold text-lg 2xl:text-[25px] mb-2'>
                 {t('projectTasks')}
               </h3>
-              <ul className='space-y-2'>
+              <ul className='space-y-2 xl:px-14'>
                 {project.description.map((task, index) => (
                   <li key={index} className='flex items-start'>
                     <CheckCircle2 className='h-5 w-5 text-green-500 mr-3 mt-1 shrink-0' />
@@ -148,6 +156,8 @@ const ProjectDetailsSlider = ({
                 ))}
               </ul>
             </div>
+
+            {/* Result section */}
             <div>
               <h3 className='font-semibold text-lg 2xl:text-[25px] mb-2'>
                 {t('projectResult')}
@@ -156,6 +166,30 @@ const ProjectDetailsSlider = ({
                 {project.result}
               </p>
             </div>
+
+            {/* Additional Videos */}
+            {project.videoLinks && project.videoLinks.length > 0 && (
+              <div>
+                <h3 className='font-semibold text-lg 2xl:text-[25px] mb-4 mt-6'>
+                  {t('additionalVideos')}
+                </h3>
+                <div className='grid grid-cols-2 xl:grid-cols-3  gap-4 xl:gap-6'>
+                  {project.videoLinks.map((video, index) => (
+                    <HeroVideoDialog
+                      key={index}
+                      className='block'
+                      animationStyle='from-center'
+                      videoSrc={video.url}
+                      thumbnailSrc={video.thumbnail}
+                      thumbnailAlt={`${project.name} - Additional Video ${
+                        index + 1
+                      }`}
+                      aspectRatio='aspect-video'
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -171,149 +205,26 @@ const ProjectDetailsSlider = ({
 // - Pause animation on hover or when details panel is open
 const Projects = () => {
   const t = useTranslations('Projects');
-  const [selectedProject, setSelectedProject] = useState<{
-    src: string;
-    name: string;
-    logo: string;
-    summary: string;
-    role: string;
-    description: string[];
-    result: string;
-    tags?: string[];
-    className: string;
-    videoSrc: string;
-  } | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
+    null
+  );
 
-  // Get project data from translations
-  const projectData = [
-    {
-      src: '/img/projects/project-1.jpg',
-      logo: '/img/logos/logo-1.svg',
-      // tags: [
-      //   'Video Production',
-      //   'Creative Direction',
-      //   'Social Media',
-      //   'Anniversary Campaign',
-      // ],
-      className: '',
-      ...t.raw('projects.project1'),
-    },
-    {
-      src: '/img/projects/project-2.jpg',
-      logo: '/airbnb-logo.png',
-      // tags: ['UI/UX Design', 'Web Design', 'Landing Page', 'User Experience'],
-      className: '',
-      ...t.raw('projects.project2'),
-    },
-    {
-      src: '/img/projects/project-3.jpg',
-      logo: '/audi-logo.png',
-      // tags: [
-      //   'Web Development',
-      //   'Interactive Design',
-      //   'E-commerce',
-      //   'Car Configurator',
-      // ],
-      className: '',
-      ...t.raw('projects.project3'),
-    },
-    {
-      src: '/img/projects/project-4.jpg',
-      logo: '/paypal-logo.png',
-      // tags: [
-      //   'Payment Integration',
-      //   'E-commerce',
-      //   'Web Development',
-      //   'API Integration',
-      // ],
-      className: '',
-      ...t.raw('projects.project4'),
-    },
-    {
-      src: '/img/projects/project-5.jpg',
-      logo: '/sony-logo.png',
-      // tags: ['Web Development', 'Interactive Design', 'Gaming', 'E-commerce'],
-      className: '',
-      ...t.raw('projects.project5'),
-    },
-    {
-      src: '/img/projects/project-6.jpg',
-      logo: '/under-armour-logo.png',
-      // tags: ['Mobile App Design', 'UI/UX Design', 'Fitness', 'App Development'],
-      className: '',
-      ...t.raw('projects.project6'),
-    },
-    {
-      src: '/img/projects/project-7.jpg',
-      logo: '/redbull-logo.png',
-      // tags: [
-      //   'Digital Marketing',
-      //   'Social Media Marketing',
-      //   'Campaign Development',
-      //   'Content Creation',
-      // ],
-      className: '',
-      ...t.raw('projects.project7'),
-    },
-    {
-      src: '/img/projects/project-8.png',
-      logo: '/spalding-logo.png',
-      // tags: [
-      //   'Product Review',
-      //   'Content Creation',
-      //   'Collaboration',
-      //   'Digital Marketing',
-      // ],
-      className: '',
-      ...t.raw('projects.project8'),
-    },
-    {
-      src: '/img/projects/project-9.jpg',
-      logo: '/visa-logo.png',
-      // tags: [
-      //   'Payment Integration',
-      //   'E-commerce',
-      //   'Web Development',
-      //   'API Integration',
-      // ],
-      className: '',
-      ...t.raw('projects.project9'),
-    },
-    {
-      src: '/img/projects/project-10.png',
-      logo: '/nord-logo.png',
-      // tags: [
-      //   'E-commerce Design',
-      //   'UI/UX Design',
-      //   'Web Design',
-      //   'User Experience',
-      // ],
-      className: '',
-      ...t.raw('projects.project10'),
-    },
-    {
-      src: '/img/projects/project-11.jpg',
-      logo: '/nord-logo.png',
-      // tags: [
-      //   'E-commerce Design',
-      //   'UI/UX Design',
-      //   'Web Design',
-      //   'User Experience',
-      // ],
-      className: '',
-      ...t.raw('projects.project11'),
-    },
-  ];
+  // Get all project data from translations
+  // Using t.raw() to get the full object structure including arrays
+  const projects = t.raw('projects');
+  const projectKeys = Object.keys(projects).sort(
+    (a, b) =>
+      parseInt(a.substring('project'.length)) -
+      parseInt(b.substring('project'.length))
+  );
 
-  // Split project data into 3 rows
+  const projectData: ProjectData[] = projectKeys.map((key) => projects[key]);
+
+  // Split project data into 3 rows for the marquee effect
+  // Each row has a different starting point to create visual variety
   const firstRow = projectData;
   const secondRow = [...projectData.slice(3), ...projectData.slice(0, 3)];
   const thirdRow = [...projectData.slice(6), ...projectData.slice(0, 6)];
-  // const cols = 3;
-  // const base = Math.ceil(projectData.length / cols);
-  // const firstRow = projectData.slice(0, base);
-  // const secondRow = projectData.slice(base, base * 2);
-  // const thirdRow = projectData.slice(base * 2, base * 3);
 
   return (
     <section
@@ -321,14 +232,17 @@ const Projects = () => {
       className='w-full bg-white dark:bg-gray-900 py-16 md:px-6'
     >
       <div className='mx-auto max-w-7xl px-4 md:px-8'>
+        {/* Section header */}
         <div className='mb-12 md:-ml-8'>
           <h2 className='text-4xl font-bold text-foreground mb-4'>
             {t('title')}
           </h2>
-          <p className='text-muted-foreground text-lg '>{t('subtitle')}</p>
+          <p className='text-muted-foreground text-lg'>{t('subtitle')}</p>
         </div>
 
+        {/* Marquee container with three columns */}
         <div className='w-full h-[800px] 2xl:h-[1000px] flex items-center justify-center overflow-hidden py-8'>
+          {/* First column - base speed */}
           <Marquee
             vertical
             pauseOnHover
@@ -337,7 +251,7 @@ const Projects = () => {
           >
             {firstRow.map((project, index) => (
               <ProjectPreviewCard
-                key={index}
+                key={`first-${index}`}
                 src={project.src}
                 name={project.name}
                 summary={project.summary}
@@ -346,6 +260,7 @@ const Projects = () => {
             ))}
           </Marquee>
 
+          {/* Second column - slightly slower */}
           <Marquee
             vertical
             pauseOnHover
@@ -354,7 +269,7 @@ const Projects = () => {
           >
             {secondRow.map((project, index) => (
               <ProjectPreviewCard
-                key={index}
+                key={`second-${index}`}
                 src={project.src}
                 name={project.name}
                 summary={project.summary}
@@ -363,6 +278,7 @@ const Projects = () => {
             ))}
           </Marquee>
 
+          {/* Third column - slowest, hidden on mobile */}
           <Marquee
             vertical
             pauseOnHover
@@ -371,7 +287,7 @@ const Projects = () => {
           >
             {thirdRow.map((project, index) => (
               <ProjectPreviewCard
-                key={index}
+                key={`third-${index}`}
                 src={project.src}
                 name={project.name}
                 summary={project.summary}
@@ -382,9 +298,11 @@ const Projects = () => {
         </div>
       </div>
 
+      {/* Project details slider with backdrop */}
       <AnimatePresence>
         {selectedProject && (
           <>
+            {/* Backdrop overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
@@ -392,6 +310,7 @@ const Projects = () => {
               className='fixed inset-0 bg-black z-40'
               onClick={() => setSelectedProject(null)}
             />
+            {/* Details slider */}
             <ProjectDetailsSlider
               project={selectedProject}
               onClose={() => setSelectedProject(null)}

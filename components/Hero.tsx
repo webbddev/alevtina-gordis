@@ -18,7 +18,7 @@ export function Hero() {
         </p>
 
         {/* Main Title (Stacked) */}
-        <h1 className='text-left text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight tracking-tighter mb-16 md:-ml-8'>
+        <h1 className='text-black/80 dark:text-white/90 text-left text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight tracking-tighter mb-16 md:-ml-8'>
           <span className='block'>{t('titleLine1')}</span>
           <span className='relative inline-block'>
             {t('titleLine2')}
@@ -31,7 +31,7 @@ export function Hero() {
           {/* Four Links (Centered) */}
           <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 md:gap-x-3 md:gap-y-6 xl:gap-x-14 xl:flex xl:flex-row xl:items-center xl:justify-center xl:flex-nowrap'>
             {/* --- Language Switcher --- */}
-            <div className='flex-shrink-0'>
+            <div className='shrink-0'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('iTalk')}
               </p>
@@ -120,7 +120,7 @@ export function Hero() {
             isStatic={false}
             ariaLabel='Zoom Area'
           >
-            <div className='relative w-full aspect-[3/2] overflow-hidden rounded-lg mb-4 shadow-lg'>
+            <div className='relative w-full aspect-3/2 overflow-hidden rounded-lg mb-4 shadow-lg'>
               <Image
                 // src='/portfolio-image1.jpg'
                 src='/portfolio-image.png'

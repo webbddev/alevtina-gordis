@@ -26,7 +26,10 @@ const Footer = () => {
   return (
     <>
       {/* Main Footer Content */}
-      <footer id='contact' className='bg-white dark:bg-gray-900 text-black dark:text-white py-16 md:px-8'>
+      <footer
+        id='contact'
+        className='bg-white dark:bg-gray-900 text-black dark:text-white py-16 md:px-8'
+      >
         {/* Consistent max-width container based on your Hero component */}
         <div className='max-w-340 mx-auto px-4 '>
           {/* Top Section: Contact & Links */}
@@ -36,13 +39,13 @@ const Footer = () => {
             <div>
               <a
                 href='tel:+11202330123'
-                className='block text-2xl font-medium hover:text-gray-700 dark:hover:text-gray-300'
+                className='font-funnel block text-2xl font-light hover:text-gray-700 dark:hover:text-gray-300'
               >
                 +373 (78) 585-585
               </a>
               <a
                 href='mailto:yo@alevtinagordienko.com'
-                className='block text-2xl font-medium hover:text-gray-700 dark:hover:text-gray-300'
+                className='font-funnel block text-2xl font-thin hover:text-gray-700 dark:hover:text-gray-300'
               >
                 alevtina.gordienko@gmail.com
               </a>
@@ -61,7 +64,7 @@ const Footer = () => {
                   <li>
                     <SmoothLink
                       href='#'
-                      className='text-xl font-medium hover:underline'
+                      className='text-xl  font-light hover:underline'
                     >
                       {t('home')}
                     </SmoothLink>
@@ -70,7 +73,7 @@ const Footer = () => {
                   <li>
                     <SmoothLink
                       href='#my-works'
-                      className='text-xl font-medium hover:underline'
+                      className='text-xl font-light hover:underline'
                     >
                       {t('projects')}
                     </SmoothLink>
@@ -83,11 +86,13 @@ const Footer = () => {
                 <h3 className='text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4'>
                   {t('social')}
                 </h3>
-                <ul className='space-y-3'>
+                <ul className='space-y-3 font-funnel'>
                   <li>
                     <a
-                      href='#'
-                      className='text-xl font-medium hover:underline flex items-center gap-1.5'
+                      href='https://birdigi.vercel.app/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-xl  font-light hover:underline flex items-center gap-1.5'
                     >
                       {t('mySeoBlog')} <ExternalLinkIcon />
                     </a>
@@ -95,7 +100,7 @@ const Footer = () => {
                   <li>
                     <a
                       href='#'
-                      className='text-xl font-medium hover:underline flex items-center gap-1.5'
+                      className='text-xl  font-light hover:underline flex items-center gap-1.5'
                     >
                       Twitter <ExternalLinkIcon />
                     </a>
@@ -103,7 +108,7 @@ const Footer = () => {
                   <li>
                     <a
                       href='#'
-                      className='text-xl font-medium hover:underline flex items-center gap-1.5'
+                      className='text-xl  font-light hover:underline flex items-center gap-1.5'
                     >
                       Facebook <ExternalLinkIcon />
                     </a>
@@ -115,7 +120,7 @@ const Footer = () => {
 
           {/* Large Brand Name */}
           <div className='my-16 text-left md:-ml-8'>
-            <h1 className='font-serif text-6xl sm:text-8xl lg:text-9xl font-bold tracking-tighter wrap-break-word'>
+            <h1 className='text-black/80 dark:text-white/90 font-serif text-6xl sm:text-8xl lg:text-9xl font-bold tracking-tighter wrap-break-word'>
               Alevtina Gordienko
               <sup className='text-2xl sm:text-3xl lg:text-4xl font-bold -top-8 sm:-top-12 lg:-top-16 ml-1'>
                 &reg;
@@ -128,10 +133,10 @@ const Footer = () => {
       {/* Bottom Bar: Copyright & Legal */}
       {/* --- REFACTOR --- */}
       {/* Outer div is full-width, inner div matches the 'max-w-7xl' container */}
-      <div className='bg-black/20 text-white text-sm py-5 px-4 md:px-8'>
+      <div className='bg-black/80 dark:bg-black/50 text-white text-sm py-5 px-4 md:px-8'>
         <div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2'>
-          <p className='text-center md:text-left'>
-            &copy;{new Date().getFullYear()} Alevtina Gordienko All rights
+          <p className='font-funnel text-base md:text-lg text-center md:text-left'>
+            &copy; {new Date().getFullYear()} Alevtina Gordienko All rights
             reserved
           </p>
         </div>

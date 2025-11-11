@@ -32,8 +32,12 @@
     "projectRole": "Role",
     "projectTasks": "Tasks",
     "projectResult": "Result",
+    "additionalVideos": "Additional Videos",
     "projects": {
       "project1": {
+        "src": "/img/projects/project-1.jpg",
+        "logo": "/img/logos/logo-1.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "JOURNALIST | NEWS 1TV (BBC PARTNERSHIP) | 2024 – 2025",
         "summary": "Creation of daily news reports for 1TV in partnership with the BBC.",
         "role": "Journalist in the news department of 1TV, working in partnership with the BBC.",
@@ -42,10 +46,34 @@
           "Researching topics, interacting with representatives of state and public organizations, coordinating and conducting interviews.",
           "Creating stories in accordance with British broadcasting standards and journalistic ethics."
         ],
-        "result": "Release of original stories that form the unique brand of the TV channel's news with publication on 1TV's social networks.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "Release of original stories that form the unique brand of the TV channel's news with publication on 1TV's social networks."
       },
       "project2": {
+        "src": "/img/projects/project-2-portrait.png",
+        "logo": "/img/logos/logo-2.svg",
+        "videoSrc": "https://www.youtube.com/watch?v=w2kGpsm5KaI",
+        "videoLinks": [
+          {
+            "url": "https://www.youtube.com/watch?v=3GWCh9kMji8",
+            "thumbnail": "/img/projects/project-1-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=dR9r6quDwqI",
+            "thumbnail": "/img/projects/project-2-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=17eM8yXggY0",
+            "thumbnail": "/img/projects/project-3-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=H2-DTDyY0NE",
+            "thumbnail": "/img/projects/project-4-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=wdaKZPbk-h0",
+            "thumbnail": "/img/projects/project-5-video-1.png"
+          }
+        ],
         "name": "PRODUCER | 'VOTE CONSCIOUSLY' CAMPAIGN (NDI) | 1TV 2025",
         "summary": "Production of video clips and reports for the 'Vote Consciously' campaign.",
         "role": "Producer of 8 artistic video clips for the 'Vote Consciously' campaign and 4 informational reports on pre-election activities and the importance of conscious voting in partnership with ndi.org for 1TV.",
@@ -56,17 +84,12 @@
           "Managing the filming process, coordinating the work of operators and the film crew.",
           "Post-production: editing, music selection, final product control."
         ],
-        "result": "8 video teasers for the pre-election campaign in storytelling style and 4 special informational reports within STIRI 1TV, emphasizing the importance of conscious voting.",
-        "videoSrc": "https://www.youtube.com/watch?v=w2kGpsm5KaI",
-        "videoLinks": [
-          "https://www.youtube.com/watch?v=3GWCh9kMji8",
-          "https://www.youtube.com/watch?v=dR9r6quDwqI",
-          "https://www.youtube.com/watch?v=17eM8yXggY0",
-          "https://www.youtube.com/watch?v=H2-DTDyY0NE",
-          "https://www.youtube.com/watch?v=wdaKZPbk-h0"
-        ]
+        "result": "8 video teasers for the pre-election campaign in storytelling style and 4 special informational reports within STIRI 1TV, emphasizing the importance of conscious voting."
       },
       "project3": {
+        "src": "/img/projects/project-3.jpg",
+        "logo": "/img/logos/logo-3.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "PRODUCER | Website for TATIANA BRAGA BEAUTY SALON | 2024",
         "summary": "Creation and launch of a landing page for a new shampoo from Tatiana Braga Beauty Salon.",
         "role": "Producer of the project to launch a website for a new product of the Tatiana Braga beauty salon.",
@@ -76,10 +99,12 @@
           "Organizing a photo shoot for the product.",
           "Coordinating work with the programmer when creating the landing page."
         ],
-        "result": "Successful launch of the landing page, including content creation, organization of a photo shoot and coordination with a web developer, which led to the effective presentation of the new product on the market.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "Successful launch of the landing page, including content creation, organization of a photo shoot and coordination with a web developer, which led to the effective presentation of the new product on the market."
       },
       "project4": {
+        "src": "/img/projects/project-4.png",
+        "logo": "/img/logos/logo-4.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "PRODUCER | MILINA BAKERY | 2024",
         "summary": "Production of three video clips to promote a new line of Milina Bakery breads.",
         "role": "Producer for the creation of three videos for the website and promotion of a new line of breads.",
@@ -90,11 +115,13 @@
           "Managing the filming process, coordinating the work of operators and the film crew.",
           "Post-production: editing, music selection, final product control."
         ],
-        "result": "3 promotional videos for the company's website.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "3 promotional videos for the company's website."
       },
       "project5": {
-        "name": "ADMINISTRATOR | WEDDING SALON “APRIORI” | 2023",
+        "src": "/img/projects/project-5.jpg",
+        "logo": "/img/logos/logo-5.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "name": "ADMINISTRATOR | WEDDING SALON \"APRIORI\" | 2023",
         "summary": "Full management of a wedding salon, including sales, marketing and staff training.",
         "role": "Administrator",
         "description": [
@@ -105,22 +132,26 @@
           "Staff training.",
           "Work in the conditions of an intense wedding season, work with foreign clients."
         ],
-        "result": "Ensured the smooth operation of the salon, increased sales and successfully managed the team during the peak season.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "Ensured the smooth operation of the salon, increased sales and successfully managed the team during the peak season."
       },
       "project6": {
-        "name": "CO-AUTHOR AND SPEAKER | “PREMIERE ESQUISSE” PROJECT | 2021 – 2022",
+        "src": "/img/projects/project-6.jpg",
+        "logo": "/img/logos/logo-6.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "name": "CO-AUTHOR AND SPEAKER | \"PREMIERE ESQUISSE\" PROJECT | 2021 – 2022",
         "summary": "Co-author and speaker of an educational project for young designers.",
         "role": "Co-author and speaker",
         "description": [
-          "Co-author and speaker of the “Premiere Esquisse” project for young designers.",
+          "Co-author and speaker of the \"Premiere Esquisse\" project for young designers.",
           "Creating the concept of the competition and its detailed implementation.",
           "Conducting lectures and master classes on the topics: 'Producing a photo shoot', 'Main style vectors', 'Brand and collection archetypes', 'Linearity and color contrasts in clothing'."
         ],
-        "result": "2 seasons of the project were implemented, the final of which were shows of collections of young designers.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "2 seasons of the project were implemented, the final of which were shows of collections of young designers."
       },
       "project7": {
+        "src": "/img/projects/project-7.jpg",
+        "logo": "/img/logos/logo-7.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "PROJECT MANAGER | MAXIMUM ELECTRONICS SRL | 2019 – 2022",
         "summary": "Management of a project to create video reviews for a major electronics retailer.",
         "role": "Project manager",
@@ -131,10 +162,12 @@
           "Coordination of texts and reviews with foreign representatives of LG Samsung Sharp.",
           "Author of commercial texts for the Point.md portal."
         ],
-        "result": "More than 50 videos (5–8 min), the Dyson AirWrap review got 300,000+ views.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "More than 50 videos (5–8 min), the Dyson AirWrap review got 300,000+ views."
       },
       "project8": {
+        "src": "/img/projects/project-8.png",
+        "logo": "/img/logos/logo-8.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "PR-MANAGER | MILINA BAKERY | 2019",
         "summary": "Management of a PR campaign to launch new product lines for Milina Bakery.",
         "role": "PR-Manager",
@@ -144,34 +177,40 @@
           "Scripts, storyboarding, casting, organization of filming and control of editing of commercials.",
           "Joint work with a targetologist and maintenance of video content for social networks."
         ],
-        "result": "Sales growth from 300 to 6000 loaves per day in the first three months after launch.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "Sales growth from 300 to 6000 loaves per day in the first three months after launch."
       },
       "project9": {
-        "name": "PRODUCER, AUTHOR AND DIRECTOR | FASHION PROJECT “ISTIL”, ORHEI TV | 2018 – 2019",
+        "src": "/img/projects/project-9.jpg",
+        "logo": "/img/logos/logo-9.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "name": "PRODUCER, AUTHOR AND DIRECTOR | FASHION PROJECT \"ISTIL\", ORHEI TV | 2018 – 2019",
         "summary": "Full production of a weekly fashion TV show.",
         "role": "Producer, author and director",
         "description": [
-          "Producer, author and director of the fashion project “ISTIL”, Orhei TV.",
+          "Producer, author and director of the fashion project \"ISTIL\", Orhei TV.",
           "Full production of a weekly 26-minute issue: selection of heroines, presenters, locations, partners, scripts and control of editing.",
           "Management of a team of 5 people (2 presenters, 3 operators)."
         ],
-        "result": "21 television shows were released.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "21 television shows were released."
       },
       "project10": {
-        "name": "JOURNALIST | “ISTORII URBANE” PROJECT, TNT BRAVO TV | 2013 – 2017",
+        "src": "/img/projects/project-10.png",
+        "logo": "/img/logos/logo-10.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "name": "JOURNALIST | \"ISTORII URBANE\" PROJECT, TNT BRAVO TV | 2013 – 2017",
         "summary": "Journalist and co-author of a daily television project about urban stories.",
         "role": "Journalist and co-author",
         "description": [
-          "Journalist and co-author of the daily project “Istorii Urbane”, TNT Bravo TV.",
+          "Journalist and co-author of the daily project \"Istorii Urbane\", TNT Bravo TV.",
           "Daily search for topics, heroes and organization of filming for 4 years in a row.",
           "Writing texts for stories, publication in social networks."
         ],
-        "result": "Creation of daily content for a television project for four years, including searching for stories, organizing filming and writing scripts.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "Creation of daily content for a television project for four years, including searching for stories, organizing filming and writing scripts."
       },
       "project11": {
+        "src": "/img/projects/project-11.jpg",
+        "logo": "/img/logos/logo-11.svg",
+        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "TV PRESENTER AND AUTHOR | NIT TV PROJECT | 2009 – 2013",
         "summary": "Presenter, journalist and author of several television projects, including a morning show and a program on consumer rights protection.",
         "role": "TV presenter, journalist and author of the project",
@@ -180,8 +219,7 @@
           "Author and head of the project 'Traps for the consumer' - journalistic investigations in the field of consumer rights protection, interviews with politicians, lawyers and public figures.",
           "Special correspondent of the 'Microeconomics' program - scripts and analytical materials."
         ],
-        "result": "Creation and maintenance of several successful television programs, including conducting journalistic investigations and interviews with key figures.",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb"
+        "result": "Creation and maintenance of several successful television programs, including conducting journalistic investigations and interviews with key figures."
       }
     }
   },
