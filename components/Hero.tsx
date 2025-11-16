@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import { SmoothLink } from './SmoothLink';
 import { useState } from 'react';
 import { AIChatBox } from './AIChatBox';
+import { ShineBorder } from './ui/shine-border';
 
 export function Hero() {
   const t = useTranslations('Hero');
@@ -123,16 +124,25 @@ export function Hero() {
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('talkWithAI')}
               </p>
-              <button
-                onClick={() => setChatOpen(!chatOpen)}
-                className='text-base font-medium group'
-              >
-                {'[ '}
-                <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
-                  {t('AIChatBot')}
-                </span>
-                {' ]'}
-              </button>
+              <div className='relative inline-block'>
+                <button
+                  onClick={() => setChatOpen(!chatOpen)}
+                  className='text-base font-medium group'
+                >
+                  {'[ '}
+                  <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
+                    {t('AIChatBot')}
+                  </span>
+                  {' ]'}
+                </button>
+                <div className='absolute -bottom-1 left-0 w-full h-0.5'>
+                  <ShineBorder
+                    shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+                    borderWidth={1}
+                    duration={8}
+                  />
+                </div>
+              </div>
               <AIChatBox open={chatOpen} onClose={() => setChatOpen(false)} />
             </div>
           </div>
