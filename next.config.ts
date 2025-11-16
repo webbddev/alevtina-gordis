@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
     ],
     qualities: [75, 90],
   },
+  serverExternalPackages: ['pdf-parse'],
 };
 
 const withNextIntl = createNextIntlPlugin();

@@ -97,17 +97,11 @@ const Footer = () => {
                       {t('mySeoBlog')} <ExternalLinkIcon />
                     </a>
                   </li>
+
                   <li>
                     <a
-                      href='#'
-                      className='text-xl  font-light hover:underline flex items-center gap-1.5'
-                    >
-                      Twitter <ExternalLinkIcon />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href='#'
+                      href='https://www.facebook.com/share/1BT3s7Eu7G/'
+                      target='_blank'
                       className='text-xl  font-light hover:underline flex items-center gap-1.5'
                     >
                       Facebook <ExternalLinkIcon />

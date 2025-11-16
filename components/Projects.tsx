@@ -111,24 +111,36 @@ const ProjectDetailsSlider = ({
 
           {/* Video dialog component */}
           <div className='w-full mb-6 rounded-lg overflow-hidden'>
-            <HeroVideoDialog
-              className='block dark:hidden'
-              animationStyle='top-in-bottom-out'
-              videoSrc={project.videoSrc}
-              thumbnailSrc={project.src}
-              thumbnailAlt={project.name}
-              aspectRatio='aspect-video'
-            />
-            <HeroVideoDialog
-              className='hidden dark:block'
-              animationStyle='top-in-bottom-out'
-              videoSrc={project.videoSrc}
-              thumbnailSrc={project.src}
-              thumbnailAlt={project.name}
-              aspectRatio='aspect-video'
-            />
+            {project.videoSrc ? (
+              <>
+                <HeroVideoDialog
+                  className='block dark:hidden'
+                  animationStyle='top-in-bottom-out'
+                  videoSrc={project.videoSrc}
+                  thumbnailSrc={project.src}
+                  thumbnailAlt={project.name}
+                  aspectRatio='aspect-video'
+                />
+                <HeroVideoDialog
+                  className='hidden dark:block'
+                  animationStyle='top-in-bottom-out'
+                  videoSrc={project.videoSrc}
+                  thumbnailSrc={project.src}
+                  thumbnailAlt={project.name}
+                  aspectRatio='aspect-video'
+                />
+              </>
+            ) : (
+              <Image
+                width={1920}
+                height={1080}
+                src={project.src}
+                alt={project.name}
+                className='object-cover w-full aspect-video'
+              />
+            )}
           </div>
-
+          
           <div className='space-y-6'>
             {/* Role section */}
             <div>
@@ -305,9 +317,9 @@ const Projects = () => {
             {/* Backdrop overlay */}
             <motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='fixed inset-0 bg-black z-40'
+              className='fixed inset-0 bg-black/50 z-40 backdrop-blur-[2px]'
               onClick={() => setSelectedProject(null)}
             />
             {/* Details slider */}

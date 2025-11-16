@@ -1,0 +1,210 @@
+Would it make sense if I do the following? I can either:
+
+1) create projects.txt file with project-related content and then embed it; OR
+
+2) embed my en.json, ru.json, ro.json files (I am using next-intl in my project)
+
+What should my code look like in that case?
+
+Yes, that's an excellent instinct. Let's break down your two options.
+
+The Short Answer
+Option 1 (projects.txt) is an excellent idea. It's a clean, simple, and highly effective way to add your project data to the RAG system.
+
+Option 2 (.json files) is not recommended. It will add a lot of "noise" (like UI labels) and structural junk, which will confuse your search results and give you low-quality answers.
+
+🤔 Why the TXT File is the Right Choice
+Clean Data: A .txt file contains only the knowledge you want the AI to learn. You don't have to filter out keys, brackets, or "Home" and "Submit" button labels.
+
+Simple to Process: Reading a text file is a basic operation. You can then feed its entire content directly into the chunkContent function you already planned to build.
+
+Fits the Pipeline: This approach uses the exact same RAG pipeline. The only thing that changes is the very first step: "Get Data."
+
+For PDF: Get Data = pdf-parse
+
+For Webpage: Get Data = cheerio (scraper)
+
+For TXT: Get Data = fs.readFile (file reader)
+
+After that, the chunk -> embed -> store steps are identical.
+
+🚫 Why the i18n JSON Files are a Bad Choice
+Noise: Your .json files contain UI text. Your RAG system will be polluted with vectors for "Contact Me," "Toggle Theme," and other UI elements. When a user asks, "Tell me about your projects," the search might wrongly retrieve a chunk containing "projects.title" or a nav link.
+
+Structure: JSON is for structure, not prose. The semantic meaning is broken up by keys and hierarchy. Embedding the raw text of a JSON file is almost useless for a RAG system.
+
+Redundancy: You'd be embedding the same information three times in three different languages, which will triple your database size and confuse the search. The LLM is already multilingual; you only need to feed it the facts once (ideally in English, as models have the most training on it).
+
+💻 What Your Code Should Look Like (for Option 1)
+I suggest creating a new, more general-purpose file for your data processing actions, like src/lib/data-actions.ts. You can move your PDF logic here and add the new text file logic.
+
+1. Create src/lib/data-actions.ts
+This file will hold all your server actions for data processing. We'll use the Node.js fs (File System) module to read the file.
+
+TypeScript
+'use server';
+
+import { db } from '@/lib/db-config';
+import { documents } from '@/lib/db-schema';
+import { chunkContent } from '@/lib/chunking';
+import { generateEmbeddings } from '@/lib/embeddings';
+import pdf from 'pdf-parse';
+import { promises as fs } from 'fs'; // Import Node.js File System
+import path from 'path'; // Import Node.js Path
+
+// ---
+// Action 1: Process PDF (Moved from your old actions.ts)
+// ---
+export async function processPDF(formData: FormData) {
+  try {
+    const file = formData.get('pdf') as File;
+    if (!file) return { success: false, error: 'No file provided.' };
+
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+    const data = await pdf(buffer);
+
+    if (!data.text || data.text.trim().length === 0) {
+      return { success: false, error: 'No text found in PDF.' };
+    }
+
+    const chunks = await chunkContent(data.text);
+    const embeddings = await generateEmbeddings(chunks);
+    const records = chunks.map((chunk, index) => ({
+      content: chunk,
+      embedding: embeddings[index],
+    }));
+
+    await db.insert(documents).values(records);
+    return {
+      success: true,
+      message: `Processed PDF! Created ${records.length} chunks.`,
+    };
+  } catch (error) {
+    console.error('PDF processing error:', error);
+    return { success: false, error: 'Failed to process PDF.' };
+  }
+}
+
+// ---
+// Action 2: Process a Text File (e.g., projects.txt)
+// ---
+export async function processTextFile(fileName: string) {
+  try {
+    // We use path.join to safely find the file.
+    // This assumes your projects.txt is in a /data folder in your project root.
+    // You can change this path!
+    const filePath = path.join(process.cwd(), 'data', fileName);
+
+    // 1. Get Data (from text file)
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    if (!fileContent || fileContent.trim().length === 0) {
+      return { success: false, error: 'No text found in file.' };
+    }
+
+    // 2. Chunk (Same as before) 
+    const chunks = await chunkContent(fileContent);
+
+    // 3. Embed (Same as before) [cite: 276, 330]
+    const embeddings = await generateEmbeddings(chunks);
+
+    // 4. Store (Same as before) [cite: 200, 338]
+    const records = chunks.map((chunk, index) => ({
+      content: chunk,
+      embedding: embeddings[index],
+    }));
+
+    await db.insert(documents).values(records);
+
+    return {
+      success: true,
+      message: `Processed ${fileName}! Created ${records.length} chunks.`,
+    };
+  } catch (error) {
+    console.error(`Error processing ${fileName}:`, error);
+    return { success: false, error: `Failed to process ${fileName}.` };
+  }
+}
+2. Create a /data/projects.txt file
+Create a new folder data in your project root and add projects.txt to it.
+
+File: /data/projects.txt
+
+Plaintext
+My Portfolio Projects:
+
+Project 1: SuperApp
+- Description: This was a full-stack application built with Next.js, TypeScript, and a Neon database.
+- Features: It included real-time chat, user authentication, and a RAG chatbot.
+- Role: I was the lead developer and architect.
+
+Project 2: EcoTracker
+- Description: A mobile app to track carbon footprints.
+- Technologies: Built with React Native and Firebase.
+- Outcome: Reached 10,000 users in the first 3 months.
+...
+3. Create a Simple Admin Page (e.g., src/app/admin-data/page.tsx)
+This page will give you buttons to trigger your new actions. It's much better than just having an "upload" page.
+
+TypeScript
+'use client';
+
+import { useState } from 'react';
+import { processPDF, processTextFile } from '@/lib/data-actions';
+
+export default function AdminDataPage() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  // Handler for the PDF form
+  const handlePdfSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
+    setMessage('');
+
+    const formData = new FormData(event.currentTarget);
+    const result = await processPDF(formData);
+    
+    setMessage(result.success ? result.message! : result.error!);
+    setIsLoading(false);
+  };
+
+  // Handler for the TXT file button
+  const handleTxtClick = async (fileName: string) => {
+    setIsLoading(true);
+    setMessage('');
+    
+    const result = await processTextFile(fileName);
+    
+    setMessage(result.success ? result.message! : result.error!);
+    setIsLoading(false);
+  };
+
+  return (
+    <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <h1>Data Processing Panel</h1>
+      
+      {isLoading && <p>Processing... (This can take a moment)</p>}
+      {message && <p>{message}</p>}
+
+      {/* PDF Upload Form */}
+      <form onSubmit={handlePdfSubmit}>
+        <h3>Upload CV (PDF)</h3>
+        <input type="file" name="pdf" accept=".pdf" required disabled={isLoading} />
+        <button type="submit" disabled={isLoading}>
+          Process PDF
+        </button>
+      </form>
+
+      {/* TXT File Processor */}
+      <div>
+        <h3>Process Text Files</h3>
+        <button onClick={() => handleTxtClick('projects.txt')} disabled={isLoading}>
+          Process projects.txt
+        </button>
+        {/* You could add more buttons here for other files */}
+      </div>
+    </div>
+  );
+}
+Now, you have a simple panel where you can go to .../admin-data, upload your CV, and click a button to process your project file. Both actions will add their chunks to the same documents table, creating a single, powerful knowledge base for your chatbot.

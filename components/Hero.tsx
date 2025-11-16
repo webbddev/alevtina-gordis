@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { TextReveal } from './ui/text-reveal';
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler';
@@ -5,9 +7,12 @@ import { Lens } from './ui/lens';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslations } from 'next-intl';
 import { SmoothLink } from './SmoothLink';
+import { useState } from 'react';
+import { AIChatBox } from './AIChatBox';
 
 export function Hero() {
   const t = useTranslations('Hero');
+  const [chatOpen, setChatOpen] = useState(false);
 
   return (
     <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-14 md:px-6'>
@@ -27,11 +32,11 @@ export function Hero() {
         </h1>
 
         {/* --- COMBINED NAVIGATION SECTION --- */}
-        <div className='flex flex-col sm:flex-row justify-between items-start gap-6 md:gap-10 mb-16 w-full max-w-6xl mx-auto'>
+        <div className='flex flex-col sm:flex-row justify-between items-start gap-6 md:gap-10 mb-16 w-full max-w-6xl xl:mx-auto'>
           {/* Four Links (Centered) */}
-          <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 md:gap-x-3 md:gap-y-6 xl:gap-x-14 xl:flex xl:flex-row xl:items-center xl:justify-center xl:flex-nowrap'>
+          <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-3 md:gap-y-6 xl:gap-x-14'>
             {/* --- Language Switcher --- */}
-            <div className='shrink-0'>
+            <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('iTalk')}
               </p>
@@ -41,8 +46,9 @@ export function Hero() {
                 <span className='leading-none'>]</span>
               </span>
             </div>
+
             {/* --- Viewing My Work Link --- */}
-            <div className=''>
+            <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('enjoy')}
               </p>
@@ -57,8 +63,9 @@ export function Hero() {
                 {' ]'}
               </SmoothLink>
             </div>
+
             {/* --- Visit BirDigi Link --- */}
-            <div className=''>
+            <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('visit')}
               </p>
@@ -75,8 +82,9 @@ export function Hero() {
                 {' ]'}
               </a>
             </div>
+
             {/* --- Download CV Link --- */}
-            <div className=''>
+            <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('feelFree')}
               </p>
@@ -94,7 +102,7 @@ export function Hero() {
             </div>
 
             {/* --- Contact Me Link --- */}
-            <div className=''>
+            <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('welcome')}
               </p>
@@ -109,6 +117,24 @@ export function Hero() {
                 {' ]'}
               </SmoothLink>
             </div>
+
+            {/* --- Ask AI Link --- */}
+            <div className='relative text-left'>
+              <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
+                {t('talkWithAI')}
+              </p>
+              <button
+                onClick={() => setChatOpen(!chatOpen)}
+                className='text-base font-medium group'
+              >
+                {'[ '}
+                <span className='transition-colors group-hover:text-gray-400 dark:group-hover:text-gray-300'>
+                  {t('AIChatBot')}
+                </span>
+                {' ]'}
+              </button>
+              <AIChatBox open={chatOpen} onClose={() => setChatOpen(false)} />
+            </div>
           </div>
         </div>
 
@@ -122,8 +148,7 @@ export function Hero() {
           >
             <div className='relative w-full aspect-3/2 overflow-hidden rounded-lg mb-4 shadow-lg'>
               <Image
-                // src='/portfolio-image1.jpg'
-                src='/portfolio-image.png'
+                src='/author.jpg'
                 alt='Artistic portrait with glitch-inspired overlays and ethereal lighting'
                 fill
                 style={{ objectFit: 'cover' }}

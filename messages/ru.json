@@ -12,6 +12,8 @@
     "downloadCv": "СКАЧАТЬ МОЕ РЕЗЮМЕ",
     "welcome": "Добро пожаловать",
     "contactMe": "СВЯЖИТЕСЬ СО МНОЙ",
+    "talkWithAI": "Пообщайтесь с",
+    "AIChatBot": "ALYA AI",
     "overviewTitle": "От автора",
     "overviewIntro": "МОЙ ПУТЬ: ОТ ПОИСКА ИСТОРИЙ К УМЕНИЮ СЛЫШАТЬ БИЗНЕС. СЕГОДНЯ Я СОЕДИНЯЮ ЭМПАТИЮ С АНАЛИТИКОЙ ДЛЯ СОЗДАНИЯ СТРАТЕГИЙ ВАШЕГО РОСТА.",
     "overviewDetails": "Помню свои первые репортажи: беготня по улицам, поиск героев, сотни вопросов и одна цель: поймать живую историю. С годами я создавала видеопроекты для брендов и социальных кампаний, училась видеть суть, превращать сложное в понятное и ценное для людей. Сегодня я меняю вектор: соединяю опыт работы с проектами и вниманием к деталям с аналитикой и цифровыми инструментами, чтобы помогать бизнесам развивать свои проекты эффективнее. Мир SEO кажется мне особенно привлекательным: азарт открывать, что происходит «по ту сторону крана», анализировать, искать закономерности и находить возможности для роста."
@@ -102,10 +104,10 @@
         "result": "Успешный запуск landing page, включая создание контента, организацию фотосъемки и координацию с веб-разработчиком, что привело к эффективному представлению нового продукта на рынке."
       },
       "project4": {
-        "src": "/img/projects/project-4.png",
+        "src": "/img/projects/project-4-portrait.png",
         "logo": "/img/logos/logo-4.svg",
         "videoSrc": "https://www.youtube.com/watch?v=rKrIt1kyX58",
-        "name": "ПРОДЮСЕР | MILINA BAKERY | 2024",
+        "name": "ПРОДЮСЕР | MILINA BAKERY | 2025",
         "summary": "Продюсирование трех видеороликов для продвижения новой линейки хлебов Milina Bakery.",
         "role": "Продюсер по созданию трех роликов для сайта и продвижения новой линейки хлебов.",
         "description": [
@@ -120,7 +122,7 @@
       "project5": {
         "src": "/img/projects/project-5.jpg",
         "logo": "/img/logos/logo-5.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "АДМИНИСТРАТОР | СВАДЕБНЫЙ САЛОН \"APRIORI\" | 2023",
         "summary": "Полное управление свадебным салоном, включая продажи, маркетинг и обучение персонала.",
         "role": "Администратор",
@@ -151,7 +153,17 @@
       "project7": {
         "src": "/img/projects/project-7.jpg",
         "logo": "/img/logos/logo-7.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "https://www.youtube.com/watch?v=7b-mLggNqos&t=91s",
+        "videoLinks": [
+          {
+            "url": "https://www.youtube.com/watch?v=qZEU02drSeE&t=35s",
+            "thumbnail": "/img/projects/project-7-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=gj_HjFYoPtQ",
+            "thumbnail": "/img/projects/project-7-video-2.png"
+          }
+        ],
         "name": "ПРОЕКТ-МЕНЕДЖЕР | MAXIMUM ELECTRONICS SRL | 2019 – 2022",
         "summary": "Руководство проектом по созданию видеообзоров для крупного ритейлера электроники.",
         "role": "Проект-менеджер",
@@ -165,9 +177,23 @@
         "result": "Более 50 видеороликов (5–8 мин), обзор Dyson AirWrap собрал 300 000+ просмотров."
       },
       "project8": {
-        "src": "/img/projects/project-8.png",
+        "src": "/img/projects/project-8.jpg",
         "logo": "/img/logos/logo-8.svg",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoLinks": [
+          {
+            "url": "https://www.youtube.com/watch?v=V82fUpwBr2E",
+            "thumbnail": "/img/projects/project-1-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=-BGmaONAqGg",
+            "thumbnail": "/img/projects/project-2-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=xoeIR0Gx38M&t=54s",
+            "thumbnail": "/img/projects/project-3-video-1.png"
+          }
+        ],
         "name": "PR-МЕНЕДЖЕР | MILINA BAKERY | 2019",
         "summary": "Руководство PR-кампанией по запуску новых продуктовых линеек для Milina Bakery.",
         "role": "PR-Менеджер",
@@ -194,7 +220,7 @@
         "result": "Выпущено 21 телевизионное шоу."
       },
       "project10": {
-        "src": "/img/projects/project-10.png",
+        "src": "/img/projects/project-10-portrait.png",
         "logo": "/img/logos/logo-10.svg",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "ЖУРНАЛИСТ | ПРОЕКТ \"ISTORII URBANE\", TNT BRAVO TV | 2013 – 2017",
@@ -210,7 +236,7 @@
       "project11": {
         "src": "/img/projects/project-11.jpg",
         "logo": "/img/logos/logo-11.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "ТЕЛЕВЕДУЩАЯ И АВТОР | ПРОЕКТ NIT TV | 2009 – 2013",
         "summary": "Ведущая, журналист и автор нескольких телепроектов, включая утреннее шоу и программу о защите прав потребителей.",
         "role": "Телеведущая, журналист и автор проекта",

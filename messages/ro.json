@@ -12,6 +12,8 @@
     "downloadCv": "DESCĂRCAȚI CV-UL MEU",
     "welcome": "Bun venit",
     "contactMe": "CONTACTAȚI-MĂ",
+    "talkWithAI": "Vorbiți cu",
+    "AIChatBot": "ALYA AI",
     "overviewTitle": "De la autor",
     "overviewIntro": "CALEA MEA: DE LA GĂSIREA POVEȘTILOR LA ABILITATEA DE A ASCULTA AFACERILE. ASTĂZI, COMBIN EMPATIA CU ANALITICA PENTRU A CREA STRATEGII PENTRU CREȘTEREA DVS.",
     "overviewDetails": "Îmi amintesc primele mele reportaje: alergând pe străzi, căutând eroi, sute de întrebări și un singur scop: să surprind o poveste vie. De-a lungul anilor, am creat proiecte video pentru branduri și campanii sociale, am învățat să văd esența, să transform complexul în ceva de înțeles și valoros pentru oameni. Astăzi, îmi schimb direcția: combin experiența mea cu proiectele și atenția la detalii cu analitica și instrumentele digitale pentru a ajuta afacerile să-și dezvolte proiectele mai eficient. Lumea SEO mi se pare deosebit de atractivă: entuziasmul de a descoperi ce se întâmplă 'de cealaltă parte a ecranului,' de a analiza, de a căuta modele și de a găsi oportunități de creștere."
@@ -104,8 +106,8 @@
       "project4": {
         "src": "/img/projects/project-4.png",
         "logo": "/img/logos/logo-4.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
-        "name": "PRODUCĂTOR | MILINA BAKERY | 2024",
+        "videoSrc": "https://www.youtube.com/watch?v=rKrIt1kyX58",
+        "name": "PRODUCĂTOR | MILINA BAKERY | 2025",
         "summary": "Producția a trei clipuri video pentru promovarea unei noi linii de pâine Milina Bakery.",
         "role": "Producător pentru crearea a trei clipuri pentru site și promovarea unei noi linii de pâine.",
         "description": [
@@ -151,7 +153,17 @@
       "project7": {
         "src": "/img/projects/project-7.jpg",
         "logo": "/img/logos/logo-7.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "https://www.youtube.com/watch?v=7b-mLggNqos&t=91s",
+        "videoLinks": [
+          {
+            "url": "https://www.youtube.com/watch?v=qZEU02drSeE&t=35s",
+            "thumbnail": "/img/projects/project-7-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=gj_HjFYoPtQ",
+            "thumbnail": "/img/projects/project-7-video-2.png"
+          }
+        ],
         "name": "MANAGER DE PROIECT | MAXIMUM ELECTRONICS SRL | 2019 – 2022",
         "summary": "Managementul unui proiect de creare a recenziilor video pentru un mare retailer de electronice.",
         "role": "Manager de proiect",
@@ -168,6 +180,20 @@
         "src": "/img/projects/project-8.png",
         "logo": "/img/logos/logo-8.svg",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoLinks": [
+          {
+            "url": "https://www.youtube.com/watch?v=V82fUpwBr2E",
+            "thumbnail": "/img/projects/project-1-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=-BGmaONAqGg",
+            "thumbnail": "/img/projects/project-2-video-1.png"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=xoeIR0Gx38M&t=54s",
+            "thumbnail": "/img/projects/project-3-video-1.png"
+          }
+        ],
         "name": "MANAGER PR | MILINA BAKERY | 2019",
         "summary": "Managementul unei campanii de PR pentru lansarea de noi linii de produse pentru Milina Bakery.",
         "role": "Manager PR",
