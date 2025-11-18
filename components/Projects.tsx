@@ -58,7 +58,7 @@ const ProjectPreviewCard = ({
           <h3 className='text-white text-[12px] md:text-[13px] lg:text-[16px] xl:text-[17px] font-semibold '>
             {name}
           </h3>
-          <p className='line-clamp-2 text-white/80 text-[12px] md:text-[13px] lg:text-[16px] xl:text-[17px]'>
+          <p className='line-clamp-2 text-white/90 hidden lg:block text-[12px] md:text-[13px] lg:text-[16px] xl:text-[17px]'>
             {summary}
           </p>
         </div>

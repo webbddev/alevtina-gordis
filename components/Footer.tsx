@@ -42,13 +42,13 @@ const Footer = () => {
             <div>
               <a
                 href='tel:+11202330123'
-                className='font-funnel block text-2xl font-light hover:text-gray-700 dark:hover:text-gray-300'
+                className='font-geist font-light block text-2xl hover:text-gray-700 dark:hover:text-gray-300'
               >
                 +373 (78) 585-585
               </a>
               <a
                 href='mailto:yo@alevtinagordienko.com'
-                className='font-funnel block text-2xl font-thin hover:text-gray-700 dark:hover:text-gray-300'
+                className='font-geist font-extralight block text-2xl hover:text-gray-700 dark:hover:text-gray-300'
               >
                 alevtina.gordienko@gmail.com
               </a>

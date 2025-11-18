@@ -250,6 +250,7 @@
     }
   },
   "Footer": {
+    "bookACall": "BOOK A CALL",
     "navigate": "Navigate",
     "home": "Home",
     "projects": "Projects",
