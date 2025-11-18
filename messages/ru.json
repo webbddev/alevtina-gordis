@@ -39,7 +39,7 @@
       "project1": {
         "src": "/img/projects/project-1.jpg",
         "logo": "/img/logos/logo-1.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "ЖУРНАЛИСТ | НОВОСТИ 1TV (BBC PARTNERSHIP) | 2024 – 2025",
         "summary": "Создание ежедневных новостных репортажей для 1TV в партнерстве с BBC.",
         "role": "Журналист в новостном отделе 1TV, работающий в рамках партнерства с BBC.",
@@ -91,7 +91,7 @@
       "project3": {
         "src": "/img/projects/project-3.jpg",
         "logo": "/img/logos/logo-3.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "ПРОДЮСЕР | Сайт для TATIANA BRAGA BEAUTY SALON | 2024",
         "summary": "Создание и запуск landing page для нового шампуня от Tatiana Braga Beauty Salon.",
         "role": "Продюсер проекта по запуску сайта для нового продукта салона красоты Tatiana Braga.",
@@ -120,7 +120,7 @@
         "result": "3 рекламных видео для сайта компании."
       },
       "project5": {
-        "src": "/img/projects/project-5.jpg",
+        "src": "/img/projects/project-5-img2.jpg",
         "logo": "/img/logos/logo-5.svg",
         "videoSrc": "",
         "name": "АДМИНИСТРАТОР | СВАДЕБНЫЙ САЛОН \"APRIORI\" | 2023",
@@ -139,7 +139,7 @@
       "project6": {
         "src": "/img/projects/project-6.jpg",
         "logo": "/img/logos/logo-6.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "СОАВТОР И СПИКЕР | ПРОЕКТ \"PREMIERE ESQUISSE\" | 2021 – 2022",
         "summary": "Соавтор и спикер образовательного проекта для молодых дизайнеров.",
         "role": "Соавтор и спикер",
@@ -179,19 +179,19 @@
       "project8": {
         "src": "/img/projects/project-8.jpg",
         "logo": "/img/logos/logo-8.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "https://www.youtube.com/watch?v=-BGmaONAqGg",
         "videoLinks": [
           {
             "url": "https://www.youtube.com/watch?v=V82fUpwBr2E",
-            "thumbnail": "/img/projects/project-1-video-1.png"
+            "thumbnail": "/img/projects/project-8-baltia.png"
           },
           {
             "url": "https://www.youtube.com/watch?v=-BGmaONAqGg",
-            "thumbnail": "/img/projects/project-2-video-1.png"
+            "thumbnail": "/img/projects/project-8-coffee_chain.png"
           },
           {
             "url": "https://www.youtube.com/watch?v=xoeIR0Gx38M&t=54s",
-            "thumbnail": "/img/projects/project-3-video-1.png"
+            "thumbnail": "/img/projects/project-8-bakery.png"
           }
         ],
         "name": "PR-МЕНЕДЖЕР | MILINA BAKERY | 2019",
@@ -206,7 +206,7 @@
         "result": "Рост продаж с 300 до 6000 батонов в день в первые три месяца после запуска."
       },
       "project9": {
-        "src": "/img/projects/project-9.jpg",
+        "src": "/img/projects/project-9-noImage.jpg",
         "logo": "/img/logos/logo-9.svg",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "ПРОДЮСЕР, АВТОР И РЕЖИССЁР | МОДНЫЙ ПРОЕКТ \"ISTIL\", ORHEI TV | 2018 – 2019",
@@ -220,9 +220,9 @@
         "result": "Выпущено 21 телевизионное шоу."
       },
       "project10": {
-        "src": "/img/projects/project-10-portrait.png",
+        "src": "/img/projects/project-10-portrait_expanded.jpg",
         "logo": "/img/logos/logo-10.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "ЖУРНАЛИСТ | ПРОЕКТ \"ISTORII URBANE\", TNT BRAVO TV | 2013 – 2017",
         "summary": "Журналист и соавтор ежедневного телепроекта о городских историях.",
         "role": "Журналист и соавтор",

@@ -39,7 +39,7 @@
       "project1": {
         "src": "/img/projects/project-1.jpg",
         "logo": "/img/logos/logo-1.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "JURNALIST | ȘTIRI 1TV (PARTENERIAT BBC) | 2024 – 2025",
         "summary": "Crearea de reportaje de știri zilnice pentru 1TV în parteneriat cu BBC.",
         "role": "Jurnalist în departamentul de știri al 1TV, lucrând în parteneriat cu BBC.",
@@ -91,7 +91,7 @@
       "project3": {
         "src": "/img/projects/project-3.jpg",
         "logo": "/img/logos/logo-3.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "PRODUCĂTOR | Site pentru TATIANA BRAGA BEAUTY SALON | 2024",
         "summary": "Crearea și lansarea unei pagini de destinație pentru un nou șampon de la Tatiana Braga Beauty Salon.",
         "role": "Producător al proiectului de lansare a unui site pentru un nou produs al salonului de înfrumusețare Tatiana Braga.",
@@ -104,7 +104,7 @@
         "result": "Lansarea cu succes a paginii de destinație, inclusiv crearea de conținut, organizarea unei ședințe foto și coordonarea cu un dezvoltator web, ceea ce a dus la prezentarea eficientă a noului produs pe piață."
       },
       "project4": {
-        "src": "/img/projects/project-4.png",
+        "src": "/img/projects/project-4-portrait.png",
         "logo": "/img/logos/logo-4.svg",
         "videoSrc": "https://www.youtube.com/watch?v=rKrIt1kyX58",
         "name": "PRODUCĂTOR | MILINA BAKERY | 2025",
@@ -120,9 +120,9 @@
         "result": "3 videoclipuri promoționale pentru site-ul companiei."
       },
       "project5": {
-        "src": "/img/projects/project-5.jpg",
+        "src": "/img/projects/project-5-img2.jpg",
         "logo": "/img/logos/logo-5.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "ADMINISTRATOR | SALON DE NUNTĂ \"APRIORI\" | 2023",
         "summary": "Managementul complet al unui salon de nuntă, inclusiv vânzări, marketing și instruirea personalului.",
         "role": "Administrator",
@@ -139,7 +139,7 @@
       "project6": {
         "src": "/img/projects/project-6.jpg",
         "logo": "/img/logos/logo-6.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "CO-AUTOR ȘI SPEAKER | PROIECTUL \"PREMIERE ESQUISSE\" | 2021 – 2022",
         "summary": "Co-autor și speaker al unui proiect educațional pentru tinerii designeri.",
         "role": "Co-autor și speaker",
@@ -177,21 +177,21 @@
         "result": "Peste 50 de videoclipuri (5–8 min), recenzia Dyson AirWrap a adunat peste 300.000 de vizualizări."
       },
       "project8": {
-        "src": "/img/projects/project-8.png",
+        "src": "/img/projects/project-8.jpg",
         "logo": "/img/logos/logo-8.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "https://www.youtube.com/watch?v=-BGmaONAqGg",
         "videoLinks": [
           {
             "url": "https://www.youtube.com/watch?v=V82fUpwBr2E",
-            "thumbnail": "/img/projects/project-1-video-1.png"
+            "thumbnail": "/img/projects/project-8-baltia.png"
           },
           {
             "url": "https://www.youtube.com/watch?v=-BGmaONAqGg",
-            "thumbnail": "/img/projects/project-2-video-1.png"
+            "thumbnail": "/img/projects/project-8-coffee_chain.png"
           },
           {
             "url": "https://www.youtube.com/watch?v=xoeIR0Gx38M&t=54s",
-            "thumbnail": "/img/projects/project-3-video-1.png"
+            "thumbnail": "/img/projects/project-8-bakery.png"
           }
         ],
         "name": "MANAGER PR | MILINA BAKERY | 2019",
@@ -206,7 +206,7 @@
         "result": "Creșterea vânzărilor de la 300 la 6000 de pâini pe zi în primele trei luni de la lansare."
       },
       "project9": {
-        "src": "/img/projects/project-9.jpg",
+        "src": "/img/projects/project-9-noImage.jpg",
         "logo": "/img/logos/logo-9.svg",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "PRODUCĂTOR, AUTOR ȘI REGIZOR | PROIECTUL DE MODĂ \"ISTIL\", ORHEI TV | 2018 – 2019",
@@ -220,9 +220,9 @@
         "result": "Au fost lansate 21 de emisiuni de televiziune."
       },
       "project10": {
-        "src": "/img/projects/project-10.png",
+        "src": "/img/projects/project-10-portrait_expanded.jpg",
         "logo": "/img/logos/logo-10.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "JURNALIST | PROIECTUL \"ISTORII URBANE\", TNT BRAVO TV | 2013 – 2017",
         "summary": "Jurnalist și co-autor al unui proiect de televiziune zilnic despre povești urbane.",
         "role": "Jurnalist și co-autor",
@@ -236,7 +236,7 @@
       "project11": {
         "src": "/img/projects/project-11.jpg",
         "logo": "/img/logos/logo-11.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "PREZENTATOARE TV ȘI AUTOR | PROIECTUL NIT TV | 2009 – 2013",
         "summary": "Prezentatoare, jurnalistă și autoare a mai multor proiecte de televiziune, inclusiv o emisiune matinală și un program despre protecția drepturilor consumatorilor.",
         "role": "Prezentatoare TV, jurnalistă și autoare a proiectului",

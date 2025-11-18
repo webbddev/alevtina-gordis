@@ -12,7 +12,7 @@
     "downloadCv": "DOWNLOAD MY CV",
     "welcome": "Welcome",
     "contactMe": "CONTACT ME",
-    "talkWithAI": "Talk with",
+    "talkWithAI": "Talk to",
     "AIChatBot": "ALYA AI",
     "overviewTitle": "From the Author",
     "overviewIntro": "MY JOURNEY: FROM FINDING STORIES TO LEARNING TO LISTEN TO BUSINESS. TODAY, I COMBINE EMPATHY WITH ANALYTICS TO CREATE STRATEGIES FOR YOUR GROWTH.",
@@ -39,7 +39,7 @@
       "project1": {
         "src": "/img/projects/project-1.jpg",
         "logo": "/img/logos/logo-1.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "JOURNALIST | NEWS 1TV (BBC PARTNERSHIP) | 2024 – 2025",
         "summary": "Creation of daily news reports for 1TV in partnership with the BBC.",
         "role": "Journalist in the news department of 1TV, working in partnership with the BBC.",
@@ -91,7 +91,7 @@
       "project3": {
         "src": "/img/projects/project-3.jpg",
         "logo": "/img/logos/logo-3.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "PRODUCER | Website for TATIANA BRAGA BEAUTY SALON | 2024",
         "summary": "Creation and launch of a landing page for a new shampoo from Tatiana Braga Beauty Salon.",
         "role": "Producer of the project to launch a website for a new product of the Tatiana Braga beauty salon.",
@@ -104,7 +104,7 @@
         "result": "Successful launch of the landing page, including content creation, organization of a photo shoot and coordination with a web developer, which led to the effective presentation of the new product on the market."
       },
       "project4": {
-        "src": "/img/projects/project-4.png",
+        "src": "/img/projects/project-4-portrait.png",
         "logo": "/img/logos/logo-4.svg",
         "videoSrc": "https://www.youtube.com/watch?v=rKrIt1kyX58",
         "name": "PRODUCER | MILINA BAKERY | 2025",
@@ -120,9 +120,9 @@
         "result": "3 promotional videos for the company's website."
       },
       "project5": {
-        "src": "/img/projects/project-5.jpg",
+        "src": "/img/projects/project-5-img2.jpg",
         "logo": "/img/logos/logo-5.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "ADMINISTRATOR | WEDDING SALON \"APRIORI\" | 2023",
         "summary": "Full management of a wedding salon, including sales, marketing and staff training.",
         "role": "Administrator",
@@ -139,7 +139,7 @@
       "project6": {
         "src": "/img/projects/project-6.jpg",
         "logo": "/img/logos/logo-6.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "CO-AUTHOR AND SPEAKER | \"PREMIERE ESQUISSE\" PROJECT | 2021 – 2022",
         "summary": "Co-author and speaker of an educational project for young designers.",
         "role": "Co-author and speaker",
@@ -177,21 +177,21 @@
         "result": "More than 50 videos (5–8 min), the Dyson AirWrap review got 300,000+ views."
       },
       "project8": {
-        "src": "/img/projects/project-8.png",
+        "src": "/img/projects/project-8.jpg",
         "logo": "/img/logos/logo-8.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "https://www.youtube.com/watch?v=-BGmaONAqGg",
         "videoLinks": [
           {
             "url": "https://www.youtube.com/watch?v=V82fUpwBr2E",
-            "thumbnail": "/img/projects/project-1-video-1.png"
+            "thumbnail": "/img/projects/project-8-baltia.png"
           },
           {
             "url": "https://www.youtube.com/watch?v=-BGmaONAqGg",
-            "thumbnail": "/img/projects/project-2-video-1.png"
+            "thumbnail": "/img/projects/project-8-coffee_chain.png"
           },
           {
             "url": "https://www.youtube.com/watch?v=xoeIR0Gx38M&t=54s",
-            "thumbnail": "/img/projects/project-3-video-1.png"
+            "thumbnail": "/img/projects/project-8-bakery.png"
           }
         ],
         "name": "PR-MANAGER | MILINA BAKERY | 2019",
@@ -206,7 +206,7 @@
         "result": "Sales growth from 300 to 6000 loaves per day in the first three months after launch."
       },
       "project9": {
-        "src": "/img/projects/project-9.jpg",
+        "src": "/img/projects/project-9-noImage.jpg",
         "logo": "/img/logos/logo-9.svg",
         "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
         "name": "PRODUCER, AUTHOR AND DIRECTOR | FASHION PROJECT \"ISTIL\", ORHEI TV | 2018 – 2019",
@@ -220,9 +220,9 @@
         "result": "21 television shows were released."
       },
       "project10": {
-        "src": "/img/projects/project-10.png",
+        "src": "/img/projects/project-10-portrait_expanded.jpg",
         "logo": "/img/logos/logo-10.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "JOURNALIST | \"ISTORII URBANE\" PROJECT, TNT BRAVO TV | 2013 – 2017",
         "summary": "Journalist and co-author of a daily television project about urban stories.",
         "role": "Journalist and co-author",
@@ -236,7 +236,7 @@
       "project11": {
         "src": "/img/projects/project-11.jpg",
         "logo": "/img/logos/logo-11.svg",
-        "videoSrc": "https://youtu.be/COnOGmzSznA?si=rh-DD4Ok-HtSTkJb",
+        "videoSrc": "",
         "name": "TV PRESENTER AND AUTHOR | NIT TV PROJECT | 2009 – 2013",
         "summary": "Presenter, journalist and author of several television projects, including a morning show and a program on consumer rights protection.",
         "role": "TV presenter, journalist and author of the project",

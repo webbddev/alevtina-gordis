@@ -9,6 +9,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-funnel: var(--font-funnel-sans);
+  --font-nunito: var(--font-nunito);
+  --font-abril-fatface: var(--font-abril-fatface);
+  --font-libreBaskerville: var(--font-libre-baskerville);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --color-sidebar-ring: var(--sidebar-ring);

@@ -1,5 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { SmoothLink } from './SmoothLink';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { InlineWidget } from 'react-calendly';
+import BookACallButton from './BookACallButton';
 
 // A simple SVG icon for the external links
 const ExternalLinkIcon = () => (
@@ -49,11 +52,12 @@ const Footer = () => {
               >
                 alevtina.gordienko@gmail.com
               </a>
+              {/* Book a Call */}
+              <BookACallButton />
             </div>
 
             {/* Navigation & Social Links */}
-            {/* --- REFACTOR --- */}
-            {/* This is now 'flex-row' by default for the mobile 2-column layout */}
+
             <div className='flex flex-row gap-12 sm:gap-20'>
               {/* Navigate Links */}
               <div>

@@ -173,12 +173,12 @@ export function Hero() {
         </p>
 
         {/* Introduction Paragraph with TextReveal */}
-        <TextReveal className='font-mono text-justify text-2xl md:text-3xl font-medium leading-relaxed max-w-4xl mx-auto'>
+        <TextReveal className='font-libreBaskerville font-bold text-justify text-2xl md:text-3xl leading-relaxed max-w-4xl mx-auto'>
           {t('overviewIntro')}
         </TextReveal>
 
         {/* Detailed Description with TextReveal */}
-        <TextReveal className='font-funnel font-light text-justify text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'>
+        <TextReveal className='font-nunito font-medium text-justify text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'>
           {t('overviewDetails')}
         </TextReveal>
       </div>
