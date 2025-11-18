@@ -140,7 +140,7 @@ const ProjectDetailsSlider = ({
               />
             )}
           </div>
-          
+
           <div className='space-y-6'>
             {/* Role section */}
             <div>
