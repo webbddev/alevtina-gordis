@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { HeroVideoDialog } from './ui/hero-video-dialog';
 import { XIcon, CheckCircle2 } from 'lucide-react';
+import { TextReveal } from './ui/text-reveal';
 
 // Type definition for video links
 interface VideoLink {
@@ -54,7 +55,7 @@ const ProjectPreviewCard = ({
           className='object-cover w-full'
           priority
         />
-        <div className='absolute bottom-0 left-0 p-4 bg-linear-to-t from-black/80 to-transparent w-full'>
+        <div className='absolute bottom-0 left-0 p-4 bg-linear-to-t from-black/90 to-transparent w-full'>
           <h3 className='text-white text-[12px] md:text-[13px] lg:text-[16px] xl:text-[17px] font-semibold '>
             {name}
           </h3>
@@ -246,14 +247,16 @@ const Projects = () => {
       <div className='mx-auto max-w-7xl px-4 md:px-8'>
         {/* Section header */}
         <div className='mb-12 md:-ml-8'>
-          <h2 className='text-4xl font-bold text-foreground mb-4'>
+          <h2 className='font-libreBaskerville text-4xl font-normal text-foreground mb-4'>
             {t('title')}
           </h2>
-          <p className='text-muted-foreground text-lg'>{t('subtitle')}</p>
+          <TextReveal className='font-nunito font-medium text-base md:text-lg lg:text-xl'>
+            {t('subtitle')}
+          </TextReveal>
         </div>
 
         {/* Marquee container with three columns */}
-        <div className='w-full h-[800px] 2xl:h-[1000px] flex items-center justify-center overflow-hidden py-8'>
+        <div className='w-full h-[800px] lg:h-[860px] 2xl:h-[1300px] flex items-center justify-center overflow-hidden py-8'>
           {/* First column - base speed */}
           <Marquee
             vertical

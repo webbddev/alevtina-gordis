@@ -1,5 +1,13 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Funnel_Sans, Abril_Fatface, Nunito, Libre_Baskerville} from 'next/font/google';
+import {
+  Geist,
+  Geist_Mono,
+  Funnel_Sans,
+  Abril_Fatface,
+  Nunito,
+  Libre_Baskerville,
+  Cormorant_SC,
+} from 'next/font/google';
 import './globals.css';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { routing } from '@/i18n/routing';
@@ -8,6 +16,12 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
 import ReactLenis from 'lenis/react';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+
+const cormorantSC = Cormorant_SC({
+  variable: '--font-cormorant-sc',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 const abrilFatface = Abril_Fatface({
   variable: '--font-abril-fatface',
@@ -18,7 +32,7 @@ const abrilFatface = Abril_Fatface({
 const nunito = Nunito({
   variable: '--font-nunito',
   subsets: ['latin'],
-  weight: ['200','300', '400', '500', '600', '700', '800', '900'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 const libreBaskerville = Libre_Baskerville({
@@ -74,7 +88,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${funnelSans.variable} ${abrilFatface.variable} ${nunito.variable} ${libreBaskerville.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} ${funnelSans.variable} ${abrilFatface.variable} ${nunito.variable} ${libreBaskerville.variable} ${cormorantSC.variable} antialiased `}
       >
         {/* <SmoothScrollProvider> */}
         <ReactLenis root>

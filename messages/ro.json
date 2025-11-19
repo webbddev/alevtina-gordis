@@ -1,8 +1,8 @@
 {
   "Hero": {
     "projectLabel": "Proiect",
-    "titleLine1": "ALEVTINA",
-    "titleLine2": "GORDIENKO",
+    "titleLine1": "Alevtina",
+    "titleLine2": "Gordienko",
     "iTalk": "Vorbesc",
     "enjoy": "Bucurați-vă",
     "viewWork": "VEZI LUCRĂRILE MELE",
@@ -15,7 +15,7 @@
     "talkWithAI": "Vorbiți cu",
     "AIChatBot": "ALYA AI",
     "overviewTitle": "De la autor",
-    "overviewIntro": "CALEA MEA: DE LA GĂSIREA POVEȘTILOR LA ABILITATEA DE A ASCULTA AFACERILE. ASTĂZI, COMBIN EMPATIA CU ANALITICA PENTRU A CREA STRATEGII PENTRU CREȘTEREA DVS.",
+    "overviewIntro": "Calea mea: de la găsirea poveștilor la abilitatea de a asculta afacerile. Astăzi, combin empatia cu analitica pentru a crea strategii pentru creșterea dvs.",
     "overviewDetails": "Îmi amintesc primele mele reportaje: alergând pe străzi, căutând eroi, sute de întrebări și un singur scop: să surprind o poveste vie. De-a lungul anilor, am creat proiecte video pentru branduri și campanii sociale, am învățat să văd esența, să transform complexul în ceva de înțeles și valoros pentru oameni. Astăzi, îmi schimb direcția: combin experiența mea cu proiectele și atenția la detalii cu analitica și instrumentele digitale pentru a ajuta afacerile să-și dezvolte proiectele mai eficient. Lumea SEO mi se pare deosebit de atractivă: entuziasmul de a descoperi ce se întâmplă 'de cealaltă parte a ecranului,' de a analiza, de a căuta modele și de a găsi oportunități de creștere."
   },
   "KeyStrengths": {
@@ -29,7 +29,7 @@
   },
   "Projects": {
     "title": "Proiectele Mele",
-    "subtitle": "Proiectele noastre prezintă cele mai bune tehnici vizuale și de storytelling.",
+    "subtitle": "De la Jurnalism la Leadership de Proiect: Crearea de Conținut și Inițiative Impactante",
     "projectDetails": "Detalii proiect",
     "projectRole": "Rol",
     "projectTasks": "Sarcini",
@@ -256,6 +256,7 @@
     "projects": "Proiecte",
     "social": "Social",
     "mySeoBlog": "Blogul meu SEO",
+    "title": "Alevtina Gordienko",
     "allRightsReserved": "Toate drepturile rezervate"
   }
 }

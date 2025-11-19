@@ -24,7 +24,7 @@ export function Hero() {
         </p>
 
         {/* Main Title (Stacked) */}
-        <h1 className='text-black/80 dark:text-white/90 text-left text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight tracking-tighter mb-16 md:-ml-8'>
+        <h1 className='font-libreBaskerville font-bold uppercase text-black/80 dark:text-white/90 text-left text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tighter mb-16 md:-ml-8'>
           <span className='block'>{t('titleLine1')}</span>
           <span className='relative inline-block'>
             {t('titleLine2')}
@@ -35,13 +35,13 @@ export function Hero() {
         {/* --- COMBINED NAVIGATION SECTION --- */}
         <div className='flex flex-col sm:flex-row justify-between items-start gap-6 md:gap-10 mb-16 w-full max-w-6xl xl:mx-auto'>
           {/* Four Links (Centered) */}
-          <div className='flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-3 md:gap-y-6 xl:gap-x-14'>
+          <div className='font-nunito flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-3 md:gap-y-6 xl:gap-x-14'>
             {/* --- Language Switcher --- */}
             <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('iTalk')}
               </p>
-              <span className='inline-flex items-baseline gap-1 text-base font-medium'>
+              <span className='inline-flex items-baseline gap-1 text-base'>
                 <span className='leading-none'>[</span>
                 <LanguageSwitcher />
                 <span className='leading-none'>]</span>
@@ -173,7 +173,7 @@ export function Hero() {
         </p>
 
         {/* Introduction Paragraph with TextReveal */}
-        <TextReveal className='font-libreBaskerville font-bold text-justify text-2xl md:text-3xl leading-relaxed max-w-4xl mx-auto'>
+        <TextReveal className='font-libreBaskerville font-normal uppercase text-justify text-2xl md:text-3xl leading-relaxed max-w-4xl mx-auto project-drop-cap'>
           {t('overviewIntro')}
         </TextReveal>
 

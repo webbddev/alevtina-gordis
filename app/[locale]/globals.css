@@ -12,6 +12,7 @@
   --font-nunito: var(--font-nunito);
   --font-abril-fatface: var(--font-abril-fatface);
   --font-libreBaskerville: var(--font-libre-baskerville);
+  --font-cormorantSC: var(--font-cormorant-sc);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -208,4 +209,14 @@
     @apply bg-background text-foreground;
     @apply font-sans;
   }
+}
+
+/* Drop cap style for overviewIntro text */
+.project-drop-cap::first-letter {
+  font-size: 2em; /* Adjust size (e.g., 3x-4x the base text size) */
+  font-weight: semibold; /* Optional: make the drop cap stand out more */
+  float: left;
+  line-height: 0.7; /* Align drop cap with surrounding text */
+  margin-right: 0.15em; /* Add space between drop cap and rest of text */
+  margin-top: 0.1em; /* Fine-tune vertical alignment */
 }
