@@ -31,10 +31,10 @@ const Footer = () => {
       {/* Main Footer Content */}
       <footer
         id='contact'
-        className='bg-white dark:bg-gray-900 text-black dark:text-white py-16 md:px-8'
+        className='bg-white dark:bg-gray-900 text-black dark:text-white py-16 md:px-6'
       >
         {/* Consistent max-width container based on your Hero component */}
-        <div className='max-w-340 mx-auto px-4 '>
+        <div className='mx-auto max-w-7xl px-4 md:px-8'>
           {/* Top Section: Contact & Links */}
           {/* Stacks vertically on mobile, row on large screens */}
           <div className='flex flex-col lg:flex-row justify-between gap-12 mb-16'>

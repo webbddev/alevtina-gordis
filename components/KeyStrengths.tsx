@@ -60,8 +60,9 @@ const KeyStrengths = () => {
       ref={targetRef}
       className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug pb-10 text-[20px] md:text-[30px] xl:text-[50px]'
     >
-      <div className='mx-auto max-w-7xl px-4 md:px-8'>
-        <div className='mb-12 md:-ml-8'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        {/* Section Title and Subtitle */}
+        <div className='mb-12'>
           <h2 className='font-libreBaskerville text-4xl font-bold text-foreground mb-4'>
             {t('title')}
           </h2>
@@ -70,6 +71,7 @@ const KeyStrengths = () => {
           </TextReveal>
         </div>
       </div>
+
       <div className='text-center'>
         {/* Line 1 */}
         <motion.div style={{ x: x1 }} className='py-2'>

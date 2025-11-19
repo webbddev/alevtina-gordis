@@ -6,9 +6,7 @@ import KeyStrengths from '@/components/KeyStrengths';
 export default function Home() {
   return (
     <>
-      {/* <PortfolioHero /> */}
       <Hero />
-      {/* <HeroSection /> */}
       <Projects />
       <KeyStrengths/>
       <Footer />

@@ -17,13 +17,13 @@ export function Hero() {
 
   return (
     <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-14 md:px-6'>
-      <div className='max-w-340 mx-auto px-4 md:px-8'>
+      <div className='mx-auto max-w-7xl px-4 md:px-8'>
         {/* --- LEFT-ALIGNED SECTION --- */}
         <p className='text-left text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2 md:-ml-8'>
           {t('projectLabel')}
         </p>
 
-        {/* Main Title (Stacked) */}
+        {/* Main Title (Stacked) - Alevtina */}
         <h1 className='font-libreBaskerville font-bold uppercase text-black/80 dark:text-white/90 text-left text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tighter mb-16 md:-ml-8'>
           <span className='block'>{t('titleLine1')}</span>
           <span className='relative inline-block'>
@@ -173,12 +173,12 @@ export function Hero() {
         </p>
 
         {/* Introduction Paragraph with TextReveal */}
-        <TextReveal className='font-libreBaskerville font-normal uppercase text-justify text-2xl md:text-3xl leading-relaxed max-w-4xl mx-auto project-drop-cap'>
+        <TextReveal className='font-libreBaskerville font-normal uppercase text-justify text-2xl md:text-3xl leading-relaxed max-w-5xl mx-auto project-drop-cap mb-4'>
           {t('overviewIntro')}
         </TextReveal>
 
         {/* Detailed Description with TextReveal */}
-        <TextReveal className='font-nunito font-medium text-justify text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl mx-auto'>
+        <TextReveal className='font-nunito font-medium  text-justify text-base md:text-lg lg:text-xl leading-relaxed text-gray-700 dark:text-gray-200 max-w-3xl md:w-[95%] mx-auto'>
           {t('overviewDetails')}
         </TextReveal>
       </div>

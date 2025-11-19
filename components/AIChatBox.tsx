@@ -201,14 +201,14 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
       //     : 'h-[500px] max-h-[80vh] w-92 sm:w-96'
       // )}
       className={cn(
-        'animate-in slide-in-from-top-10 bg-card/80 absolute top-full left-0 sm:left-auto sm:right-0 mt-2 z-50 flex flex-col rounded-lg border shadow-lg duration-500 overscroll-contain',
+        'animate-in slide-in-from-top-10 bg-white/90 dark:bg-gray-900/90 text-gray-800 dark:text-gray-100 absolute top-full left-0 sm:left-auto sm:right-0 mt-2 z-50 flex flex-col rounded-lg border shadow-lg duration-500 overscroll-contain',
         'max-w-[90vw]', // <-- 1. Apply max-width to the base
         isExpanded
           ? 'h-[950px] max-h-[90vh] w-[550px]' // <-- Removed max-w from here
           : 'h-[500px] max-h-[80vh] w-96' // <-- 2. Simplified to just w-96
       )}
     >
-      <div className='bg-[#40C1AC] text-primary-foreground flex items-center justify-between rounded-t-lg border-b p-3'>
+      <div className='bg-[#8B8E71]/80 text-primary-foreground flex items-center justify-between rounded-t-lg border-b p-3'>
         <div className='flex items-center gap-2'>
           <BrainCog size={18} />
           <h3 className='font-medium'>Alevtina</h3>
@@ -291,7 +291,7 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
                                 //   : firstName || 'You'
                               }
                             >
-                              <MessageContent>
+                              <MessageContent className='text-xl sm:text-2xl'>
                                 <MessageResponse>{part.text}</MessageResponse>
                               </MessageContent>
                             </Message>
@@ -348,29 +348,29 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
                             <ReasoningContent>{part.text}</ReasoningContent>
                           </Reasoning>
                         );
-                      case 'file':
-                        if (part.mediaType?.startsWith('image/')) {
-                          return (
-                            <Image
-                              key={`${message.id}-${i}`}
-                              src={part.url}
-                              alt={part.filename ?? `Attachment ${i}`}
-                              width={500}
-                              height={500}
-                            />
-                          );
-                        }
-                        if (part.mediaType?.startsWith('application/pdf')) {
-                          return (
-                            <iframe
-                              key={`${message.id}-${i}`}
-                              src={part.url}
-                              width={500}
-                              height={600}
-                              title={part.filename ?? `attachment-${i}`}
-                            />
-                          );
-                        }
+                      // case 'file':
+                      //   if (part.mediaType?.startsWith('image/')) {
+                      //     return (
+                      //       <Image
+                      //         key={`${message.id}-${i}`}
+                      //         src={part.url}
+                      //         alt={part.filename ?? `Attachment ${i}`}
+                      //         width={500}
+                      //         height={500}
+                      //       />
+                      //     );
+                      //   }
+                      //   if (part.mediaType?.startsWith('application/pdf')) {
+                      //     return (
+                      //       <iframe
+                      //         key={`${message.id}-${i}`}
+                      //         src={part.url}
+                      //         width={500}
+                      //         height={600}
+                      //         title={part.filename ?? `attachment-${i}`}
+                      //       />
+                      //     );
+                      //   }
                       default:
                         return null;
                     }
@@ -416,6 +416,7 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
             <PromptInputTextarea
               onChange={(e) => setPrompt(e.target.value)}
               value={prompt}
+              className='text-lg md:text-2xl'
             />
           </PromptInputBody>
 
@@ -454,11 +455,9 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
                   </PromptInputButton>
                 </ModelSelectorTrigger>
 
-                {/* ---
-                 👇 THIS IS THE FIX 
-                --- */}
+              
                 <ModelSelectorContent side='top' align='end' sideOffset={5}>
-                  <ModelSelectorInput placeholder='Search models...' />
+                  <ModelSelectorInput  placeholder='Search models...' />
                   <ModelSelectorList>
                     <ModelSelectorEmpty>No models found.</ModelSelectorEmpty>
                     {chefs.map((chef) => (
@@ -473,9 +472,10 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
                                 setModelSelectorOpen(false);
                               }}
                               value={m.id}
+                              
                             >
                               <ModelSelectorLogo provider={m.chefSlug} />
-                              <ModelSelectorName>{m.name}</ModelSelectorName>
+                              <ModelSelectorName  >{m.name}</ModelSelectorName>
                               {model === m.id ? (
                                 <CheckIcon className='ml-auto size-4' />
                               ) : (

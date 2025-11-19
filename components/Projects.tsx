@@ -240,13 +240,10 @@ const Projects = () => {
   const thirdRow = [...projectData.slice(6), ...projectData.slice(0, 6)];
 
   return (
-    <section
-      id='my-works'
-      className='w-full bg-white dark:bg-gray-900 py-16 md:px-6'
-    >
-      <div className='mx-auto max-w-7xl px-4 md:px-8'>
-        {/* Section header */}
-        <div className='mb-12 md:-ml-8'>
+    <section id='my-works' className=' bg-white dark:bg-gray-900 py-16'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        {/* Section Title and Subtitle */}
+        <div className='mb-12'>
           <h2 className='font-libreBaskerville text-4xl font-bold text-foreground mb-4'>
             {t('title')}
           </h2>
@@ -256,7 +253,7 @@ const Projects = () => {
         </div>
 
         {/* Marquee container with three columns */}
-        <div className='w-full h-[800px] lg:h-[860px] 2xl:h-[1300px] flex items-center justify-center overflow-hidden py-8'>
+        <div className='mx-auto w-full md:w-[95%]  h-[800px] lg:h-[860px] 2xl:h-[1300px] flex items-center justify-center overflow-hidden py-8'>
           {/* First column - base speed */}
           <Marquee
             vertical
