@@ -18,15 +18,6 @@
     "overviewIntro": "Calea mea: de la găsirea poveștilor la abilitatea de a asculta afacerile. Astăzi, combin empatia cu analitica pentru a crea strategii pentru creșterea dvs.",
     "overviewDetails": "Îmi amintesc primele mele reportaje: alergând pe străzi, căutând eroi, sute de întrebări și un singur scop: să surprind o poveste vie. De-a lungul anilor, am creat proiecte video pentru branduri și campanii sociale, am învățat să văd esența, să transform complexul în ceva de înțeles și valoros pentru oameni. Astăzi, îmi schimb direcția: combin experiența mea cu proiectele și atenția la detalii cu analitica și instrumentele digitale pentru a ajuta afacerile să-și dezvolte proiectele mai eficient. Lumea SEO mi se pare deosebit de atractivă: entuziasmul de a descoperi ce se întâmplă 'de cealaltă parte a ecranului,' de a analiza, de a căuta modele și de a găsi oportunități de creștere."
   },
-  "KeyStrengths": {
-    "title": "COMPETENȚE CHEIE",
-    "skill1": "Crearea de conținut original",
-    "skill2": "Producție video de la A la Z",
-    "skill3": "Management de proiect pe termen lung",
-    "skill4": "Interes pentru e-commerce",
-    "skill5": "Respect pentru oameni",
-    "skill6": "Transformarea complexului în simplu"
-  },
   "Projects": {
     "title": "Proiectele Mele",
     "subtitle": "De la Jurnalism la Leadership de Proiect: Crearea de Conținut și Inițiative Impactante",
@@ -248,6 +239,16 @@
         "result": "Crearea și întreținerea mai multor programe de televiziune de succes, inclusiv efectuarea de investigații jurnalistice și interviuri cu personalități cheie."
       }
     }
+  },
+  "KeyStrengths": {
+    "title": "Eu Pun Accent Pe",
+    "subtitle": "Crearea de narațiuni captivante și construirea de proiecte de impact de la zero",
+    "skill1": "Crearea de conținut original",
+    "skill2": "Producție video de la A la Z",
+    "skill3": "Management de proiect pe termen lung",
+    "skill4": "Interes pentru e-commerce",
+    "skill5": "Respect pentru oameni",
+    "skill6": "Transformarea complexului în simplu"
   },
   "Footer": {
     "bookACall": "PROGRAMEAZĂ UN APEL",

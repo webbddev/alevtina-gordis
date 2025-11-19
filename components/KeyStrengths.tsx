@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { useTheme } from 'next-themes';
+import { TextReveal } from './ui/text-reveal';
 
 const KeyStrengths = () => {
   const { theme } = useTheme();
@@ -25,22 +26,20 @@ const KeyStrengths = () => {
 
   const yellowTones = ['#FBBF24', '#F59E0B', '#D97706']; // Amber 400, 500, 600
   const grayTones = ['#9CA3AF', '#6B7280', '#4B5563']; // Gray 400, 500, 600
-  // Light mode: Rich darks with warm gold accents
-  // Light mode: Rich darks with warm gold accents
+
   const lightModeTones = [
-    '#1A1410', // Deep charcoal brown
-    '#2D2620', // Warm dark gray
-    '#3F3A35', // Medium warm brown
-    '#5C5550', // Warm taupe
-    '#D4A574', // Warm beige
-    '#E8B876', // Light tan
-    '#F4C869', // Golden amber
+    '#004D40', // Dark Teal
+    '#00796B', // Medium Teal
+    '#4DB6AC', // Light Teal
+    '#81C784', // Very Light Green
+    '#1976D2', // Dark Blue
+    '#2196F3', // Medium Blue
+    '#90CAF9', // Light Blue
     '#FFD700', // Bright gold
     '#FFC700', // Deep gold
     '#FEBE10', // Warm yellow
   ];
 
-  // Dark mode: Light neutrals with vibrant gold accents
   const darkModeTones = [
     '#F5F1ED', // Off-white
     '#E8E3DD', // Light warm gray
@@ -59,45 +58,57 @@ const KeyStrengths = () => {
   return (
     <section
       ref={targetRef}
-      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug text-center pb-10 text-[20px] md:text-[30px] xl:text-[50px]'
+      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug pb-10 text-[20px] md:text-[30px] xl:text-[50px]'
     >
-      {/* Line 1 */}
-      <motion.div style={{ x: x1 }} className='py-2'>
-        <p className='font-normal '>
-          <AuroraText colors={mixedTones}>{t('skill1')}</AuroraText>
-        </p>
-      </motion.div>
+      <div className='mx-auto max-w-7xl px-4 md:px-8'>
+        <div className='mb-12 md:-ml-8'>
+          <h2 className='font-libreBaskerville text-4xl font-bold text-foreground mb-4'>
+            {t('title')}
+          </h2>
+          <TextReveal className='font-nunito font-medium text-base md:text-lg lg:text-xl'>
+            {t('subtitle')}
+          </TextReveal>
+        </div>
+      </div>
+      <div className='text-center'>
+        {/* Line 1 */}
+        <motion.div style={{ x: x1 }} className='py-2'>
+          <p className='font-libreBaskerville font-medium '>
+            <AuroraText colors={mixedTones}>{t('skill1')}</AuroraText>
+          </p>
+        </motion.div>
 
-      {/* Line 2 */}
-      <motion.div
-        style={{ x: x2 }}
-        className='flex items-center justify-center gap-3 py-2'
-      >
-        <p className='font-thin'>{t('skill2')}</p>
-        <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
-      </motion.div>
+        {/* Line 2 */}
+        <motion.div
+          style={{ x: x2 }}
+          className='flex items-center justify-center gap-3 py-2'
+        >
+          <p className='font-thin'>{t('skill2')}</p>
+          <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
+        </motion.div>
 
-      {/* Line 3 */}
-      <motion.div style={{ x: x3 }} className='py-2'>
-        <p className=''>{t('skill3')}</p>
-      </motion.div>
+        {/* Line 3 */}
+        <motion.div style={{ x: x3 }} className='py-2'>
+          <p className=''>{t('skill3')}</p>
+        </motion.div>
 
-      {/* Line 4 */}
-      <motion.div
-        style={{ x: x4 }}
-        className='flex items-center justify-center gap-3 py-2'
-      >
-        <p className='font-thin'>
-          <AuroraText colors={mixedTones}>{t('skill5')}</AuroraText>
-        </p>
-        <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
-        <p className='font-thin '>{t('skill6')}</p>
-      </motion.div>
+        {/* Line 4 */}
+        <motion.div
+          style={{ x: x4 }}
+          className='flex items-center justify-center gap-3 py-2'
+        >
+          <p className='font-thin'>
+            <AuroraText colors={mixedTones}>{t('skill5')}</AuroraText>
+          </p>
+          <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
+          <p className='font-thin '>{t('skill6')}</p>
+        </motion.div>
 
-      {/* Line 5 */}
-      <motion.div style={{ x: x5 }} className='py-2'>
-        <p className='font-'>{t('skill4')}</p>
-      </motion.div>
+        {/* Line 5 */}
+        <motion.div style={{ x: x5 }} className='py-2'>
+          <p className='font-libreBaskerville font-thin'>{t('skill4')}</p>
+        </motion.div>
+      </div>
     </section>
   );
 };
