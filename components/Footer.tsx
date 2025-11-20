@@ -118,7 +118,7 @@ const Footer = () => {
 
           {/* Large Brand Name */}
           <div className='my-16 text-left md:-ml-8'>
-            <h1 className='text-black/80 dark:text-white/90 font-libreBaskerville text-6xl sm:text-8xl lg:text-9xl font-bold tracking-tighter wrap-break-word'>
+            <h1 className='text-black/80 dark:text-white/90 font-ebGaramond uppercase text-[58px] sm:text-8xl lg:text-9xl font-bold leading-10 tracking-tight wrap-break-word'>
               {t('title')}
               <sup className='text-2xl sm:text-3xl lg:text-4xl font-bold -top-8 sm:-top-12 lg:-top-16 ml-1'>
                 &reg;

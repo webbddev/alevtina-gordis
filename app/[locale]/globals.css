@@ -14,6 +14,8 @@
   --font-libreBaskerville: var(--font-libre-baskerville);
   --font-cormorantSC: var(--font-cormorant-sc);
   --font-playfairDisplay: var(--font-playfair-display);
+  --font-cormorantGaramond: var(--font-cormorant-garamond);
+  --font-ebGaramond: var(--font-eb-garamond);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --color-sidebar-ring: var(--sidebar-ring);

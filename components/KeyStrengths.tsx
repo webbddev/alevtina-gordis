@@ -63,7 +63,7 @@ const KeyStrengths = () => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Section Title and Subtitle */}
         <div className='mb-12'>
-          <h2 className='font-playfairDisplay text-4xl font-medium text-foreground mb-4'>
+          <h2 className='font-ebGaramond uppercase text-4xl font-medium text-foreground mb-4'>
             {t('title')}
           </h2>
           <TextReveal className='font-nunito font-medium text-base md:text-lg lg:text-xl'>

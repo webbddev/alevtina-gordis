@@ -244,7 +244,7 @@ const Projects = () => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Section Title and Subtitle */}
         <div className='mb-12'>
-          <h2 className='font-playfairDisplay font-medium text-4xl text-foreground mb-4'>
+          <h2 className='font-ebGaramond uppercase font-regular text-4xl text-foreground mb-4'>
             {t('title')}
           </h2>
           <TextReveal className='font-nunito font-medium text-base md:text-lg lg:text-xl'>
