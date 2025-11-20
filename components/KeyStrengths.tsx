@@ -63,7 +63,7 @@ const KeyStrengths = () => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Section Title and Subtitle */}
         <div className='mb-12'>
-          <h2 className='font-libreBaskerville text-4xl font-bold text-foreground mb-4'>
+          <h2 className='font-playfairDisplay text-4xl font-medium text-foreground mb-4'>
             {t('title')}
           </h2>
           <TextReveal className='font-nunito font-medium text-base md:text-lg lg:text-xl'>
@@ -75,7 +75,7 @@ const KeyStrengths = () => {
       <div className='text-center'>
         {/* Line 1 */}
         <motion.div style={{ x: x1 }} className='py-2'>
-          <p className='font-libreBaskerville font-medium '>
+          <p className='font-playfairDisplay font-semibold '>
             <AuroraText colors={mixedTones}>{t('skill1')}</AuroraText>
           </p>
         </motion.div>
@@ -108,7 +108,7 @@ const KeyStrengths = () => {
 
         {/* Line 5 */}
         <motion.div style={{ x: x5 }} className='py-2'>
-          <p className='font-libreBaskerville font-thin'>{t('skill4')}</p>
+          <p className='font-playfairDisplay font-semibold'>{t('skill4')}</p>
         </motion.div>
       </div>
     </section>

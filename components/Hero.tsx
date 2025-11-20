@@ -24,7 +24,7 @@ export function Hero() {
         </p>
 
         {/* Main Title (Stacked) - Alevtina */}
-        <h1 className='font-libreBaskerville font-bold uppercase text-black/80 dark:text-white/90 text-left text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tighter mb-16 md:-ml-8'>
+        <h1 className='font-playfairDisplay font-semibold uppercase text-black/80 dark:text-white/90 text-left text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tighter mb-16 md:-ml-8'>
           <span className='block'>{t('titleLine1')}</span>
           <span className='relative inline-block'>
             {t('titleLine2')}
@@ -173,7 +173,7 @@ export function Hero() {
         </p>
 
         {/* Introduction Paragraph with TextReveal */}
-        <TextReveal className='font-libreBaskerville font-normal uppercase text-justify text-2xl md:text-3xl leading-relaxed max-w-5xl mx-auto project-drop-cap mb-4'>
+        <TextReveal className='font-playfairDisplay font-medium uppercase text-justify text-2xl md:text-3xl leading-relaxed max-w-5xl mx-auto project-drop-cap mb-4'>
           {t('overviewIntro')}
         </TextReveal>
 

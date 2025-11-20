@@ -7,6 +7,7 @@ import {
   Nunito,
   Libre_Baskerville,
   Cormorant_SC,
+  Playfair_Display,
 } from 'next/font/google';
 import './globals.css';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
@@ -16,6 +17,12 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
 import ReactLenis from 'lenis/react';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+
+const playfairDisplay = Playfair_Display({
+  variable: '--font-playfair-display',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+});
 
 const cormorantSC = Cormorant_SC({
   variable: '--font-cormorant-sc',
@@ -88,7 +95,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${funnelSans.variable} ${abrilFatface.variable} ${nunito.variable} ${libreBaskerville.variable} ${cormorantSC.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} ${funnelSans.variable} ${abrilFatface.variable} ${nunito.variable} ${libreBaskerville.variable} ${cormorantSC.variable} ${playfairDisplay.variable} antialiased `}
       >
         {/* <SmoothScrollProvider> */}
         <ReactLenis root>
