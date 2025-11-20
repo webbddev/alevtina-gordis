@@ -18,6 +18,18 @@
     "overviewIntro": "My journey: from finding stories to learning to listen to business. Today, I combine empathy with analytics to create strategies for your growth.",
     "overviewDetails": "I remember my first reports: running through the streets, searching for heroes, hundreds of questions, and one goal: to capture a living story. Over the years, I created video projects for brands and social campaigns, learned to see the essence, to turn the complex into something understandable and valuable for people. Today, I am changing my direction: I combine my experience with projects and attention to detail with analytics and digital tools to help businesses develop their projects more effectively. The world of SEO seems particularly attractive to me: the excitement of discovering what is happening 'on the other side of the screen,' analyzing, looking for patterns, and finding opportunities for growth."
   },
+  "AIChatBox": {
+    "title": "Alevtina",
+    "minimize": "Minimize",
+    "expand": "Expand",
+    "clearChat": "Clear chat",
+    "you": "You",
+    "retry": "Retry",
+    "copy": "Copy",
+    "copied": "Copied",
+    "stopGenerating": "Stop generating",
+    "inputPlaceholder": "What would you like to know about me?"
+  },
   "Projects": {
     "title": "My Projects",
     "subtitle": "From Journalism to Project Leadership: Crafting Impactful Content and Ventures",

@@ -18,6 +18,18 @@
     "overviewIntro": "Calea mea: de la găsirea poveștilor la abilitatea de a asculta afacerile. Astăzi, combin empatia cu analitica pentru a crea strategii pentru creșterea dvs.",
     "overviewDetails": "Îmi amintesc primele mele reportaje: alergând pe străzi, căutând eroi, sute de întrebări și un singur scop: să surprind o poveste vie. De-a lungul anilor, am creat proiecte video pentru branduri și campanii sociale, am învățat să văd esența, să transform complexul în ceva de înțeles și valoros pentru oameni. Astăzi, îmi schimb direcția: combin experiența mea cu proiectele și atenția la detalii cu analitica și instrumentele digitale pentru a ajuta afacerile să-și dezvolte proiectele mai eficient. Lumea SEO mi se pare deosebit de atractivă: entuziasmul de a descoperi ce se întâmplă 'de cealaltă parte a ecranului,' de a analiza, de a căuta modele și de a găsi oportunități de creștere."
   },
+  "AIChatBox": {
+    "title": "Alevtina",
+    "minimize": "Minimizează",
+    "expand": "Extinde",
+    "clearChat": "Curăță chat-ul",
+    "you": "Tu",
+    "retry": "Reîncearcă",
+    "copy": "Copiază",
+    "copied": "Copiat",
+    "stopGenerating": "Oprește generarea",
+    "inputPlaceholder": "Ce ați dori să știți despre mine?"
+  },
   "Projects": {
     "title": "Proiectele Mele",
     "subtitle": "De la Jurnalism la Leadership de Proiect: Crearea de Conținut și Inițiative Impactante",
