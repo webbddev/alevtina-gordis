@@ -10,6 +10,8 @@ import { SmoothLink } from './SmoothLink';
 import { useState } from 'react';
 import { AIChatBox } from './AIChatBox';
 import { ShineBorder } from './ui/shine-border';
+import { AnimatedTextWords } from './AnimatedTextWords';
+import { motion } from 'framer-motion';
 
 export function Hero() {
   const t = useTranslations('Hero');
@@ -24,12 +26,37 @@ export function Hero() {
         </p>
 
         {/* Main Title (Stacked) - Alevtina */}
-        <h1 className='font-ebGaramond font-semibold uppercase text-black/80 dark:text-white/90 text-left text-[58px] md:text-6xl lg:text-7xl leading-10 tracking-tight mb-16 md:-ml-8'>
+        {/* <h1 className='font-ebGaramond font-medium uppercase text-black/80 dark:text-white/90 mix-blend-mode:multiply text-left text-[58px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight mb-16 md:-ml-8'>
           <span className='block'>{t('titleLine1')}</span>
-          <span className='relative inline-block'>
+          <span className='relative inline-block pl-0.5 md:pl-4'>
             {t('titleLine2')}
             <AnimatedThemeToggler className='absolute top-0 left-full ml-2' />
           </span>
+        </h1> */}
+        <h1 className='font-ebGaramond font-medium uppercase text-black/80 dark:text-white/90 mix-blend-mode:multiply text-left text-[58px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight mb-16 md:-ml-8'>
+          <div className='block'>
+            <AnimatedTextWords
+              duration={1.5}
+              delay={0}
+              text={t('titleLine1')}
+            />
+          </div>
+          <div className='relative inline-block pl-0.5 md:pl-4'>
+            <AnimatedTextWords
+              duration={1.5}
+              delay={0.5}
+              text={t('titleLine2')}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 0, scale: 5 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 1.5, delay: 1, ease: [0.19, 1, 0.22, 1] }}
+              viewport={{ once: true }}
+              className='absolute -top-7 lg:-top-8 xl:-top-11 2xl:-top-18 left-full'
+            >
+              <AnimatedThemeToggler className='-ml-3 md:-ml-1 2xl:-ml-2'  />
+            </motion.div>
+          </div>
         </h1>
 
         {/* --- COMBINED NAVIGATION SECTION --- */}
