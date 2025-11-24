@@ -20,8 +20,16 @@ export const AnimatedTextWords = ({
   duration = 0.5,
   stagger = 0.15,
 }: AnimatedTextWordsProps) => {
-  const items = text ? text.split(' ') : React.Children.toArray(children);
+  let items: (string | React.ReactNode)[];
+  const isString = typeof text === 'string' || typeof children === 'string';
 
+  if (typeof text === 'string') {
+    items = text.trim().split(/\s+/);
+  } else if (typeof children === 'string') {
+    items = children.trim().split(/\s+/);
+  } else {
+    items = React.Children.toArray(children);
+  }
   const container: Variants = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({

@@ -118,7 +118,7 @@ const Footer = () => {
 
           {/* Large Brand Name */}
           <div className='my-16 text-left md:-ml-8'>
-            <h1 className='text-black/80 dark:text-white/90 font-ebGaramond uppercase text-[58px] sm:text-8xl lg:text-9xl font-bold leading-10 tracking-tight wrap-break-word'>
+            <h1 className='text-black/80 dark:text-white/90 font-ebGaramond font-medium uppercase text-[58px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight wrap-break-word'>
               {t('title')}
               <sup className='text-2xl sm:text-3xl lg:text-4xl font-bold -top-8 sm:-top-12 lg:-top-16 ml-1'>
                 &reg;
@@ -131,10 +131,10 @@ const Footer = () => {
       {/* Bottom Bar: Copyright & Legal */}
       {/* --- REFACTOR --- */}
       {/* Outer div is full-width, inner div matches the 'max-w-7xl' container */}
-      <div className='bg-black/80 dark:bg-black/50 text-white text-sm py-5 px-4 md:px-8'>
+      <div className='bg-gray-900 dark:bg-gray-900/20 text-white text-sm py-5 px-4 md:px-8'>
         <div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2'>
-          <p className='font-funnel text-base md:text-lg text-center md:text-left'>
-            &copy; {new Date().getFullYear()} Alevtina Gordienko All rights
+          <p className='font-geist font-normal text-base md:text-lg text-center md:text-left'>
+            &copy; {new Date().getFullYear()} Alevtina Gordienko. All rights
             reserved
           </p>
         </div>
