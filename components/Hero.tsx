@@ -12,10 +12,15 @@ import { AIChatBox } from './AIChatBox';
 import { ShineBorder } from './ui/shine-border';
 import { AnimatedTextWords } from './AnimatedTextWords';
 import { motion } from 'framer-motion';
+import { Volume2, VolumeX } from 'lucide-react';
+import { useAudio } from '@/context/AudioContext'; // Ensure this path matches your project structure
 
 export function Hero() {
   const t = useTranslations('Hero');
   const [chatOpen, setChatOpen] = useState(false);
+
+  // Consume global audio state from the Context Provider
+  const { isPlaying, toggleAudio } = useAudio();
 
   return (
     <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-14 md:px-6'>
@@ -25,14 +30,7 @@ export function Hero() {
           {t('projectLabel')}
         </p>
 
-        {/* Main Title (Stacked) - Alevtina */}
-        {/* <h1 className='font-ebGaramond font-medium uppercase text-black/80 dark:text-white/90 mix-blend-mode:multiply text-left text-[58px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight mb-16 md:-ml-8'>
-          <span className='block'>{t('titleLine1')}</span>
-          <span className='relative inline-block pl-0.5 md:pl-4'>
-            {t('titleLine2')}
-            <AnimatedThemeToggler className='absolute top-0 left-full ml-2' />
-          </span>
-        </h1> */}
+        {/* Main Title Section */}
         <h1 className='font-ebGaramond font-medium uppercase text-gray-700 dark:text-gray-200 mix-blend-mode:multiply text-left text-[56px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight mb-16 md:-ml-8'>
           <div className='block'>
             <AnimatedTextWords duration={1.2} delay={0}>
@@ -43,23 +41,54 @@ export function Hero() {
             <AnimatedTextWords duration={1.2} delay={0.5}>
               {t('titleLine2')}
             </AnimatedTextWords>
-            <motion.div
-              initial={{ opacity: 0, y: 0, scale: 5 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 1.5, delay: 1, ease: [0.19, 1, 0.22, 1] }}
-              viewport={{ once: true }}
-              className='absolute -top-7 lg:-top-8 xl:-top-11 2xl:-top-18 left-full'
-            >
-              <AnimatedThemeToggler className='ml-1 md:ml-4 2xl:ml-6' />
-            </motion.div>
+
+            {/* Action Container: Toggler and Sound Icon */}
+            <div className='absolute -top-7 lg:-top-8 xl:-top-11 2xl:-top-18 left-full flex items-center gap-3'>
+              <motion.div
+                initial={{ opacity: 0, y: 0, scale: 5 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 1,
+                  ease: [0.19, 1, 0.22, 1],
+                }}
+                viewport={{ once: true }}
+              >
+                <AnimatedThemeToggler className='ml-1 md:ml-4 2xl:ml-6' />
+              </motion.div>
+
+              {/* Sound Toggle Button - Appears as the final animated element */}
+              <motion.button
+                onClick={toggleAudio}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 1.8, // Triggered after the ThemeToggler
+                  ease: [0.19, 1, 0.22, 1],
+                }}
+                viewport={{ once: true }}
+                className='p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center'
+                aria-label={
+                  isPlaying
+                    ? 'Mute background sound'
+                    : 'Unmute background sound'
+                }
+              >
+                {isPlaying ? (
+                  <Volume2 className='w-5 h-5 md:w-6 md:h-6 text-gray-700 dark:text-gray-200' />
+                ) : (
+                  <VolumeX className='w-5 h-5 md:w-6 md:h-6 text-gray-400' />
+                )}
+              </motion.button>
+            </div>
           </div>
         </h1>
 
         {/* --- COMBINED NAVIGATION SECTION --- */}
         <div className='flex flex-col sm:flex-row justify-between items-start gap-6 md:gap-10 mb-16 w-full max-w-6xl xl:mx-auto'>
-          {/* Four Links (Centered) */}
           <div className='font-nunito flex-1 flex flex-col items-start gap-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-3 md:gap-y-6 xl:gap-x-14'>
-            {/* --- Language Switcher --- */}
+            {/* Language Switcher */}
             <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('iTalk')}
@@ -71,7 +100,7 @@ export function Hero() {
               </span>
             </div>
 
-            {/* --- Viewing My Work Link --- */}
+            {/* Viewing My Work Link */}
             <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('enjoy')}
@@ -88,7 +117,7 @@ export function Hero() {
               </SmoothLink>
             </div>
 
-            {/* --- Visit BirDigi Link --- */}
+            {/* Visit BirDigi Link */}
             <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('visit')}
@@ -107,7 +136,7 @@ export function Hero() {
               </a>
             </div>
 
-            {/* --- Download CV Link --- */}
+            {/* Download CV Link */}
             <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('feelFree')}
@@ -125,7 +154,7 @@ export function Hero() {
               </a>
             </div>
 
-            {/* --- Contact Me Link --- */}
+            {/* Contact Me Link */}
             <div className='text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('welcome')}
@@ -142,7 +171,7 @@ export function Hero() {
               </SmoothLink>
             </div>
 
-            {/* --- Ask AI Link --- */}
+            {/* Ask AI Link */}
             <div className='relative text-left'>
               <p className='text-xs md:text-[12px] lg:text-[14px] xl:text-[16px] uppercase tracking-wider text-gray-500 dark:text-gray-400'>
                 {t('talkWithAI')}

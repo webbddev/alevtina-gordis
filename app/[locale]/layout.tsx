@@ -8,7 +8,7 @@ import {
   Libre_Baskerville,
   Cormorant_SC,
   Cormorant_Garamond,
-  EB_Garamond
+  EB_Garamond,
 } from 'next/font/google';
 import './globals.css';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
@@ -18,6 +18,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
 import ReactLenis from 'lenis/react';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+import { AudioProvider } from '@/context/AudioContext';
 
 const ebGaramond = EB_Garamond({
   variable: '--font-eb-garamond',
@@ -113,7 +114,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               enableSystem
               disableTransitionOnChange
             >
-              {children}
+              <AudioProvider> {children}</AudioProvider>
             </ThemeProvider>
           </NextIntlClientProvider>
         </ReactLenis>
