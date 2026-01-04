@@ -4,6 +4,7 @@ const config = {
       // Add this 'theme' object
       theme: {
         extend: {
+          
           fontFamily: {
             // This maps --font-geist-sans to the 'font-sans' utility
             sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],

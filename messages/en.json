@@ -30,6 +30,14 @@
     "stopGenerating": "Stop generating",
     "inputPlaceholder": "What would you like to know about me?"
   },
+  "VoiceAgent": {
+    "agentName": "Alya's Voice Agent",
+    "agentDescription": "Chat with Alya",
+    "listening": "Listening...",
+    "connecting": "Connecting...",
+    "startCall": "Start a call",
+    "agentIdMissing": "Agent ID is missing. Check your .env.local file."
+  },
   "Projects": {
     "title": "My Projects",
     "subtitle": "From Journalism to Project Leadership: Crafting Impactful Content and Ventures",
@@ -263,7 +271,7 @@
     "skill6": "Making the complex simple"
   },
   "Footer": {
-    "bookACall": "Time To Talk?",
+    "bookACall": "Schedule an Interview ?",
     "navigate": "Navigate",
     "home": "Home",
     "projects": "Projects",

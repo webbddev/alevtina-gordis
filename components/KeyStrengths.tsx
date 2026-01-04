@@ -16,11 +16,11 @@ const KeyStrengths = () => {
     offset: ['start end', 'end start'],
   });
 
-  const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-10%']);
-  const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
-  const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-10%']);
+  const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-31.4%']);
+  const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '2%']);
+  const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-47%']);
   const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-15%']);
-  const x5 = useTransform(scrollYProgress, [0, 1], ['-30%', '15%']);
+  const x5 = useTransform(scrollYProgress, [0, 1], ['-30%', '14%']);
 
   const dividerColor = 'bg-yellow-500 dark:bg-yellow-400';
 

@@ -19,6 +19,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 import ReactLenis from 'lenis/react';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import { AudioProvider } from '@/context/AudioContext';
+import ElevenLabsVoiceAgent from '@/components/voice-chat/ElevenLabsVoiceAgent';
+import GeminiVoiceAgent from '@/components/voice-chat/GeminiVoiceAgent';
 
 const ebGaramond = EB_Garamond({
   variable: '--font-eb-garamond',
@@ -114,8 +116,12 @@ export default async function LocaleLayout({ children, params }: Props) {
               enableSystem
               disableTransitionOnChange
             >
-              <AudioProvider> {children}</AudioProvider>
+              <AudioProvider>{children}</AudioProvider>
             </ThemeProvider>
+            <div className='fixed bottom-4 right-4 z-100 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 xl:bottom-8 xl:right-10 2xl:bottom-14 2xl:right-35 3xl:bottom-20 3xl:right-96'>
+              {/* <ElevenLabsVoiceAgent /> */}
+              <GeminiVoiceAgent />
+            </div>
           </NextIntlClientProvider>
         </ReactLenis>
         {/* </SmoothScrollProvider> */}

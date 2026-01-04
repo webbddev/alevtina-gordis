@@ -47,7 +47,7 @@ const Footer = () => {
                 +373 (78) 585-585
               </a>
               <a
-                href='mailto:yo@alevtinagordienko.com'
+                href='mailto:alevtina.gordienko@gmail.com'
                 className='font-geist font-extralight block text-2xl hover:text-gray-700 dark:hover:text-gray-300'
               >
                 alevtina.gordienko@gmail.com

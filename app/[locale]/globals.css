@@ -53,6 +53,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --animate-shine: shine var(--duration) infinite linear;
   --animate-aurora: aurora 8s ease-in-out infinite alternate;
+  --breakpoint-3xl: 120rem; /* 1920px */
 
   /* --- TEXT GLOW CUSTOM PROPERTIES AND ANIMATION KEYFRAMES (MUST stay inside @theme) --- */
   --text-shadow-glow: 0 0 10px rgba(255, 255, 255, 0.8),

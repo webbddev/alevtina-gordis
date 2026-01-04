@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useRef } from 'react';
+import { createContext, useContext, useState, useRef } from 'react';
 
 interface AudioContextType {
   isPlaying: boolean;
@@ -18,7 +18,9 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play().catch((err) => console.log("Playback blocked:", err));
+        audioRef.current
+          .play()
+          .catch((err) => console.log('Playback blocked:', err));
       }
       setIsPlaying(!isPlaying);
     }
@@ -27,14 +29,17 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   return (
     <AudioContext.Provider value={{ isPlaying, toggleAudio }}>
       {children}
-      {/* The audio element lives here so it never unmounts */}
-      <audio ref={audioRef} src="/sounds/the-best-jazz-club-in-new-orleans-164472.mp3" loop />
+      <audio
+        ref={audioRef}
+        src='/sounds/the-best-jazz-club-in-new-orleans-164472.mp3'
+        loop
+      />
     </AudioContext.Provider>
   );
 }
 
 export const useAudio = () => {
   const context = useContext(AudioContext);
-  if (!context) throw new Error("useAudio must be used within AudioProvider");
+  if (!context) throw new Error('useAudio must be used within AudioProvider');
   return context;
 };

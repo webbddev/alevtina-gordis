@@ -30,6 +30,14 @@
     "stopGenerating": "Oprește generarea",
     "inputPlaceholder": "Ce ați dori să știți despre mine?"
   },
+  "VoiceAgent": {
+    "agentName": "Asistent vocal Alya",
+    "agentDescription": "Vorbește cu Alya",
+    "listening": "Ascult...",
+    "connecting": "Conectare...",
+    "startCall": "Începe apelul",
+    "agentIdMissing": "ID-ul agentului lipsește. Verificați fișierul .env.local."
+  },
   "Projects": {
     "title": "Proiectele Mele",
     "subtitle": "De la Jurnalism la Leadership de Proiect: Crearea de Conținut și Inițiative Impactante",
@@ -263,7 +271,7 @@
     "skill6": "Transformarea complexului în simplu"
   },
   "Footer": {
-    "bookACall": "Timp Să Vorbim?",
+    "bookACall": "Programați un interviu ?",
     "navigate": "Navigare",
     "home": "Acasă",
     "projects": "Proiecte",
