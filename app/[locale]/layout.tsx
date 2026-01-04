@@ -118,7 +118,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             >
               <AudioProvider>{children}</AudioProvider>
             </ThemeProvider>
-            <div className='fixed bottom-4 right-4 z-100 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 xl:bottom-8 xl:right-10 2xl:bottom-14 2xl:right-35 3xl:bottom-20 3xl:right-96'>
+            <div className='fixed bottom-4 right-4 z-20 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 xl:bottom-8 xl:right-10 2xl:bottom-14 2xl:right-35 3xl:bottom-20 3xl:right-96'>
               {/* <ElevenLabsVoiceAgent /> */}
               <GeminiVoiceAgent />
             </div>

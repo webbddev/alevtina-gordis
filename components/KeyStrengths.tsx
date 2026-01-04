@@ -16,12 +16,12 @@ const KeyStrengths = () => {
     offset: ['start end', 'end start'],
   });
 
-  const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-31.4%']);
+  const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-21.4%']);
   const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '2%']);
-  const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-47%']);
-  const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-32.8%']);
-  const x5 = useTransform(scrollYProgress, [0, 1], ['-30%', '14%']);
-  const x6 = useTransform(scrollYProgress, [0, 1], ['10%', '-22%']);
+  const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-37%']);
+  const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-22.8%']);
+  const x5 = useTransform(scrollYProgress, [0, 1], ['-30%', '24%']);
+  const x6 = useTransform(scrollYProgress, [0, 1], ['10%', '-12%']);
 
   const dividerColor = 'bg-yellow-500 dark:bg-yellow-400';
 
@@ -59,7 +59,7 @@ const KeyStrengths = () => {
   return (
     <section
       ref={targetRef}
-      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug pb-10 text-[20px] md:text-[30px] xl:text-[50px]'
+      className='bg-white dark:bg-gray-900 pt-10 overflow-hidden font-light leading-snug pb-2 md:pb-10 text-[20px] md:text-[30px] xl:text-[50px]'
     >
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Section Title and Subtitle */}
