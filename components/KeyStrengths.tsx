@@ -87,7 +87,7 @@ const KeyStrengths = () => {
           className='flex items-center justify-center gap-3 py-2'
         >
           <p className='font-thin'>{t('skill2')}</p>
-          <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
+          {/* <div className={`w-10 h-1 md:w-32 ${dividerColor}`} /> */}
         </motion.div>
 
         {/* Line 3 */}
@@ -103,7 +103,7 @@ const KeyStrengths = () => {
           <p className='font-thin'>
             <AuroraText colors={mixedTones}>{t('skill5')}</AuroraText>
           </p>
-          <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
+          {/* <div className={`w-10 h-1 md:w-32 ${dividerColor}`} /> */}
           {/* <p className='font-thin '>{t('skill6')}</p> */}
         </motion.div>
 

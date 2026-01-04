@@ -195,23 +195,37 @@ export default function ElevenLabsVoiceAgent() {
         <motion.button
           layoutId='launcher'
           onClick={() => setIsOpen(true)}
-          className='group flex items-center gap-3 rounded-full border border-gray-100 bg-white/90 p-2 pr-6 shadow-2xl transition-all hover:border-gray-200 dark:border-gray-800 dark:bg-gray-950/80'
+          // 1. Added relative, overflow-hidden, and p-px (padding for the border width)
+          className='group relative flex items-center gap-3 overflow-hidden rounded-full p-px shadow-2xl transition-all focus:outline-none'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className='relative h-10 w-10 overflow-hidden rounded-full border border-gray-200 dark:border-gray-700'>
-            <Image
-              src='/author.jpg'
-              alt='Agent'
-              fill
-              className='object-cover grayscale group-hover:grayscale-0 transition-all'
-            />
-          </div>
-          <div className='flex items-center gap-2.5 font-bold text-sm text-gray-800 dark:text-gray-100'>
-            <div className='flex h-8 w-8 items-center justify-center rounded-full bg-black/80 text-white dark:bg-white dark:text-black'>
-              <PhoneIcon className='h-4 w-4 fill-current' />
+          {/* 2. The Spinning Gradient Layer */}
+          <span
+            className={cn(
+              'absolute inset-[-1000%] animate-[spin_4s_linear_infinite]',
+              // Light Mode: Use the name defined after --background-image-
+              'bg-champagne-gold opacity-25',
+              // Dark Mode
+              'dark:bg-luxury-purple dark:opacity-50'
+            )}
+          />
+          {/* 3. The Inner Content Container (acts as the button face) */}
+          <div className='inline-flex h-full w-full items-center gap-3 rounded-full bg-white/60 dark:bg-gray-950/40 p-2 pr-6 backdrop-blur-xl transition-colors duration-500 group-hover:bg-white dark:group-hover:bg-gray-900/90'>
+            <div className='relative h-10 w-10 overflow-hidden rounded-full border border-gray-200 dark:border-gray-700'>
+              <Image
+                src='/author.jpg'
+                alt='Agent'
+                fill
+                className='object-cover grayscale group-hover:grayscale-0 transition-all'
+              />
             </div>
-            {t('startCall')}
+            <div className='flex items-center gap-2.5 font-bold text-sm text-gray-800 dark:text-gray-100'>
+              <div className='flex h-8 w-8 items-center justify-center rounded-full bg-black/80 text-white dark:bg-white dark:text-black'>
+                <PhoneIcon className='h-4 w-4 fill-current' />
+              </div>
+              {t('startCall')}
+            </div>
           </div>
         </motion.button>
       )}

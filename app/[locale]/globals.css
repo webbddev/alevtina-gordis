@@ -54,7 +54,30 @@
   --animate-shine: shine var(--duration) infinite linear;
   --animate-aurora: aurora 8s ease-in-out infinite alternate;
   --breakpoint-3xl: 120rem; /* 1920px */
-
+  --background-image-gold-spin: conic-gradient(
+    from 90deg at 50% 50%,
+    #f59e0b 0%,
+    #78350f 50%,
+    #f59e0b 100%
+  );
+  --background-image-purple-spin: conic-gradient(
+    from 90deg at 50% 50%,
+    #e2cbff 0%,
+    #393bb2 50%,
+    #e2cbff 100%
+  );
+  --background-image-champagne-gold: conic-gradient(
+    from 90deg at 50% 50%,
+    #fdfcf0 0%,
+    #b88e2f 50%,
+    #fdfcf0 100%
+  );
+  --background-image-luxury-purple: conic-gradient(
+    from 90deg at 50% 50%,
+    #e2cbff 0%,
+    #393bb2 50%,
+    #e2cbff 100%
+  );
   /* --- TEXT GLOW CUSTOM PROPERTIES AND ANIMATION KEYFRAMES (MUST stay inside @theme) --- */
   --text-shadow-glow: 0 0 10px rgba(255, 255, 255, 0.8),
     0 0 15px rgba(255, 255, 255, 0.6);

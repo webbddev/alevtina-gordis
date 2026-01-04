@@ -1,0 +1,3 @@
+to update the knowledge base visit https://elevenlabs.io/app/agents/agents 
+select 'knowledge base' and update it as needed 
+the app supposedly will pick up the changes automatically since it uses NEXT_PUBLIC_ELEVENLABS_AGENT_ID
