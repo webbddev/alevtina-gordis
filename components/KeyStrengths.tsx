@@ -19,8 +19,9 @@ const KeyStrengths = () => {
   const x1 = useTransform(scrollYProgress, [0, 1], ['20%', '-31.4%']);
   const x2 = useTransform(scrollYProgress, [0, 1], ['-10%', '2%']);
   const x3 = useTransform(scrollYProgress, [0, 1], ['40%', '-47%']);
-  const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-15%']);
+  const x4 = useTransform(scrollYProgress, [0, 1], ['20%', '-32.8%']);
   const x5 = useTransform(scrollYProgress, [0, 1], ['-30%', '14%']);
+  const x6 = useTransform(scrollYProgress, [0, 1], ['10%', '-22%']);
 
   const dividerColor = 'bg-yellow-500 dark:bg-yellow-400';
 
@@ -103,7 +104,7 @@ const KeyStrengths = () => {
             <AuroraText colors={mixedTones}>{t('skill5')}</AuroraText>
           </p>
           <div className={`w-10 h-1 md:w-32 ${dividerColor}`} />
-          <p className='font-thin '>{t('skill6')}</p>
+          {/* <p className='font-thin '>{t('skill6')}</p> */}
         </motion.div>
 
         {/* Line 5 */}
@@ -111,6 +112,11 @@ const KeyStrengths = () => {
           <p className='font-playfairDisplay text-gray-700 dark:text-gray-200'>
             {t('skill4')}
           </p>
+        </motion.div>
+
+        {/* Line 6 */}
+        <motion.div style={{ x: x6 }} className='py-2'>
+          <p className='font-thin '>{t('skill6')}</p>
         </motion.div>
       </div>
     </section>
