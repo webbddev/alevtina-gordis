@@ -29,7 +29,7 @@ export function Hero() {
         </p>
 
         {/* Main Title Section */}
-        <h1 className='font-ebGaramond font-medium uppercase text-gray-700 dark:text-gray-200 mix-blend-mode:multiply text-left text-[56px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight mb-16 md:-ml-8 relative'>
+        <h1 className='font-ebGaramond font-medium uppercase text-gray-700 dark:text-gray-200 mix-blend-mode:multiply text-left text-[50px]/[2.75rem] md:text-6xl/[2.75rem] lg:text-7xl/[3.50rem] xl:text-8xl/[4.5rem] 2xl:text-9xl/[5rem] tracking-tight mb-16 md:-ml-8 relative'>
           <div className='block'>
             <AnimatedTextWords duration={1.2} delay={0}>
               {t('titleLine1')}
