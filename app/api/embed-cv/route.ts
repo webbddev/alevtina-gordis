@@ -5,54 +5,53 @@ import { db } from '@/lib/db-config';
 import { documents } from '@/lib/db-schema';
 import { generateEmbeddings } from '@/lib/embeddings';
 import { chunkContent } from '@/lib/chunking';
-import pdf from 'pdf-parse';
-import { eq } from 'drizzle-orm'; // Import the 'eq' operator
+import { PDFParse } from 'pdf-parse';
+import { eq } from 'drizzle-orm';
 
-export const maxDuration = 60; // Allow 60 seconds for processing
+export const maxDuration = 60;
 
 export async function GET() {
+  let parser;
   try {
     console.log('Starting PDF processing for CV...');
     const filePath = path.join(
       process.cwd(),
       'public',
-      'Alevtina-Gordienko-CV-RU.pdf'
+      'cv',
+      'GORDIENCO-ALEVTINA-CV_RU.pdf',
     );
 
     const buffer = await fs.readFile(filePath);
     console.log('CV PDF file read successfully.');
 
-    const data = await pdf(buffer);
+    parser = new PDFParse({ data: buffer });
+    const result = await parser.getText();
 
-    if (!data.text || data.text.trim().length === 0) {
+    if (!result.text || result.text.trim().length === 0) {
       console.error('No text found in CV PDF');
       return NextResponse.json(
         { success: false, error: 'No text found in CV PDF' },
-        { status: 400 }
+        { status: 400 },
       );
     }
-    console.log(`Extracted ${data.text.length} characters from CV PDF.`);
+    console.log(`Extracted ${result.text.length} characters from CV PDF.`);
 
-    const chunks = await chunkContent(data.text);
+    const chunks = await chunkContent(result.text);
     console.log(`Created ${chunks.length} CV chunks.`);
 
     const embeddings = await generateEmbeddings(chunks);
     console.log('Generated embeddings for all CV chunks.');
 
-    // Prepare records with the new 'source' tag
     const records = chunks.map((chunk, index) => ({
       content: chunk,
       embedding: embeddings[index],
-      source: 'cv', // Tag each chunk with 'cv'
+      source: 'cv',
     }));
 
-    // --- SAFER DELETE ---
-    // Only delete documents tagged as 'cv'
     console.log("Clearing existing 'cv' documents from the database...");
     await db.delete(documents).where(eq(documents.source, 'cv'));
     console.log("Old 'cv' documents cleared.");
 
-    // Insert the new records
     console.log(`Inserting ${records.length} new 'cv' records...`);
     await db.insert(documents).values(records);
     console.log("Successfully inserted new 'cv' records.");
@@ -69,7 +68,11 @@ export async function GET() {
     }
     return NextResponse.json(
       { success: false, error: errorMessage },
-      { status: 500 }
+      { status: 500 },
     );
+  } finally {
+    if (parser) {
+      await parser.destroy();
+    }
   }
 }
