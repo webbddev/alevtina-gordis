@@ -81,16 +81,16 @@ interface AIChatBoxProps {
 }
 
 const models = [
-  {
-    id: 'xai/grok-4-fast-reasoning',
-    name: 'Grok 4 Fast Reasoning',
-    chef: 'xAI',
-    chefSlug: 'xai',
-    providers: ['xai'],
-  },
+  // {
+  //   id: 'xai/grok-4.20-reasoning-beta',
+  //   name: 'Grok 4.20 Reasoning Beta',
+  //   chef: 'xAI',
+  //   chefSlug: 'xai',
+  //   providers: ['xai'],
+  // },
   {
     id: 'google/gemini-2.5-flash',
-    name: 'Gemini Flash',
+    name: 'Gemini 2.5 Flash',
     chef: 'Google',
     chefSlug: 'google',
     providers: ['google'],
@@ -110,29 +110,22 @@ const models = [
     providers: ['openai'],
   },
   {
-    id: 'openai/gpt-4o',
-    name: 'GPT 4o',
-    chef: 'OpenAI',
-    chefSlug: 'openai',
-    providers: ['openai'],
-  },
-  {
     id: 'openai/gpt-5-nano',
     name: 'GPT 5 Nano',
     chef: 'OpenAI',
     chefSlug: 'openai',
     providers: ['openai'],
   },
-  {
-    id: 'deepseek/deepseek-r1',
-    name: 'Deepseek R1',
-    chef: 'DeepSeek',
-    chefSlug: 'deepseek',
-    providers: ['deepseek'],
-  },
+  // {
+  //   id: 'deepseek/deepseek-v4-pro',
+  //   name: 'Deepseek V4 Pro',
+  //   chef: 'DeepSeek',
+  //   chefSlug: 'deepseek',
+  //   providers: ['deepseek'],
+  // },
 ];
 
-const chefs = ['xAI', 'Google', 'OpenAI', 'DeepSeek'];
+const chefs = ['Google', 'OpenAI'];
 
 export function AIChatBox({ open, onClose }: AIChatBoxProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -176,7 +169,7 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
           model: model,
           // webSearch: webSearch,
         },
-      }
+      },
     );
     setPrompt('');
   };
@@ -207,7 +200,7 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
         'max-w-[90vw]',
         isExpanded
           ? 'h-[950px] max-h-[90vh] w-[650px]'
-          : 'h-[500px] max-h-[80vh] w-96'
+          : 'h-[500px] max-h-[80vh] w-96',
       )}
     >
       <div className='bg-[#8B8E71]/80 text-primary-foreground flex items-center justify-between rounded-t-lg border-b p-3'>
@@ -262,7 +255,7 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
                         <SourcesTrigger
                           count={
                             message.parts.filter(
-                              (part) => part.type === 'source-url'
+                              (part) => part.type === 'source-url',
                             ).length
                           }
                         />
@@ -321,7 +314,7 @@ export function AIChatBox({ open, onClose }: AIChatBoxProps) {
                                             ...prev,
                                             [partId]: false,
                                           })),
-                                        1000
+                                        1000,
                                       );
                                     }}
                                     label={
