@@ -5,7 +5,7 @@ import { TextReveal } from './ui/text-reveal';
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler';
 import { Lens } from './ui/lens';
 import LanguageSwitcher from './LanguageSwitcher';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { SmoothLink } from './SmoothLink';
 import { useState } from 'react';
 import { AIChatBox } from './AIChatBox';
@@ -17,8 +17,23 @@ import { useAudio } from '@/context/AudioContext';
 
 export function Hero() {
   const t = useTranslations('Hero');
+  const locale = useLocale();
   const [chatOpen, setChatOpen] = useState(false);
   const { isPlaying, toggleAudio } = useAudio();
+
+  const getCvPath = () => {
+    switch (locale) {
+      case 'ro':
+        return '/cv/GORDIENCO-ALEVTINA-CV_RO.pdf';
+      case 'ru':
+        return '/cv/GORDIENCO-ALEVTINA-CV_RU.pdf';
+      case 'en':
+      default:
+        return '/cv/GORDIENCO-ALEVTINA-EN_CV.pdf';
+    }
+  };
+
+  const cvPath = getCvPath();
 
   return (
     <section className='bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-14 md:px-6 overflow-x-hidden'>
@@ -161,7 +176,8 @@ export function Hero() {
                 {t('feelFree')}
               </p>
               <a
-                href='/Alevtina-Gordienko-CV-RU.pdf'
+                // href='/GORDIENCO-ALEVTINA-CV_RO.pdf'
+                href={cvPath}
                 download
                 className='text-base font-medium group'
               >

@@ -15,8 +15,8 @@
     "talkWithAI": "Talk to",
     "AIChatBot": "ALYA AI",
     "overviewTitle": "From the Author",
-    "overviewIntro": "My journey: from finding stories to learning to listen to business. Today, I combine empathy with analytics to create strategies for your growth.",
-    "overviewDetails": "I remember my first reports: running through the streets, searching for heroes, hundreds of questions, and one goal: to capture a living story. Over the years, I created video projects for brands and social campaigns, learned to see the essence, to turn the complex into something understandable and valuable for people. Today, I am changing my direction: I combine my experience with projects and attention to detail with analytics and digital tools to help businesses develop their projects more effectively. The world of SEO seems particularly attractive to me: the excitement of discovering what is happening 'on the other side of the screen,' analyzing, looking for patterns, and finding opportunities for growth."
+    "overviewIntro": "My journey: from seeking real-life stories to understanding systems.",
+    "overviewDetails": "I began my career in reporting — running through the streets, asking hundreds of questions, with a single goal: to capture the essence of what was happening. Later, I created video projects for brands and social campaigns, learning to translate complex ideas into clear and accessible narratives. Today, I combine empathy with analytics: I interpret data, listen to people, and identify patterns where others see chaos. I have experience managing projects, negotiating, and bringing them to successful completion. Above all, I value the ability to create information that is clear, structured, and immediately understandable to any audience."
   },
   "AIChatBox": {
     "title": "Alevtina",
@@ -131,21 +131,45 @@
         "result": "3 promotional videos for the company's website."
       },
       "project5": {
-        "src": "/img/projects/project-5-img2.jpg",
-        "logo": "/img/logos/logo-5.svg",
-        "videoSrc": "",
-        "name": "ADMINISTRATOR | WEDDING SALON \"APRIORI\" | 2023",
-        "summary": "Full management of a wedding salon, including sales, marketing and staff training.",
-        "role": "Administrator",
-        "description": [
-          "Full management of the company in the absence of the director.",
-          "Consulting clients and closing deals.",
-          "Maintaining social networks and the website.",
-          "Inventory, administration of the cash book.",
-          "Staff training.",
-          "Work in the conditions of an intense wedding season, work with foreign clients."
+        "src": "/img/projects/project-5-vertical.png",
+        "logo": "/img/projects/project-5-horizontal.png",
+        "videoSrc": "https://youtu.be/iDXiwK76SWE?si=fg8D4QMLUkE85QTx",
+        "videoLinks": [
+          {
+            "url": "https://youtu.be/iDXiwK76SWE?si=fg8D4QMLUkE85QTx",
+            "thumbnail": "/img/projects/project-5.1.png"
+          },
+          {
+            "url": "https://youtu.be/ryM2NgH66Oc?si=beyoxHZounBwsXMY",
+            "thumbnail": "/img/projects/project-5.2.png"
+          },
+          {
+            "url": "https://youtu.be/HlL2uXIQfyI?si=_KbBVuG5ZYXnoibY",
+            "thumbnail": "/img/projects/project-5.3.png"
+          },
+          {
+            "url": "https://youtu.be/VcrRJEv-5kA?si=zu-3jZIim1pKkF26",
+            "thumbnail": "/img/projects/project-5.4.png"
+          },
+          {
+            "url": "https://youtu.be/WzjIjGhdM7Q?si=s39AU7ntSORulwo7",
+            "thumbnail": "/img/projects/project-5.5.png"
+          },
+          {
+            "url": "https://youtu.be/CRK1I39I8NQ?si=3F7gmh6d9WXc3GCn",
+            "thumbnail": "/img/projects/project-5.6.png"
+          }
         ],
-        "result": "Ensured the smooth operation of the salon, increased sales and successfully managed the team during the peak season."
+        "name": "PRODUCER | UNU TV | 'PORTbagaj' COMMERCIAL MEDIA PROJECT | 2026",
+        "summary": "The project is being implemented within the framework of the show \"BINE BINE SHOW\" under a one-year partnership with PORT Mall.",
+        "role": "Producer of the commercial media project for the weekly rubric \"PORTbagaj\" for the daily evening show \"BINE BINE SHOW\" at UNU TV in partnership with PORT Mall (one-year project).",
+        "description": [
+          "Script planning and scriptwriting.",
+          "Management of the filming crew (host, camera operator).",
+          "Control of editing and tone of the final product.",
+          "Product approval with the client (feedback integration, finalization, release)."
+        ],
+        "result": ""
       },
       "project6": {
         "src": "/img/projects/project-6.jpg",

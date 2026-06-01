@@ -1,0 +1,40 @@
+project 5 on Apriori is taken out for the time being
+
+for ro.json:
+
+"project5": {
+        "src": "/img/projects/project-5-img2.jpg",
+        "logo": "/img/logos/logo-5.svg",
+        "videoSrc": "",
+        "name": "ADMINISTRATOR | SALON DE NUNTĂ \"APRIORI\" | 2023",
+        "summary": "Managementul complet al unui salon de nuntă, inclusiv vânzări, marketing și instruirea personalului.",
+        "role": "Administrator",
+        "description": [
+          "Managementul complet al companiei în absența directorului.",
+          "Consultanță pentru clienți și încheierea de tranzacții.",
+          "Gestionarea rețelelor sociale și a site-ului.",
+          "Inventariere, administrarea registrului de casă.",
+          "Instruirea personalului.",
+          "Muncă în condițiile unui sezon de nunți intens, lucru cu clienți străini."
+        ],
+        "result": "A asigurat funcționarea fără probleme a salonului, a crescut vânzările și a gestionat cu succes echipa în timpul sezonului de vârf."
+      },
+
+for en.json:
+"project5": {
+        "src": "/img/projects/project-5-img2.jpg",
+        "logo": "/img/logos/logo-5.svg",
+        "videoSrc": "",
+        "name": "ADMINISTRATOR | WEDDING SALON \"APRIORI\" | 2023",
+        "summary": "Full management of a wedding salon, including sales, marketing and staff training.",
+        "role": "Administrator",
+        "description": [
+          "Full management of the company in the absence of the director.",
+          "Consulting clients and closing deals.",
+          "Maintaining social networks and the website.",
+          "Inventory, administration of the cash book.",
+          "Staff training.",
+          "Work in the conditions of an intense wedding season, work with foreign clients."
+        ],
+        "result": "Ensured the smooth operation of the salon, increased sales and successfully managed the team during the peak season."
+      },

@@ -15,8 +15,8 @@
     "talkWithAI": "Vorbiți cu",
     "AIChatBot": "ALYA AI",
     "overviewTitle": "De la autor",
-    "overviewIntro": "Calea mea: de la găsirea poveștilor la abilitatea de a asculta afacerile. Astăzi, combin empatia cu analitica pentru a crea strategii pentru creșterea dvs.",
-    "overviewDetails": "Îmi amintesc primele mele reportaje: alergând pe străzi, căutând eroi, sute de întrebări și un singur scop: să surprind o poveste vie. De-a lungul anilor, am creat proiecte video pentru branduri și campanii sociale, am învățat să văd esența, să transform complexul în ceva de înțeles și valoros pentru oameni. Astăzi, îmi schimb direcția: combin experiența mea cu proiectele și atenția la detalii cu analitica și instrumentele digitale pentru a ajuta afacerile să-și dezvolte proiectele mai eficient. Lumea SEO mi se pare deosebit de atractivă: entuziasmul de a descoperi ce se întâmplă 'de cealaltă parte a ecranului,' de a analiza, de a căuta modele și de a găsi oportunități de creștere."
+    "overviewIntro": "Drumul meu — de la căutarea poveștilor reale la capacitatea de a înțelege sistemele.",
+    "overviewDetails": "Îmi amintesc cum am început cu reportajele: alergam pe străzi, puneam sute de întrebări și aveam un singur obiectiv — să surprind esența a ceea ce se întâmplă. Ulterior, am realizat proiecte video pentru branduri și campanii sociale, învățând să transform complexul în clar și accesibil. Astăzi îmbin empatia cu analiza: văd datele, ascult oamenii și identific tipare acolo unde alții văd haos. Știu să gestionez proiecte, să negociez și să le duc până la capăt. Totuși, consider că cea mai importantă și valoroasă abilitate a mea este capacitatea de a crea informații clare, ușor de înțeles pentru toată lumea, din prima lectură."
   },
   "AIChatBox": {
     "title": "Alevtina",
@@ -131,21 +131,45 @@
         "result": "3 videoclipuri promoționale pentru site-ul companiei."
       },
       "project5": {
-        "src": "/img/projects/project-5-img2.jpg",
-        "logo": "/img/logos/logo-5.svg",
-        "videoSrc": "",
-        "name": "ADMINISTRATOR | SALON DE NUNTĂ \"APRIORI\" | 2023",
-        "summary": "Managementul complet al unui salon de nuntă, inclusiv vânzări, marketing și instruirea personalului.",
-        "role": "Administrator",
-        "description": [
-          "Managementul complet al companiei în absența directorului.",
-          "Consultanță pentru clienți și încheierea de tranzacții.",
-          "Gestionarea rețelelor sociale și a site-ului.",
-          "Inventariere, administrarea registrului de casă.",
-          "Instruirea personalului.",
-          "Muncă în condițiile unui sezon de nunți intens, lucru cu clienți străini."
+        "src": "/img/projects/project-5-vertical.png",
+        "logo": "/img/projects/project-5-horizontal.png",
+        "videoSrc": "https://youtu.be/iDXiwK76SWE?si=fg8D4QMLUkE85QTx",
+        "videoLinks": [
+          {
+            "url": "https://youtu.be/iDXiwK76SWE?si=fg8D4QMLUkE85QTx",
+            "thumbnail": "/img/projects/project-5.1.png"
+          },
+          {
+            "url": "https://youtu.be/ryM2NgH66Oc?si=beyoxHZounBwsXMY",
+            "thumbnail": "/img/projects/project-5.2.png"
+          },
+          {
+            "url": "https://youtu.be/HlL2uXIQfyI?si=_KbBVuG5ZYXnoibY",
+            "thumbnail": "/img/projects/project-5.3.png"
+          },
+          {
+            "url": "https://youtu.be/VcrRJEv-5kA?si=zu-3jZIim1pKkF26",
+            "thumbnail": "/img/projects/project-5.4.png"
+          },
+          {
+            "url": "https://youtu.be/WzjIjGhdM7Q?si=s39AU7ntSORulwo7",
+            "thumbnail": "/img/projects/project-5.5.png"
+          },
+          {
+            "url": "https://youtu.be/CRK1I39I8NQ?si=3F7gmh6d9WXc3GCn",
+            "thumbnail": "/img/projects/project-5.6.png"
+          }
         ],
-        "result": "A asigurat funcționarea fără probleme a salonului, a crescut vânzările și a gestionat cu succes echipa în timpul sezonului de vârf."
+        "name": "PRODUCĂTOR | PROIECT MEDIA COMERCIAL 'PORTbagaj' | UNU TV |  2026",
+        "summary": "Proiectul se realizează în cadrul show-ului „BINE BINE SHOW” în parteneriat anual cu PORT Mall.",
+        "role": "Producător proiect media comercial rubrica săptămânală „PORTbagaj” – emisiunea „BINE BINE SHOW” (UNU TV), parteneriat cu PORT Mall (proiect anual)",
+        "description": [
+          "Planificarea și redactarea scenariilor.",
+          "Coordonarea echipei de filmare (prezentator, operator imagine).",
+          "Controlul montajului și al tonalității produsului final.",
+          "Aprobare cu beneficiarul (preluarea modificărilor, finalizarea, lansarea)."
+        ],
+        "result": ""
       },
       "project6": {
         "src": "/img/projects/project-6.jpg",
