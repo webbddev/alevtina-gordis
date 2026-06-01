@@ -1,0 +1,15 @@
+## Reminder: After Updating Your CV
+Follow these steps to update your database with the new CV content:
+
+1. Place the new CV file in /public/cv/ folder
+2. Update the file path in /app/api/embed-cv/route.ts (line 20)
+3. Run your dev server :
+   ```
+   npm run dev
+   ```
+4. Call the API endpoint :
+   Visit this URL in your browser or use curl:
+   ```
+   http://localhost:3000/api/embed-cv
+   ```
+Your AI chat bot will now use the updated CV for answers! 🚀
